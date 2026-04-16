@@ -1,0 +1,177 @@
+{
+  "product" : [
+    {
+      "id": "banqueta-respaldo",
+      "slug": "banqueta-respaldo",
+      "name": "Banqueta con respaldo",
+      "collection": "liz",
+      "category": "banquetas",
+    
+      "description": "Banqueta de exterior con respaldo, fabricada en aluminio anodizado. Diseñada para brindar confort y estabilidad en espacios de barra.",
+    
+      "images": {
+        "main": "/assets/products/banquetas/banqueta_con_respaldo/banqueta_con_respaldo_1.webp",
+        "gallery": [
+          "/assets/products/banquetas/banqueta_con_respaldo/banqueta_con_respaldo_2.webp",
+          "/assets/products/banquetas/banqueta_con_respaldo/banqueta_con_respaldo_3.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Apta para exterior, resistente y de fácil mantenimiento"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "dimensions": [
+        {
+          "label": "Estándar",
+          "size": "45 x 40 x 100 cm"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Mayor confort gracias al respaldo",
+        "Estructura resistente y liviana",
+        "Ideal para espacios de barra exteriores"
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Banqueta%20con%20respaldo"
+      }
+    },
+
+      {
+        "id": "banqueta-sin-respaldo",
+        "slug": "banqueta-sin-respaldo",
+        "name": "Banqueta sin respaldo",
+        "collection": "liz",
+        "category": "banquetas",
+      
+        "description": "Banqueta de exterior sin respaldo, fabricada en aluminio anodizado. Diseñada para ofrecer practicidad, durabilidad y un estilo moderno en espacios de barra.",
+      
+        "images": {
+          "main": "/assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo1.webp",
+          "gallery": [
+            "/assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo2.webp"
+          ],
+          "lifestyle": ""
+        },
+      
+        "materials": [
+          {
+            "name": "Aluminio anodizado",
+            "description": "Disponible en gris, simil madera, negro y blanco"
+          },
+          {
+            "name": "Tela Lino Outdoor",
+            "description": "Apta para exterior, resistente y de fácil mantenimiento"
+          },
+          {
+            "name": "Espuma de alta densidad",
+            "description": "Mayor confort y durabilidad"
+          }
+        ],
+      
+        "dimensions": [
+          {
+            "label": "Estándar",
+            "size": "45 x 40 x 75 cm"
+          }
+        ],
+      
+        "customization": {
+          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+          "fabrics": ["lino-outdoor"],
+          "customSize": true
+        },
+      
+        "features": [
+          "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+          "Respaldo que mejora el confort en usos prolongados.",
+          "Diseño funcional ideal para barras y espacios exteriores."
+        ],
+      
+        "cta": {
+          "text": "Consultar por WhatsApp",
+          "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Banqueta%20sin%20respaldo"
+        }
+      },
+      {
+        "id": "barra-aluminio",
+        "slug": "barra-aluminio",
+        "name": "Barra de Aluminio",
+        "collection": "liz",
+        "category": "barras",
+      
+        "description": "Barra de exterior en aluminio anodizado, diseñada para espacios sociales. Combina funcionalidad, resistencia y un diseño moderno adaptable a distintos ambientes.",
+      
+        "images": {
+          "main": "/assets/products/barras/barra1.webp",
+          "gallery": [
+            "/assets/products/barras/barra2.webp"
+          ],
+          "lifestyle": ""
+        },
+      
+        "materials": [
+          {
+            "name": "Aluminio anodizado",
+            "description": "Disponible en gris, simil madera, negro y blanco"
+          },
+          {
+            "name": "WPC (Wood Plastic Composite)",
+            "description": "Opción para tapa, resistente y de bajo mantenimiento"
+          }
+        ],
+      
+        "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, con opción de tapa en aluminio o WPC. Ambos materiales ofrecen alta durabilidad, resistencia al sol y la humedad, y mínimo mantenimiento.",
+      
+        "dimensions": [
+          {
+            "label": "Medida 1",
+            "size": "0.60 x 1.20 x 1.00"
+          },
+          {
+            "label": "Medida 2",
+            "size": "0.70 x 1.70 x 1.00"
+          }
+        ],
+      
+        "customization": {
+          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+          "topOptions": ["aluminio", "wpc"],
+          "customSize": true
+        },
+      
+        "features": [
+          "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
+          "Tapa personalizable en aluminio o WPC, adaptándose a distintos estilos.",
+          "Diseño modular ideal para espacios sociales y de reunión."
+        ],
+      
+        "cta": {
+          "text": "Consultar por WhatsApp",
+          "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Barra%20de%20Aluminio"
+        }
+      }
+  ]
+}
+

@@ -1,6 +1,4 @@
-/**
- * Rellena el bloque [data-component="hero"] desde data/hero_image.json
- */
+
 const HERO_DATA_URL = "data/hero_image.json";
 
 async function loadHero() {

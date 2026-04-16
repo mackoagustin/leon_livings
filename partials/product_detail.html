@@ -1,0 +1,112 @@
+
+        <section class="product-hero">
+            <div class="product-container">
+                <!-- Back Button -->
+                <button class="back-button" onclick="window.history.back()">
+                    <svg class="back-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Volver
+                </button>
+
+                <div class="product-grid">
+                    <!-- Gallery -->
+                    <div class="product-gallery">
+                        <div class="main-image" id="mainImage">
+                            <img src="images/product1.png" alt="Sillón Rope" id="mainImageSrc">
+                        </div>
+
+                        <div class="thumbnails">
+                            <div class="thumbnail active" onclick="changeImage(0, this)">
+                                <img src="images/product1.png" alt="Vista 1">
+                            </div>
+                            <div class="thumbnail" onclick="changeImage(1, this)">
+                                <img src="images/product2.png" alt="Vista 2">
+                            </div>
+                            <div class="thumbnail" onclick="changeImage(2, this)">
+                                <img src="images/product3.png" alt="Vista 3">
+                            </div>
+                            <div class="thumbnail" onclick="changeImage(3, this)">
+                                <img src="images/product1.png" alt="Vista 4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="product-info">
+                        <div>
+                            <p class="product-category">Colección Lounge</p>
+                            <h1 class="product-title">Sillón<br>Rope</h1>
+                            <p class="product-description">
+                                Teca maciza certificada FSC y cuerda náutica trenzada a mano. Elegancia atemporal para exteriores.
+                            </p>
+                        </div>
+
+                        <div class="product-details">
+                            <div class="detail-item">
+                                <h4 class="detail-label">Materiales</h4>
+                                <p class="detail-value">Teca certificada FSC, Cuerda náutica premium</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4 class="detail-label">Dimensiones</h4>
+                                <p class="detail-value">90 × 85 × 72 cm</p>
+                            </div>
+                            <div class="detail-item">
+                                <h4 class="detail-label">Acabados disponibles</h4>
+                                <p class="detail-value">Natural, Negro, Grafito, Arena</p>
+                            </div>
+                        </div>
+
+                        <div class="product-cta">
+                            <button class="btn-primary" style="width: 100%; justify-content: center; padding: 20px;" onclick="window.open('https://wa.me/1234567890', '_blank')">
+                                Consultar
+                            </button>
+                            <p class="cta-note">Personalización disponible</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality Section -->
+        <section class="quality-section">
+            <div class="product-container">
+                <div class="quality-grid">
+                    <div class="quality-item">
+                        <h3>Teca certificada</h3>
+                        <p>
+                            Madera de grado A tratada con aceites naturales. Resistente a humedad, sol y temperaturas extremas. Certificación FSC.
+                        </p>
+                    </div>
+
+                    <div class="quality-item">
+                        <h3>Cuerda náutica</h3>
+                        <p>
+                            Polipropileno de alta densidad para aplicaciones marinas. Resistente a UV, secado rápido, mínimo mantenimiento.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <script>
+            const images = [
+                'images/product1.png',
+                'images/product2.png',
+                'images/product3.png',
+                'images/product1.png'
+            ];
+
+            function changeImage(index, element) {
+                // Update main image
+                document.getElementById('mainImageSrc').src = images[index];
+                
+                // Update active thumbnail
+                document.querySelectorAll('.thumbnail').forEach(thumb => {
+                    thumb.classList.remove('active');
+                });
+                element.classList.add('active');
+            }
+        </script>
