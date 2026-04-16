@@ -1,0 +1,12 @@
+{
+    "hero": {
+      "image": "assets/hero/hero_living.webp",
+      "subtitle": "Colección 2026",
+      "title": "Diseño sin\nconcesiones",
+      "description": "Muebles de exterior que combinan materiales excepcionales, artesanía meticulosa y diseño contemporáneo para crear espacios únicos.",
+      "cta": {
+        "text": "Hablar con un asesor",
+        "link": "https://api.whatsapp.com/send/?phone=5491136420547&text=Hola%2C%20quiero%20hacer%20hablar%20con%20un%20asesor."
+      }
+    }
+  }
