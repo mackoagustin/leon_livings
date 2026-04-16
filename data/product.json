@@ -10,10 +10,10 @@
       "description": "Banqueta de exterior con respaldo, fabricada en aluminio anodizado. Diseñada para brindar confort y estabilidad en espacios de barra.",
     
       "images": {
-        "main": "/assets/products/banquetas/banqueta_con_respaldo/banqueta_con_respaldo_1.webp",
+        "main": "assets/products/banquetas/banqueta_con_respaldo/banqueta_con_respaldo_1.webp",
         "gallery": [
-          "/assets/products/banquetas/banqueta_con_respaldo/banqueta_con_respaldo_2.webp",
-          "/assets/products/banquetas/banqueta_con_respaldo/banqueta_con_respaldo_3.webp"
+          "assets/products/banquetas/banqueta_con_respaldo/banqueta_con_respaldo_2.webp",
+          "assets/products/banquetas/banqueta_con_respaldo/banqueta_con_respaldo_3.webp"
         ],
         "lifestyle": ""
       },
@@ -68,9 +68,9 @@
         "description": "Banqueta de exterior sin respaldo, fabricada en aluminio anodizado. Diseñada para ofrecer practicidad, durabilidad y un estilo moderno en espacios de barra.",
       
         "images": {
-          "main": "/assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo1.webp",
+          "main": "assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo1.webp",
           "gallery": [
-            "/assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo2.webp"
+            "assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo2.webp"
           ],
           "lifestyle": ""
         },
@@ -124,9 +124,9 @@
         "description": "Barra de exterior en aluminio anodizado, diseñada para espacios sociales. Combina funcionalidad, resistencia y un diseño moderno adaptable a distintos ambientes.",
       
         "images": {
-          "main": "/assets/products/barras/barra1.webp",
+          "main": "assets/products/barras/barra1.webp",
           "gallery": [
-            "/assets/products/barras/barra2.webp"
+            "assets/products/barras/barra2.webp"
           ],
           "lifestyle": ""
         },
