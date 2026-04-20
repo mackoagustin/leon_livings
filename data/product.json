@@ -57,121 +57,659 @@
         "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Banqueta%20con%20respaldo"
       }
     },
-
-      {
-        "id": "banqueta-sin-respaldo",
-        "slug": "banqueta-sin-respaldo",
-        "name": "Banqueta sin respaldo",
-        "collection": "liz",
-        "category": "banquetas",
-      
-        "description": "Banqueta de exterior sin respaldo, fabricada en aluminio anodizado. Diseñada para ofrecer practicidad, durabilidad y un estilo moderno en espacios de barra.",
-      
-        "images": {
-          "main": "assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo1.webp",
-          "gallery": [
-            "assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo2.webp"
-          ],
-          "lifestyle": ""
-        },
-      
-        "materials": [
-          {
-            "name": "Aluminio anodizado",
-            "description": "Disponible en gris, simil madera, negro y blanco"
-          },
-          {
-            "name": "Tela Lino Outdoor",
-            "description": "Apta para exterior, resistente y de fácil mantenimiento"
-          },
-          {
-            "name": "Espuma de alta densidad",
-            "description": "Mayor confort y durabilidad"
-          }
+    {
+      "id": "banqueta-sin-respaldo",
+      "slug": "banqueta-sin-respaldo",
+      "name": "Banqueta sin respaldo",
+      "collection": "liz",
+      "category": "banquetas",
+    
+      "description": "Banqueta de exterior sin respaldo, fabricada en aluminio anodizado. Diseñada para ofrecer practicidad, durabilidad y un estilo moderno en espacios de barra.",
+    
+      "images": {
+        "main": "assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo1.webp",
+        "gallery": [
+          "assets/products/banquetas/banqueta_sin_respaldo/banqueta_sin_respaldo2.webp"
         ],
-      
-        "dimensions": [
-          {
-            "label": "Estándar",
-            "size": "45 x 40 x 75 cm"
-          }
-        ],
-      
-        "customization": {
-          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
-          "fabrics": ["lino-outdoor"],
-          "customSize": true
-        },
-      
-        "features": [
-          "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
-          "Respaldo que mejora el confort en usos prolongados.",
-          "Diseño funcional ideal para barras y espacios exteriores."
-        ],
-      
-        "cta": {
-          "text": "Consultar por WhatsApp",
-          "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Banqueta%20sin%20respaldo"
-        }
+        "lifestyle": ""
       },
-      {
-        "id": "barra-aluminio",
-        "slug": "barra-aluminio",
-        "name": "Barra de Aluminio",
-        "collection": "liz",
-        "category": "barras",
-      
-        "description": "Barra de exterior en aluminio anodizado, diseñada para espacios sociales. Combina funcionalidad, resistencia y un diseño moderno adaptable a distintos ambientes.",
-      
-        "images": {
-          "main": "assets/products/barras/barra1.webp",
-          "gallery": [
-            "assets/products/barras/barra2.webp"
-          ],
-          "lifestyle": ""
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
         },
-      
-        "materials": [
-          {
-            "name": "Aluminio anodizado",
-            "description": "Disponible en gris, simil madera, negro y blanco"
-          },
-          {
-            "name": "WPC (Wood Plastic Composite)",
-            "description": "Opción para tapa, resistente y de bajo mantenimiento"
-          }
-        ],
-      
-        "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, con opción de tapa en aluminio o WPC. Ambos materiales ofrecen alta durabilidad, resistencia al sol y la humedad, y mínimo mantenimiento.",
-      
-        "dimensions": [
-          {
-            "label": "Medida 1",
-            "size": "0.60 x 1.20 x 1.00"
-          },
-          {
-            "label": "Medida 2",
-            "size": "0.70 x 1.70 x 1.00"
-          }
-        ],
-      
-        "customization": {
-          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
-          "topOptions": ["aluminio", "wpc"],
-          "customSize": true
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Apta para exterior, resistente y de fácil mantenimiento"
         },
-      
-        "features": [
-          "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
-          "Tapa personalizable en aluminio o WPC, adaptándose a distintos estilos.",
-          "Diseño modular ideal para espacios sociales y de reunión."
-        ],
-      
-        "cta": {
-          "text": "Consultar por WhatsApp",
-          "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Barra%20de%20Aluminio"
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
         }
+      ],
+    
+      "dimensions": [
+        {
+          "label": "Estándar",
+          "size": "45 x 40 x 75 cm"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+        "Respaldo que mejora el confort en usos prolongados.",
+        "Diseño funcional ideal para barras y espacios exteriores."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Banqueta%20sin%20respaldo"
       }
+    },
+    {
+      "id": "barra-aluminio",
+      "slug": "barra-aluminio",
+      "name": "Barra de Aluminio",
+      "collection": "liz",
+      "category": "barras",
+    
+      "description": "Barra de exterior en aluminio anodizado, diseñada para espacios sociales. Combina funcionalidad, resistencia y un diseño moderno adaptable a distintos ambientes.",
+    
+      "images": {
+        "main": "assets/products/barras/barra2.webp",
+        "gallery": [
+          "assets/products/barras/barra1.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "WPC (Wood Plastic Composite)",
+          "description": "Opción para tapa, resistente y de bajo mantenimiento"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, con opción de tapa en aluminio o WPC. Ambos materiales ofrecen alta durabilidad, resistencia al sol y la humedad, y mínimo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "Medida 1",
+          "size": "0.60 x 1.20 x 1.00"
+        },
+        {
+          "label": "Medida 2",
+          "size": "0.70 x 1.70 x 1.00"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "topOptions": ["aluminio", "wpc"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
+        "Tapa personalizable en aluminio o WPC, adaptándose a distintos estilos.",
+        "Diseño modular ideal para espacios sociales y de reunión."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Barra%20de%20Aluminio"
+      }
+    },
+    {
+      "id": "camastro-con-techo",
+      "slug": "camastro-con-techo",
+      "name": "Camastro con techo",
+      "collection": "cove",
+      "category": "camastros",
+    
+      "description": "Camastro de exterior en aluminio de alta resistencia, diseñado para brindar confort superior y protección solar mediante techo con tela microperforada. Ideal para descanso al aire libre.",
+    
+      "images": {
+        "main": "assets/products/camastro_con_techo/camastro_con_techo3.webp",
+        "gallery": [
+          "assets/products/camastro_con_techo/camastro_con_techo1.webp",
+          "assets/products/camastro_con_techo/camastro_con_techo2.webp",
+          "assets/products/camastro_con_techo/camastro_con_techo3.webp",
+          "assets/products/camastro_con_techo/camastro_con_techo4.webp",
+          "assets/products/camastro_con_techo/camastro_con_techo5.webp",
+          "assets/products/camastro_con_techo/camastro_con_techo6.webp",
+          "assets/products/camastro_con_techo/camastro_con_techo7.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Tela resistente para exterior y techo con ventilación y protección solar"
+        },
+        {
+          "name": "Tela Microperforada",
+          "description": "Tela resistente para exterior y techo con ventilación y protección solar"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura en aluminio anodizado de alta resistencia, combinada con tela lino outdoor y espuma de alta densidad. El techo incorpora tela microperforada que permite sombra y ventilación, ideal para uso exterior prolongado.",
+    
+      "dimensions": [
+        {
+          "label": "Estándar",
+          "size": "1.45 x 1.95 x 0.40"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "roofOptions": ["fijo", "desmontable"],
+        "roofFabric": ["microperforada"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Techo con tela microperforada: sombra y ventilación constante",
+        "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento",
+        "Confort superior para uso prolongado en exterior"
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Camastro%20con%20techo"
+      }
+    },
+    {
+      "id": "mesa-comedor",
+      "slug": "mesa-comedor",
+      "name": "Mesa de Comedor",
+      "collection": "lenn",
+      "category": "mesas-de-comedor",
+    
+      "description": "Mesa de comedor de exterior en aluminio anodizado, diseñada para ofrecer resistencia, funcionalidad y un estilo moderno. Ideal para acompañar distintos tipos de configuraciones de asientos.",
+    
+      "images": {
+        "main": "assets/products/mesa_comedor/mesa_comedor1.webp",
+        "gallery": [
+          "assets/products/mesa_comedor/mesa_comedor2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "WPC (Wood Plastic Composite)",
+          "description": "Material resistente al sol, la humedad y el desgaste, ideal para exteriores"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, con opción de tapa en aluminio o WPC. El WPC combina madera y polímeros, ofreciendo alta resistencia al sol, la humedad y el desgaste, ideal para exteriores.",
+    
+      "dimensions": [
+        { "label": "Medida 1", "size": "0.80 x 0.80 x 0.75" },
+        { "label": "Medida 2", "size": "0.80 x 1.45 x 0.75" },
+        { "label": "Medida 3", "size": "0.90 x 1.45 x 0.75" },
+        { "label": "Medida 4", "size": "1.00 x 1.00 x 0.75" },
+        { "label": "Medida 5", "size": "1.00 x 2.00 x 0.75" }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "topOptions": ["aluminio", "wpc"],
+        "customSize": true,
+        "notes": "Dimensiones adaptables según cantidad de comensales"
+      },
+    
+      "features": [
+        "Medidas adaptables según cantidad de personas",
+        "Opción de tapa en WPC: mayor resistencia y estética diferencial",
+        "Estructura de aluminio anodizado: durabilidad y bajo mantenimiento"
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Mesa%20de%20Comedor"
+      }
+    },
+    {
+      "id": "mesa-ratona",
+      "slug": "mesa-ratona",
+      "name": "Mesa ratona",
+      "collection": ["luit", "kairo", "terra", "niss", "oasis"],
+      "category": "mesas-ratonas",
+    
+      "description": "Mesa ratona de exterior en aluminio anodizado, diseñada para acompañar sets de living. Combina durabilidad, bajo mantenimiento y un estilo moderno y versátil.",
+    
+      "images": {
+        "main":  "assets/products/mesas_ratonas/mesa_ratona6.webp",
+        "gallery": [
+          
+          "assets/products/mesas_ratonas/mesa_ratona2.webp",
+          "assets/products/mesas_ratonas/mesa_ratona3.webp",
+          "assets/products/mesas_ratonas/mesa_ratona4.webp",
+          "assets/products/mesas_ratonas/mesa_ratona1.webp",
+          "assets/products/mesas_ratonas/mesa_ratona5.webp"
+         
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "WPC (Wood Plastic Composite)",
+          "description": "Opción para tapa, resistente al sol, la humedad y el desgaste"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, con opción de tapa en aluminio o WPC. Ambos materiales ofrecen alta durabilidad, resistencia al sol y la humedad, y mínimo mantenimiento.",
+    
+      "dimensions": [
+        { "label": "Medida 1", "size": "0.40 x 0.40 x 0.35" },
+        { "label": "Medida 2", "size": "0.50 x 0.80 x 0.40" },
+        { "label": "Medida 3", "size": "0.60 x 1.00 x 0.40" },
+        { "label": "Medida 4", "size": "0.60 x 1.20 x 0.40" },
+        { "label": "Medida 5", "size": "0.70 x 1.20 x 0.40" }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "topOptions": ["aluminio", "wpc"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
+        "Opción de tapa en aluminio o WPC, adaptándose a distintos estilos y usos.",
+        "Diseño funcional y versátil, ideal para acompañar sets de living exterior."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Mesa%20ratona"
+      }
+    },
+    {
+      "id": "pergola",
+      "slug": "pergola",
+      "name": "Pérgola",
+      "collection": null,
+      "category": "pergolas",
+    
+      "description": "Pérgola de exterior en aluminio anodizado con techo de tela microperforada. Diseñada para generar espacios protegidos, funcionales y con una estética moderna.",
+    
+      "images": {
+        "main": "assets/products/pergolas/pergola1.webp",
+        "gallery": [
+          "assets/products/pergolas/pergola2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela microperforada",
+          "description": "Permite ventilación, reduce el calor y brinda protección solar"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado de alta resistencia, combinada con techo de tela microperforada que permite el paso del aire, reduce el calor y brinda protección solar. Materiales pensados para exterior, con alta durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "Estándar",
+          "size": "3.05 x 3.30 x 2.50"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "roofFabric": ["microperforada"],
+        "customSize": true,
+        "notes": "Adaptable al espacio del cliente"
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado: máxima durabilidad y sin mantenimiento.",
+        "Techo de tela microperforada: mayor ventilación y menor acumulación de calor.",
+        "Diseño a medida adaptable a cualquier espacio exterior."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Pérgola"
+      }
+    },
+    {
+      "id": "reposera-capri",
+      "slug": "reposera-capri",
+      "name": "Reposera Capri",
+      "collection": "capri",
+      "category": "reposeras",
+    
+      "description": "Reposera Capri fabricada en aluminio de alta resistencia, diseñada para exterior. Combina confort, durabilidad y un estilo moderno y elegante.",
+    
+      "images": {
+        "main":   "assets/products/reposeras/reposera_capri/reposera_capri4.webp",
+        "gallery": [
+          "assets/products/reposeras/reposera_capri/reposera_capri1.webp",
+          "assets/products/reposeras/reposera_capri/reposera_capri2.webp",
+          "assets/products/reposeras/reposera_capri/reposera_capri3.webp"
+        
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado en distintos acabados, combinada con Tela Lino Outdoor y espuma de alta densidad para mayor confort y resistencia.",
+    
+      "dimensions": [
+        { "label": "Medida 1", "size": "0.60 x 1.90 x 0.40" },
+        { "label": "Medida 2", "size": "0.70 x 1.90 x 0.40" },
+        { "label": "Medida 3", "size": "0.95 x 1.90 x 0.40" },
+        { "label": "Medida 4", "size": "1.40 x 1.90 x 0.40" }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Confort superior: tela lino outdoor y espuma de alta densidad que mantienen su forma y comodidad."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Reposera%20Capri"
+      }
+    },
+    {
+      "id": "reposera-lone",
+      "slug": "reposera-lone",
+      "name": "Reposera Lone",
+      "collection": "lone",
+      "category": "reposeras",
+    
+      "description": "Reposera Lone fabricada en aluminio de alta resistencia, diseñada para exterior. Su estructura reforzada brinda mayor estabilidad y durabilidad, manteniendo un estilo moderno y funcional.",
+    
+      "images": {
+        "main":  "assets/products/reposeras/reposera_lone/reposera_lone4.webp",
+        "gallery": [
+          "assets/products/reposeras/reposera_lone/reposera_lone1.webp",
+          "assets/products/reposeras/reposera_lone/reposera_lone2.webp",
+          "assets/products/reposeras/reposera_lone/reposera_lone3.webp"
+         
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado en distintos acabados, combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior con mayor resistencia, confort y durabilidad.",
+    
+      "dimensions": [
+        { "label": "Medida 1", "size": "0.60 x 1.90 x 0.40" },
+        { "label": "Medida 2", "size": "0.70 x 1.90 x 0.40" },
+        { "label": "Medida 3", "size": "0.95 x 1.90 x 0.40" },
+        { "label": "Medida 4", "size": "1.40 x 1.90 x 0.40" }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Refuerzos estructurales que aportan mayor estabilidad y durabilidad."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Reposera%20Lone"
+      }
+    },
+    {
+      "id": "reposera-doble-capri",
+      "slug": "reposera-doble-capri",
+      "name": "Reposera Doble Capri",
+      "collection": "capri",
+      "category": "reposeras-dobles",
+    
+      "description": "Reposera doble de exterior en aluminio anodizado, diseñada para ofrecer confort y amplitud en un formato liviano y versátil. Ideal para espacios exteriores modernos.",
+    
+      "images": {
+        "main": "assets/products/reposeras_dobles/reposera_doble_capri/resposera_doble_capri3.webp",
+        "gallery": [
+          "assets/products/reposeras_dobles/reposera_doble_capri/resposera_doble_capri1.webp",
+          "assets/products/reposeras_dobles/reposera_doble_capri/resposera_doble_capri2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado reforzada, combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para brindar máxima resistencia, estabilidad y confort en uso exterior.",
+    
+      "dimensions": [
+        {
+          "label": "Estándar",
+          "size": "1.40 x 1.90 x 0.40"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Formato doble: mayor comodidad para uso compartido",
+        "Diseño liviano: fácil adaptación a distintos espacios",
+        "Materiales resistentes y de bajo mantenimiento"
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Reposera%20Doble%20Capri"
+      }
+    },
+    {
+      "id": "reposera-doble-niss",
+      "slug": "reposera-doble-niss",
+      "name": "Reposera Doble Niss",
+      "collection": "niss",
+      "category": "reposeras-dobles",
+    
+      "description": "Reposera doble de exterior en aluminio anodizado, con diseño amplio y detalles estructurales que la convierten en una pieza protagonista para espacios exteriores.",
+    
+      "images": {
+        "main": "assets/products/reposeras_dobles/reposera_doble_niss/reposera_doble_niss1.webp",
+        "gallery": [],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado combinada con Tela Lino Outdoor y espuma de alta densidad, diseñada para ofrecer máxima durabilidad, confort y resistencia en exteriores.",
+    
+      "dimensions": [
+        {
+          "label": "Estándar",
+          "size": "1.40 x 1.90 x 0.40"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Diseño protagonista con detalle tipo enrejado",
+        "Formato amplio y robusto para mayor presencia",
+        "Materiales premium pensados para exterior"
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Reposera%20Doble%20Niss"
+      }
+    },
+    {
+      "id": "silla-aluminio",
+      "slug": "silla-aluminio",
+      "name": "Silla de Aluminio",
+      "collection": "lenn",
+      "category": "sillas",
+    
+      "description": "Silla de exterior en aluminio anodizado, diseñada para espacios de comedor. Combina confort, durabilidad y un estilo moderno adaptable a distintos ambientes.",
+    
+      "images": {
+        "main": "assets/products/sillas/silla_de_aluminio/silla1.webp",
+        "gallery": [
+          "assets/products/sillas/silla_de_aluminio/silla2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para ofrecer confort, durabilidad y bajo mantenimiento en exterior.",
+    
+      "dimensions": [
+        {
+          "label": "Estándar",
+          "size": "0.50 x 0.45 x 0.82"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
+        "Mayor confort e independencia frente a bancos tradicionales.",
+        "Diseño versátil que se adapta a distintos espacios de comedor."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Silla%20de%20Aluminio"
+      }
+    }
+
+
   ]
 }
 

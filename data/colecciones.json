@@ -1,0 +1,30 @@
+{
+    "collections": [
+        {
+            "id": "capri",
+            "slug": "capri",
+            "name": "Capri",
+
+            "description": "Capri es una colección de reposeras en aluminio anodizado, pensada para exterior, que combina durabilidad, confort y estética minimalista.",
+
+            "style": "moderno y minimalista",
+
+            "features": [
+                "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+                "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+                "Confort superior con tela lino outdoor y espuma de alta densidad."
+            ],
+
+            "heroImage": "assets/collections/capri/prueba.webp",
+            "collectionImage": "assets/collections/capri/product/collections_capri1.webp",
+            "thumbnail": "assets/collections/capri/prueba.webp",
+
+            "categories": ["reposeras", "reposeras-dobles"],
+
+            "featuredProducts": [
+                "reposera-capri",
+                "reposera-doble-capri"
+            ]
+        }
+    ]
+}
