@@ -36,7 +36,7 @@
     /* --- Superposiciones (fotos / hero / cards) --- */
     /* Escritorio: barra translúcida; en móvil se sobrescribe más abajo */
     --overlay-header-bg: rgba(255, 255, 255, 0.34);
-    --overlay-collection: rgba(0, 0, 0, 0.3);
+    --overlay-collection: rgba(53, 52, 52, 0.3);
     --overlay-category: rgba(0, 0, 0, 0.2);
     --overlay-hero: linear-gradient(
         to right,

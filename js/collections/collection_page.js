@@ -18,6 +18,16 @@ function normalizeAssetPath(path) {
     return p.startsWith("/") ? p.slice(1) : p;
 }
 
+function normalizeAssetList(input) {
+    if (Array.isArray(input)) {
+        return input
+            .map((item) => normalizeAssetPath(item))
+            .filter(Boolean);
+    }
+    const single = normalizeAssetPath(input);
+    return single ? [single] : [];
+}
+
 function getCollectionSlug() {
     const params = new URLSearchParams(window.location.search);
     const q = params.get("slug");
@@ -104,14 +114,173 @@ const COLLECTION_SPEC_LABELS = [
     "CONFORT Y TEXTILES",
 ];
 
+const GALLERY_PREV_SVG = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>`;
+const GALLERY_NEXT_SVG = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>`;
+const GALLERY_SLIDE_MS = 480;
+
+function preloadImage(src) {
+    return new Promise((resolve) => {
+        const im = new Image();
+        im.onload = () => resolve();
+        im.onerror = () => resolve();
+        im.src = src;
+    });
+}
+
+function galleryDirection(from, to, n) {
+    let d = to - from;
+    if (d > n / 2) d -= n;
+    if (d < -n / 2) d += n;
+    return d > 0 ? "next" : "prev";
+}
+
+function bindCollectionGallery(root, imageUrls) {
+    const mainWrap = root.querySelector(".main-image");
+    const track = root.querySelector("#gallerySlideTrack");
+    const img0 = root.querySelector('.gallery-slide-img[data-slide="0"]');
+    const img1 = root.querySelector('.gallery-slide-img[data-slide="1"]');
+    if (!mainWrap || !track || !img0 || !img1 || !imageUrls.length) return;
+
+    const n = imageUrls.length;
+    if (n <= 1) return;
+
+    let index = 0;
+    let transitioning = false;
+
+    const slideEasing = "cubic-bezier(0.25, 0.1, 0.25, 1)";
+    const transitionCss = `transform ${GALLERY_SLIDE_MS}ms ${slideEasing}`;
+
+    function updateBullets() {
+        root.querySelectorAll(".gallery-bullet").forEach((b, j) => {
+            const on = j === index;
+            b.classList.toggle("is-active", on);
+            b.setAttribute("aria-current", on ? "true" : "false");
+        });
+    }
+
+    function setGalleryBusy(busy) {
+        transitioning = busy;
+        const gallery = mainWrap?.closest(".product-gallery");
+        gallery?.classList.toggle("product-gallery--busy", busy);
+    }
+
+    function resetTrackAfterSlide() {
+        img0.src = imageUrls[index];
+        img1.src = imageUrls[(index + 1) % n];
+        track.style.transition = "none";
+        track.style.transform = "translateX(0)";
+        void track.offsetWidth;
+        track.style.transition = transitionCss;
+    }
+
+    function goTo(targetIndex, forcedDir) {
+        let next = targetIndex;
+        if (next < 0) next = n - 1;
+        if (next >= n) next = 0;
+        if (next === index || transitioning) return;
+
+        const dir = forcedDir || galleryDirection(index, next, n);
+        setGalleryBusy(true);
+
+        const afterSlide = () => {
+            index = next;
+            updateBullets();
+            resetTrackAfterSlide();
+            setGalleryBusy(false);
+        };
+
+        let done = false;
+        let fallbackTimer = null;
+
+        function onTransitionEnd(ev) {
+            if (ev.propertyName !== "transform") return;
+            if (done) return;
+            done = true;
+            track.removeEventListener("transitionend", onTransitionEnd);
+            if (fallbackTimer !== null) window.clearTimeout(fallbackTimer);
+            afterSlide();
+        }
+
+        Promise.all([preloadImage(imageUrls[index]), preloadImage(imageUrls[next])]).then(() => {
+            if (dir === "next") {
+                img0.src = imageUrls[index];
+                img1.src = imageUrls[next];
+                track.style.transition = "none";
+                track.style.transform = "translateX(0)";
+                void track.offsetWidth;
+                track.style.transition = transitionCss;
+                requestAnimationFrame(() => {
+                    track.style.transform = "translateX(-50%)";
+                });
+            } else {
+                img0.src = imageUrls[next];
+                img1.src = imageUrls[index];
+                track.style.transition = "none";
+                track.style.transform = "translateX(-50%)";
+                void track.offsetWidth;
+                track.style.transition = transitionCss;
+                requestAnimationFrame(() => {
+                    track.style.transform = "translateX(0)";
+                });
+            }
+
+            track.addEventListener("transitionend", onTransitionEnd);
+            fallbackTimer = window.setTimeout(() => {
+                if (!done) {
+                    done = true;
+                    track.removeEventListener("transitionend", onTransitionEnd);
+                    afterSlide();
+                }
+            }, GALLERY_SLIDE_MS + 120);
+        });
+    }
+
+    root.querySelector(".gallery-nav--prev")?.addEventListener("click", () => {
+        let next = index - 1;
+        if (next < 0) next = n - 1;
+        goTo(next, "prev");
+    });
+
+    root.querySelector(".gallery-nav--next")?.addEventListener("click", () => {
+        let next = index + 1;
+        if (next >= n) next = 0;
+        goTo(next, "next");
+    });
+
+    root.querySelectorAll(".gallery-bullet").forEach((b) => {
+        b.addEventListener("click", () => {
+            const i = parseInt(b.getAttribute("data-index"), 10);
+            if (Number.isFinite(i) && imageUrls[i] !== undefined) goTo(i);
+        });
+    });
+
+    mainWrap.setAttribute("tabindex", "0");
+    mainWrap.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft") {
+            e.preventDefault();
+            let next = index - 1;
+            if (next < 0) next = n - 1;
+            goTo(next, "prev");
+        } else if (e.key === "ArrowRight") {
+            e.preventDefault();
+            let next = index + 1;
+            if (next >= n) next = 0;
+            goTo(next, "next");
+        }
+    });
+}
+
 function renderCollection(container, collectionMeta, products) {
     const slug = collectionMeta.slug || collectionMeta.id;
     const name = collectionMeta.name || slug;
     const heroSrc = escapeHtml(
         normalizeAssetPath(collectionMeta.heroImage || collectionMeta.thumbnail || "")
     );
-    const collectionImgRaw = normalizeAssetPath(collectionMeta.collectionImage || "");
-    const collectionImgSrc = collectionImgRaw ? escapeHtml(collectionImgRaw) : "";
+    const collectionImages = normalizeAssetList(collectionMeta.collectionImage);
+    const collectionImgSrc = collectionImages[0] ? escapeHtml(collectionImages[0]) : "";
+    const showGallery = collectionImages.length > 1;
+    const totalImages = collectionImages.length;
+    const secondSrc = collectionImages.length > 1 ? escapeHtml(collectionImages[1]) : collectionImgSrc;
 
     const feats = Array.isArray(collectionMeta.features) ? collectionMeta.features : [];
     const specRowsHtml = feats
@@ -136,7 +305,7 @@ function renderCollection(container, collectionMeta, products) {
         "https://wa.me/1234567890";
 
     const hasShowcaseContent =
-        Boolean(collectionImgRaw) ||
+        collectionImages.length > 0 ||
         collectionMeta.description ||
         collectionMeta.style ||
         feats.length > 0;
@@ -150,9 +319,40 @@ function renderCollection(container, collectionMeta, products) {
             ${
                 collectionImgSrc
                     ? `<div class="product-gallery">
-                <div class="collection-showcase__visual">
-                    <img src="${collectionImgSrc}" alt="${escapeHtml(name)} — ambientación">
+                <div class="main-image">
+                    ${
+                        showGallery
+                            ? `<div class="gallery-slide-viewport">
+                        <div class="gallery-slide-track" id="gallerySlideTrack">
+                            <div class="gallery-slide">
+                                <img class="gallery-slide-img" data-slide="0" src="${collectionImgSrc}" alt="${escapeHtml(name)} — ambientación principal" width="700" height="600">
+                            </div>
+                            <div class="gallery-slide">
+                                <img class="gallery-slide-img" data-slide="1" src="${secondSrc}" alt="" width="700" height="600">
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="gallery-nav gallery-nav--prev" aria-label="Imagen anterior">
+                        ${GALLERY_PREV_SVG}
+                    </button>
+                    <button type="button" class="gallery-nav gallery-nav--next" aria-label="Imagen siguiente">
+                        ${GALLERY_NEXT_SVG}
+                    </button>`
+                            : `<img src="${collectionImgSrc}" alt="${escapeHtml(name)} — ambientación">`
+                    }
                 </div>
+                ${
+                    showGallery
+                        ? `<div class="gallery-bullets" role="tablist" aria-label="Galería de imágenes de la colección">
+                    ${collectionImages
+                        .map(
+                            (_, i) =>
+                                `<button type="button" class="gallery-bullet${i === 0 ? " is-active" : ""}" data-index="${i}" aria-label="Imagen ${i + 1} de ${totalImages}" aria-current="${i === 0 ? "true" : "false"}"></button>`
+                        )
+                        .join("")}
+                </div>`
+                        : ""
+                }
             </div>`
                     : ""
             }
@@ -240,6 +440,10 @@ function renderCollection(container, collectionMeta, products) {
 
     const grid = container.querySelector("[data-collection-products]");
     if (grid) bindProductGrid(grid);
+
+    if (showGallery) {
+        bindCollectionGallery(container, collectionImages);
+    }
 }
 
 async function loadCollectionPage() {

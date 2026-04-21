@@ -4,6 +4,7 @@
             "id": "capri",
             "slug": "capri",
             "name": "Capri",
+            "alt": "Colección Capri Exterior",
 
             "description": "Capri es una colección de reposeras en aluminio anodizado, pensada para exterior, que combina durabilidad, confort y estética minimalista.",
 
@@ -15,9 +16,13 @@
                 "Confort superior con tela lino outdoor y espuma de alta densidad."
             ],
 
-            "heroImage": "assets/collections/capri/prueba.webp",
-            "collectionImage": "assets/collections/capri/product/collections_capri1.webp",
-            "thumbnail": "assets/collections/capri/prueba.webp",
+            "heroImage": "assets/collections/capri/collections_capri2.webp",
+            "collectionImage": [
+                "assets/collections/capri/collections_capri1.webp",
+                "assets/collections/capri/collections_capri3.webp",
+                "assets/collections/capri/collections_capri4.webp"
+            ],
+            "thumbnail": "assets/collections/capri/collections_capri2.webp",
 
             "categories": ["reposeras", "reposeras-dobles"],
 
@@ -25,6 +30,170 @@
                 "reposera-capri",
                 "reposera-doble-capri"
             ]
-        }
+        },
+        {
+            "id": "kairo",
+            "slug": "kairo",
+            "name": "Kairo",
+            "alt": "Colección Kairo Exterior",
+          
+            "type": "living-set",
+          
+            "description": "Kairo es un set de living exterior en aluminio anodizado, diseñado para ofrecer confort superior, respaldos inclinados y una estética moderna y elegante.",
+          
+            "style": "moderno y minimalista",
+          
+            "features": [
+              "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+              "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+              "Confort superior: tela lino outdoor y espuma de alta densidad que mantienen su forma y comodidad."
+            ],
+          
+            "differentiator": "Set de living completo con respaldos inclinados, una característica poco común que mejora notablemente el confort.",
+          
+            "includes": [
+              {
+                "name": "Sillón 1 cuerpo",
+                "quantity": 2,
+                "size": "0.80 x 0.70 x 0.60"
+              },
+              {
+                "name": "Sillón 2 cuerpos",
+                "quantity": 1,
+                "size": "0.80 x 1.30 x 0.60"
+              },
+              {
+                "name": "Mesa ratona",
+                "quantity": 1,
+                "size": "0.60 x 1.00 x 0.35"
+              }
+            ],
+          
+            "customization": {
+              "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+              "fabrics": ["lino-outdoor"],
+              "topOptions": ["aluminio", "wpc"],
+              "customSize": true
+            },
+          
+            "heroImage": "/assets/collections/kairo/collection_kairo2.webp",
+            "collectionImage": [
+                "/assets/collections/kairo/collection_kairo3.webp",
+                "/assets/collections/kairo/collection_kairo2.webp",
+                "/assets/collections/kairo/collection_kairo1.webp"
+            ],
+            "thumbnail": "/assets/collections/kairo/collection_kairo1.webp",
+          
+            "categories": ["livings", "mesas-ratonas"],
+          
+            "featuredProducts": []
+        },
+        {
+        "id": "lenn",
+        "slug": "lenn",
+        "name": "Lenn",
+        "alt": "Colección Lenn Exterior",
+        
+        "type": "dining-set",
+        
+        "description": "Lenn es una colección de sets de comedor en aluminio anodizado, diseñada para exteriores, que combina funcionalidad, resistencia y un estilo moderno y personalizable.",
+        
+        "style": "moderno y funcional",
+        
+        "features": [
+            "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+            "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+            "Diseño funcional y personalizable, adaptable a distintos espacios y necesidades."
+        ],
+        
+        "differentiator": "Línea de comedor completamente modular y personalizable, con mesas adaptables y combinación de sillas o bancos.",
+        
+        "includes": [
+            {
+            "name": "Mesas",
+            "description": "Dimensiones adaptables según cantidad de asientos"
+            },
+            {
+            "name": "Sillas",
+            "description": "Configurables según necesidad"
+            },
+            {
+            "name": "Bancos",
+            "description": "Opcionales o combinables con sillas"
+            }
+        ],
+        
+        "customization": {
+            "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+            "fabrics": ["lino-outdoor"],
+            "topOptions": ["aluminio", "wpc"],
+            "customSize": true,
+            "combinations": ["sillas", "bancos", "mixto"]
+        },
+        
+        "heroImage": "/assets/collections/lenn/collection_lenn1.webp",
+        "collectionImage": [
+            "/assets/collections/lenn/collection_lenn3.webp",
+            "/assets/collections/lenn/collection_lenn4.webp",
+            "/assets/collections/lenn/collection_lenn5.webp"
+        ],
+        "thumbnail": "/assets/collections/lenn/collection_lenn2.webp",
+        
+        "categories": ["mesas-de-comedor", "sillas", "bancos"],
+        
+        "featuredProducts": []
+        },
+        {
+            "id": "liz",
+            "slug": "liz",
+            "name": "Liz",
+            "alt": "Colección Liz Exterior",
+          
+            "type": "bar-set",
+          
+            "description": "Liz es una colección de sets de barra en aluminio anodizado, diseñada para exteriores, que combina funcionalidad, resistencia y un diseño moderno y personalizable.",
+          
+            "style": "moderno y funcional",
+          
+            "features": [
+              "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+              "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+              "Diseño funcional y personalizable, adaptable a distintos espacios y necesidades, con banquetas con o sin respaldo."
+            ],
+          
+            "differentiator": "Línea de barra completamente modular y personalizable, con opción de banquetas con o sin respaldo y tapas en aluminio o WPC.",
+          
+            "includes": [
+              {
+                "name": "Barra",
+                "description": "Dimensiones adaptables según cantidad de banquetas"
+              },
+              {
+                "name": "Banquetas",
+                "description": "Disponibles con o sin respaldo, configurables según necesidad"
+              }
+            ],
+          
+            "customization": {
+              "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+              "fabrics": ["lino-outdoor"],
+              "topOptions": ["aluminio", "wpc"],
+              "variants": ["con-respaldo", "sin-respaldo"],
+              "customSize": true
+            },
+          
+            "heroImage": "/assets/collections/liz/collection_liz1.webp",
+            "collectionImage": [
+                "/assets/collections/liz/collection_liz3.webp",
+                "/assets/collections/liz/collection_liz4.webp",
+                "/assets/collections/liz/collection_liz1.webp"
+            ],
+            "thumbnail": "/assets/collections/liz/collection_liz4.webp",
+          
+            "categories": ["barras", "banquetas"],
+          
+            "featuredProducts": []
+          }
     ]
 }
+

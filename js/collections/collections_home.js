@@ -52,7 +52,7 @@ async function loadCollectionsHome() {
                 const name = c.name || slug;
                 const href = `coleccion.html?slug=${encodeURIComponent(slug)}`;
                 const imgSrc = escapeHtml(cardImageUrl(c));
-                const alt = escapeHtml(name);
+                const alt = escapeHtml(c.alt);
                 return `
             <div class="collection-card" role="link" tabindex="0" data-href="${escapeHtml(href)}">
                 <img src="${imgSrc}" alt="${alt}">
