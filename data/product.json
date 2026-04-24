@@ -536,6 +536,117 @@
       }
     },
     {
+      "id": "reposera-niss",
+      "slug": "reposera-niss",
+      "name": "Reposera Niss",
+      "collection": "niss",
+      "category": "reposeras",
+    
+      "description": "Reposera de exterior en aluminio anodizado, con diseño de enrejado en sus laterales que aporta identidad y una estética moderna distintiva. Combina confort, durabilidad y diseño.",
+    
+      "images": {
+        "main": "assets/products/reposeras/reposera_niss/reposera_niss1.webp",
+        "gallery": [],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado con detalles en perfiles dispuestos de forma continua, generando un efecto tipo enrejado en sus laterales. Combinada con Tela Lino Outdoor y espuma de alta densidad, ofrece resistencia, confort y durabilidad en exterior.",
+    
+      "dimensions": [
+        { "label": "Medida 1", "size": "0.60 x 1.90 x 0.40" },
+        { "label": "Medida 2", "size": "0.70 x 1.90 x 0.40" },
+        { "label": "Medida 3", "size": "0.95 x 1.90 x 0.40" },
+        { "label": "Medida 4", "size": "1.40 x 1.90 x 0.40" }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Diseño con enrejado: estética única y diferencial",
+        "Estructura de aluminio anodizado: resistente y sin mantenimiento",
+        "Confort y presencia para espacios exteriores de diseño"
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Reposera%20Niss"
+      }
+    },
+    {
+      "id": "reposera-doble-lone",
+      "slug": "reposera-doble-lone",
+      "name": "Reposera Doble Lone",
+      "collection": "lone",
+      "category": "reposeras-dobles",
+    
+      "description": "Reposera doble de exterior en aluminio anodizado, diseñada para ofrecer mayor espacio, confort y estabilidad. Ideal para descanso compartido en espacios exteriores.",
+    
+      "images": {
+        "main": "assets/products/reposeras_dobles/reposera_doble_lone/reposera_doble_lone2.webp",
+        "gallery": [
+          "assets/products/reposeras_dobles/reposera_doble_lone/reposera_doble_lone1.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado reforzada, combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para brindar máxima resistencia, estabilidad y confort en uso exterior.",
+    
+      "dimensions": [
+        { "label": "Medida 1", "size": "1.40 x 1.90 x 0.40" }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Formato doble: ideal para descanso compartido",
+        "Estructura reforzada: máxima estabilidad y resistencia",
+        "Materiales pensados para uso exterior intensivo"
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Reposera%20Doble%20Lone"
+      }
+    },
+    {
       "id": "reposera-doble-capri",
       "slug": "reposera-doble-capri",
       "name": "Reposera Doble Capri",
@@ -648,6 +759,117 @@
       "cta": {
         "text": "Consultar por WhatsApp",
         "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Reposera%20Doble%20Niss"
+      }
+    },
+    {
+      "id": "banco-con-respaldo",
+      "slug": "banco-con-respaldo",
+      "name": "Banco con respaldo",
+      "collection": "lenn",
+      "category": "bancos",
+    
+      "description": "Banco de exterior con respaldo, fabricado en aluminio anodizado. Diseñado para brindar mayor comodidad en espacios de comedor, con un estilo moderno y funcional.",
+    
+      "images": {
+        "main": "assets/products/sillas/banco_con_respaldo/banco_con_respaldo1.webp",
+        "gallery": [
+          "assets/products/sillas/banco_con_respaldo/banco_con_respaldo2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para ofrecer durabilidad, confort y bajo mantenimiento en exterior.",
+    
+      "dimensions": [
+        { "label": "Medida base", "size": "0.50 x 1.00 x 0.82" }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
+        "Respaldo que mejora el confort en comidas o reuniones prolongadas.",
+        "Diseño funcional que optimiza el espacio en mesas de comedor."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Banco%20con%20respaldo"
+      }
+    },
+    {
+      "id": "banco-sin-respaldo",
+      "slug": "banco-sin-respaldo",
+      "name": "Banco sin respaldo",
+      "collection": "lenn",
+      "category": "bancos",
+    
+      "description": "Banco de exterior sin respaldo, fabricado en aluminio anodizado. Diseñado para optimizar el espacio en áreas de comedor, con un estilo moderno, práctico y versátil.",
+    
+      "images": {
+        "main": "assets/products/sillas/banco_sin_respaldo/banco_sin_respaldo3.webp",
+        "gallery": [
+          "assets/products/sillas/banco_sin_respaldo/banco_sin_respaldo2.webp",
+          "assets/products/sillas/banco_sin_respaldo/banco_sin_respaldo1.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para ofrecer durabilidad, confort y bajo mantenimiento en exterior.",
+    
+      "dimensions": [
+        { "label": "Medida base", "size": "0.50 x 1.00 x 0.45" }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
+        "Banco sin respaldo que permite mayor flexibilidad de uso y una estética más liviana.",
+        "Diseño funcional que optimiza el espacio en mesas de comedor."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Banco%20sin%20respaldo"
       }
     },
     {
