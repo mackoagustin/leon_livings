@@ -466,12 +466,13 @@ function renderCollection(container, collectionMeta, products) {
         </section>
         <section class="collection-page-intro section-products1">
             <div class="container product-container">
-                <button type="button" class="back-button" data-action="back">
-                    <svg class="back-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                    </svg>
-                    Volver
-                </button>
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <a class="breadcrumb-link" href="${INDEX_HREF}#colecciones">Colecciones</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <span class="breadcrumb-current">${escapeHtml(name)}</span>
+                </nav>
                 ${showcaseHtml}
             </div>
         </section>
@@ -487,11 +488,6 @@ function renderCollection(container, collectionMeta, products) {
         </section>`;
 
     document.title = `${name} — ${SITE_NAME}`;
-
-    container.querySelector('[data-action="back"]')?.addEventListener("click", () => {
-        if (window.history.length > 1) window.history.back();
-        else window.location.href = INDEX_HREF;
-    });
 
     container.querySelector('[data-action="open-collection-wa"]')?.addEventListener("click", () => {
         window.open(waLink, "_blank", "noopener,noreferrer");

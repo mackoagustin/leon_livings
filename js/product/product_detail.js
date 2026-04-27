@@ -33,6 +33,29 @@ function collectionLabel(collection) {
     return `Colección ${c.charAt(0).toUpperCase()}${c.slice(1)}`;
 }
 
+const CATEGORY_LABELS = {
+    sillas: "Sillas",
+    barras: "Barras",
+    mesas: "Mesas",
+    "mesas-de-comedor": "Mesas",
+    "mesas-ratonas": "Mesas",
+    reposeras: "Reposeras",
+    "reposeras-dobles": "Reposeras",
+    pergolas: "Pérgolas",
+    livings: "Livings",
+    sillones: "Livings",
+    camastros: "Camastros",
+    bancos: "Bancos",
+    banquetas: "Banquetas",
+};
+
+function categoryFromProduct(product) {
+    const raw = String(product?.category || "").trim().toLowerCase();
+    const label = CATEGORY_LABELS[raw];
+    if (label) return { slug: raw === "sillones" ? "livings" : raw === "mesas-ratonas" ? "mesas" : raw === "mesas-de-comedor" ? "mesas" : raw === "reposeras-dobles" ? "reposeras" : raw, label };
+    return { slug: "categorias", label: "Categorías" };
+}
+
 function titleWithBreaks(name) {
     const parts = String(name).trim().split(/\s+/);
     if (parts.length <= 1) return escapeHtml(name);
@@ -333,6 +356,7 @@ function renderProduct(container, product) {
         .join("");
 
     const ctaUrl = product.cta?.link || "https://wa.me/1234567890";
+    const category = categoryFromProduct(product);
     const ctaNote =
         product.customization?.customSize === true
             ? "Personalización disponible"
@@ -341,12 +365,15 @@ function renderProduct(container, product) {
     container.innerHTML = `
         <section class="product-hero" >
             <div class="product-container" >
-                <button type="button" class="back-button" data-action="back">
-                    <svg class="back-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                    </svg>
-                    Volver
-                </button>
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <a class="breadcrumb-link" href="${INDEX_HREF}#categorias">Categorías</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <a class="breadcrumb-link" href="category-page.html#${escapeHtml(category.slug)}">${escapeHtml(category.label)}</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <span class="breadcrumb-current">${escapeHtml(product.name)}</span>
+                </nav>
 
                 <div class="product-grid">
                     <div class="product-gallery">
@@ -415,10 +442,6 @@ function renderProduct(container, product) {
     document.title = `${product.name} — ${SITE_NAME}`;
 
     bindGallery(container, images);
-
-    container.querySelectorAll("[data-action='back']").forEach((btn) => {
-        btn.addEventListener("click", goBack);
-    });
 
     container.querySelectorAll("[data-open-cta]").forEach((btn) => {
         btn.addEventListener("click", () => {

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirigiendo a category page...</title>
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const slug = (params.get("slug") || "").trim().toLowerCase();
+            const target = slug ? `category-page.html#${encodeURIComponent(slug)}` : "category-page.html";
+            window.location.replace(target);
+        })();
+    </script>
+</head>
+<body></body>
+</html>
