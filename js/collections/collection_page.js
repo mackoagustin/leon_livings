@@ -34,6 +34,23 @@ function getCollectionSlug() {
     return q ? decodeURIComponent(q).trim() : null;
 }
 
+function bindCollectionCards(container) {
+    const cards = container.querySelectorAll(".collection-card[data-href]");
+    cards.forEach((card) => {
+        const href = card.getAttribute("data-href");
+        const go = () => {
+            if (href) window.location.href = href;
+        };
+        card.addEventListener("click", go);
+        card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                go();
+            }
+        });
+    });
+}
+
 function getCollectionsArray(data) {
     if (!data || typeof data !== "object") return [];
     if (Array.isArray(data.collections)) return data.collections;
@@ -106,6 +123,48 @@ function renderNotFound(container, slug) {
         if (window.history.length > 1) window.history.back();
         else window.location.href = INDEX_HREF;
     });
+}
+
+function renderAllCollections(container, collections) {
+    const cardsHtml = collections
+        .map((c) => {
+            const slug = c.slug || c.id;
+            const name = c.name || slug;
+            const href = `coleccion.html?slug=${encodeURIComponent(slug)}`;
+            const imgSrc = escapeHtml(
+                normalizeAssetPath(c.thumbnail || c.heroImage || "")
+            );
+            const alt = escapeHtml(c.alt || `Colección ${name}`);
+
+            return `
+                <div class="collection-card" role="link" tabindex="0" data-href="${escapeHtml(href)}">
+                    ${imgSrc ? `<img src="${imgSrc}" alt="${alt}">` : ""}
+                    <div class="collection-overlay"></div>
+                    <div class="collection-content">
+                        <h3 class="collection-name">${escapeHtml(name)}</h3>
+                        <p class="collection-link">Ver colección →</p>
+                    </div>
+                </div>`;
+        })
+        .join("");
+
+    container.innerHTML = `
+        <section class="section-collections collection-page-products">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Todas las colecciones</h1>
+                    <p class="section-subtitle">Explorá nuestras líneas de diseño</p>
+                </div>
+                <div class="collections-container" data-collections-grid>
+                    ${cardsHtml}
+                </div>
+            </div>
+        </section>
+    `;
+
+    document.title = `Colecciones — ${SITE_NAME}`;
+    const grid = container.querySelector("[data-collections-grid]");
+    if (grid) bindCollectionCards(grid);
 }
 
 const COLLECTION_SPEC_LABELS = [
@@ -454,10 +513,6 @@ async function loadCollectionPage() {
     }
 
     const slug = getCollectionSlug();
-    if (!slug) {
-        renderNotFound(container, null);
-        return;
-    }
 
     try {
         const [resProducts, resCols] = await Promise.all([
@@ -470,6 +525,10 @@ async function loadCollectionPage() {
         const productData = await resProducts.json();
         const colData = await resCols.json();
         const collections = getCollectionsArray(colData);
+        if (!slug) {
+            renderAllCollections(container, collections);
+            return;
+        }
         const collectionMeta = collections.find((c) => (c.slug || c.id) === slug);
 
         if (!collectionMeta) {
