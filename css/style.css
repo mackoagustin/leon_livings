@@ -976,6 +976,16 @@ body.header-dark-text .header .nav-toggle:focus-visible {
     max-width: var(--content-wide);
 }
 
+.categories-featured {
+    display: flex;
+    gap: var(--space-6);
+}
+
+.categories-featured .category-card {
+    flex: 1;
+    min-height: 478px;
+}
+
 .about-content {
     display: flex;
     align-items: center;
@@ -1256,6 +1266,14 @@ body.header-dark-text .header .nav-toggle:focus-visible {
     .categories-left,
     .categories-right {
         width: 100%;
+    }
+
+    .categories-featured {
+        flex-direction: column;
+    }
+
+    .categories-featured .category-card {
+        min-height: 280px;
     }
 
     .about-content {
