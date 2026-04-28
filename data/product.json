@@ -929,7 +929,1022 @@
         "text": "Consultar por WhatsApp",
         "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20la%20Silla%20de%20Aluminio"
       }
+    },
+    {
+      "id": "sillon-luit-1c",
+      "slug": "sillon-luit-1-cuerpo",
+      "name": "Sillón de un cuerpo",
+      "collection": "luit",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado, diseñado para ofrecer confort, durabilidad y una estética moderna. Ideal para espacios compactos o como complemento dentro de un set de living.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/luit/un_cuerpo/un_cuerpo2.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/luit/un_cuerpo/un_cuerpo1.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado de perfil robusto (7.5 x 2.5 cm), combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior real, con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "Estándar",
+          "size": "0.67 x 0.75 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado de perfil robusto: mayor presencia y resistencia.",
+        "Ideal para configuraciones flexibles o espacios reducidos.",
+        "Materiales pensados para exterior: durabilidad y bajo mantenimiento."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sillón%20Luit%201%20cuerpo"
+      }
+    },
+    {
+      "id": "sillon-luit-2-cuerpos",
+      "slug": "sillon-luit-2-cuerpos",
+      "name": "Sillón Luit de dos cuerpos",
+      "collection": "luit",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para ofrecer confort, durabilidad y una estética moderna. Su estructura sólida y equilibrada lo convierte en una opción versátil para distintos espacios.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/luit/dos_cuerpos/dos_cuerpos2.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/luit/dos_cuerpos/dos_cuerpos1.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado de perfil robusto (7.5 x 2.5 cm), combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior real, con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "2 cuerpos",
+          "size": "0.67 x 1.35 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado de perfil robusto: mayor solidez y presencia visual.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de dos cuerpos ideal para espacios intermedios, combinando confort y funcionalidad."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Luit%20de%20dos%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-luit-3-cuerpos",
+      "slug": "sillon-luit-3-cuerpos",
+      "name": "Sillón Luit de tres cuerpos",
+      "collection": "luit",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de tres cuerpos, diseñado para ofrecer confort, durabilidad y una estética moderna. Su estructura sólida y equilibrada lo convierte en una opción versátil para distintos espacios.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/luit/tres_cuerpos/tres_cuerpos2.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/luit/tres_cuerpos/tres_cuerpos1.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado de perfil robusto (7.5 x 2.5 cm), combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior real, con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "3 cuerpos",
+          "size": "0.67 x 1.95 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado de perfil robusto: mayor solidez y presencia visual.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de tres cuerpos ideal para espacios amplios, priorizando confort y capacidad."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Luit%20de%20tres%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-luit-4-cuerpos",
+      "slug": "sillon-luit-4-cuerpos",
+      "name": "Sillón Luit de cuatro cuerpos",
+      "collection": "luit",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de cuatro cuerpos, diseñado para ofrecer máximo confort, durabilidad y una estética moderna. Su estructura sólida y equilibrada lo convierte en una pieza protagonista para espacios amplios.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/luit/cuatro_cuerpos/cuatro_cuerpos2.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/luit/cuatro_cuerpos/cuatro_cuerpos1.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado de perfil robusto (7.5 x 2.5 cm), combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior real, con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "4 cuerpos",
+          "size": "0.67 x 2.55 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Estructura de aluminio anodizado de perfil robusto: máxima solidez y presencia visual.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de cuatro cuerpos ideal para espacios grandes, ofreciendo máxima capacidad y confort."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Luit%20de%20cuatro%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-niss-1-cuerpo",
+      "slug": "sillon-niss-1-cuerpo",
+      "name": "Sillón Niss de un cuerpo",
+      "collection": "niss",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para destacar por su estética y confort. Sus laterales tipo enrejado aportan identidad, sofisticación y una presencia única.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/niss/un_cuerpo/un_cuerpo1.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/niss/un_cuerpo/un_cuerpo2.webp", 
+          "assets/products/sillones/clasicos/niss/un_cuerpo/un_cuerpo3.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado con laterales compuestos por perfiles dispuestos de forma continua, generando un efecto tipo enrejado. Combinado con Tela Lino Outdoor y espuma de alta densidad, ofrece alta resistencia, durabilidad y confort para uso exterior.",
+    
+      "dimensions": [
+        {
+          "label": "2 cuerpos",
+          "size": "0.82 x 1.65 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Laterales con diseño tipo enrejado: estética única y sofisticada.",
+        "Mayor profundidad y amplitud: experiencia de uso más cómoda y envolvente.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Niss%20de%20dos%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-niss-2-cuerpos",
+      "slug": "sillon-niss-2-cuerpos",
+      "name": "Sillón Niss de dos cuerpos",
+      "collection": "niss",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para destacar por su estética y confort. Sus laterales tipo enrejado aportan identidad, sofisticación y una presencia única.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/niss/dos_cuerpos/dos_cuerpos3.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/niss/dos_cuerpos/dos_cuerpos1.webp",
+          "assets/products/sillones/clasicos/niss/dos_cuerpos/dos_cuerpos2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado con laterales compuestos por perfiles dispuestos de forma continua, generando un efecto tipo enrejado. Combinado con Tela Lino Outdoor y espuma de alta densidad, ofrece alta resistencia, durabilidad y confort para uso exterior.",
+    
+      "dimensions": [
+        {
+          "label": "2 cuerpos",
+          "size": "0.82 x 1.65 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Laterales con diseño tipo enrejado: estética única y sofisticada.",
+        "Mayor profundidad y amplitud: experiencia de uso más cómoda y envolvente.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Niss%20de%20dos%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-niss-3-cuerpos",
+      "slug": "sillon-niss-3-cuerpos",
+      "name": "Sillón Niss de tres cuerpos",
+      "collection": "niss",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de tres cuerpos, diseñado para destacar por su estética y confort. Sus laterales tipo enrejado aportan identidad, sofisticación y una presencia única.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/niss/tres_cuerpos/tres_cuerpos3.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/niss/tres_cuerpos/tres_cuerpos1.webp",
+          "assets/products/sillones/clasicos/niss/tres_cuerpos/tres_cuerpos2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado con laterales compuestos por perfiles dispuestos de forma continua, generando un efecto tipo enrejado. Combinado con Tela Lino Outdoor y espuma de alta densidad, ofrece alta resistencia, durabilidad y confort para uso exterior.",
+    
+      "dimensions": [
+        {
+          "label": "3 cuerpos",
+          "size": "0.82 x 2.40 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Laterales con diseño tipo enrejado: estética única y sofisticada.",
+        "Mayor profundidad y amplitud: experiencia de uso más cómoda y envolvente.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Niss%20de%20tres%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-oasis-1-cuerpo",
+      "slug": "sillon-oasis-1-cuerpo",
+      "name": "Sillón Oasis de un cuerpo",
+      "collection": "oasis",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para ofrecer confort, durabilidad y una estética moderna con una impronta liviana y sofisticada.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/oasis/un_cuerpo/un_cuerpo4.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/oasis/un_cuerpo/un_cuerpo1.webp",
+          "assets/products/sillones/clasicos/oasis/un_cuerpo/un_cuerpo3.webp",
+          "assets/products/sillones/clasicos/oasis/un_cuerpo/un_cuerpo2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado con perfil estilizado (5 x 2.5 cm), combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "2 cuerpos",
+          "size": "0.67 x 1.35 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Perfil de aluminio más estilizado: estética liviana sin perder resistencia.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de dos cuerpos ideal para espacios equilibrados y funcionales."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Oasis%20de%20dos%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-oasis-2-cuerpos",
+      "slug": "sillon-oasis-2-cuerpos",
+      "name": "Sillón Oasis de dos cuerpos",
+      "collection": "oasis",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para ofrecer confort, durabilidad y una estética moderna con una impronta liviana y sofisticada.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/oasis/dos_cuerpos/dos_cuerpos4.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/oasis/dos_cuerpos/dos_cuerpos1.webp",
+          "assets/products/sillones/clasicos/oasis/dos_cuerpos/dos_cuerpos3.webp",
+          "assets/products/sillones/clasicos/oasis/dos_cuerpos/dos_cuerpos2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado con perfil estilizado (5 x 2.5 cm), combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "2 cuerpos",
+          "size": "0.67 x 1.35 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Perfil de aluminio más estilizado: estética liviana sin perder resistencia.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de dos cuerpos ideal para espacios equilibrados y funcionales."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Oasis%20de%20dos%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-oasis-3-cuerpos",
+      "slug": "sillon-oasis-3-cuerpos",
+      "name": "Sillón Oasis de tres cuerpos",
+      "collection": "oasis",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de tres cuerpos, diseñado para ofrecer confort, durabilidad y una estética moderna con una impronta liviana y sofisticada.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/oasis/tres_cuerpos/tres_cuerpos4.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/oasis/tres_cuerpos/tres_cuerpos1.webp",
+          "assets/products/sillones/clasicos/oasis/tres_cuerpos/tres_cuerpos3.webp",
+          "assets/products/sillones/clasicos/oasis/tres_cuerpos/tres_cuerpos2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado con perfil estilizado (5 x 2.5 cm), combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "3 cuerpos",
+          "size": "0.67 x 1.95 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Perfil de aluminio más estilizado: estética liviana sin perder resistencia.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de tres cuerpos ideal para espacios amplios, manteniendo ligereza visual."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Oasis%20de%20tres%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-oasis-4-cuerpos",
+      "slug": "sillon-oasis-4-cuerpos",
+      "name": "Sillón Oasis de cuatro cuerpos",
+      "collection": "oasis",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de cuatro cuerpos, diseñado para ofrecer máximo confort, durabilidad y una estética moderna con una impronta liviana y sofisticada. Ideal para espacios amplios.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/oasis/cuatro_cuerpos/cuatro_cuerpos4.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/oasis/cuatro_cuerpos/cuatro_cuerpos1.webp",
+          "assets/products/sillones/clasicos/oasis/cuatro_cuerpos/cuatro_cuerpos3.webp",
+          "assets/products/sillones/clasicos/oasis/cuatro_cuerpos/cuatro_cuerpos2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado con perfil estilizado (5 x 2.5 cm), combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "4 cuerpos",
+          "size": "0.67 x 2.55 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Perfil de aluminio más estilizado: estética liviana sin perder resistencia.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de cuatro cuerpos ideal para espacios grandes, combinando amplitud y ligereza visual."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Oasis%20de%20cuatro%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-terra-1-cuerpo",
+      "slug": "sillon-terra-1-cuerpo",
+      "name": "Sillón Terra de un cuerpo",
+      "collection": "terra",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para ofrecer confort, amplitud y una estética moderna limpia y equilibrada.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo3.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo1.webp",
+          "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "2 cuerpos",
+          "size": "0.82 x 1.65 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Diseño limpio y equilibrado: estética moderna sin elementos visuales innecesarios.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de dos cuerpos ideal para espacios funcionales y versátiles."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Terra%20de%20dos%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-terra-2-cuerpos",
+      "slug": "sillon-terra-2-cuerpos",
+      "name": "Sillón Terra de dos cuerpos",
+      "collection": "terra",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para ofrecer confort, amplitud y una estética moderna limpia y equilibrada.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/tera/dos_cuerpos/dos_cuerpo3.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/tera/dos_cuerpos/dos_cuerpo1.webp",
+          "assets/products/sillones/clasicos/tera/dos_cuerpos/dos_cuerpo2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "2 cuerpos",
+          "size": "0.82 x 1.65 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Diseño limpio y equilibrado: estética moderna sin elementos visuales innecesarios.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de dos cuerpos ideal para espacios funcionales y versátiles."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Terra%20de%20dos%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-terra-3-cuerpos",
+      "slug": "sillon-terra-3-cuerpos",
+      "name": "Sillón Terra de tres cuerpos",
+      "collection": "terra",
+      "category": "sillones",
+    
+      "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para ofrecer confort, amplitud y una estética moderna limpia y equilibrada.",
+    
+      "images": {
+        "main": "assets/products/sillones/clasicos/tera/tres_cuerpos/tres_cuerpo1.webp",
+        "gallery": [
+          "assets/products/sillones/clasicos/tera/tres_cuerpos/tres_cuerpo2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Perfil 7.5 x 2.5 cm, disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Resistente para uso exterior en todos los colores disponibles"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Mayor confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para uso exterior con alta resistencia, durabilidad y bajo mantenimiento.",
+    
+      "dimensions": [
+        {
+          "label": "2 cuerpos",
+          "size": "0.82 x 1.65 x 0.67"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Diseño limpio y equilibrado: estética moderna sin elementos visuales innecesarios.",
+        "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+        "Formato de dos cuerpos ideal para espacios funcionales y versátiles."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20Terra%20de%20dos%20cuerpos"
+      }
+    },
+    {
+      "id": "sillon-1-cuerpo-inclinado-kairo",
+      "slug": "sillon-1-cuerpo-inclinado-kairo",
+      "name": "Sillón de 1 cuerpo inclinado",
+      "collection": "kairo",
+      "category": "sillones",
+    
+      "description": "Sillón individual de exterior con respaldo inclinado, fabricado en aluminio anodizado. Diseñado para brindar una experiencia de descanso superior con un estilo moderno.",
+    
+      "images": {
+        "main": "assets/products/sillones/inclinados/un_cuerpo/un_cuerpo3.webp",
+        "gallery": [
+          "assets/products/sillones/inclinados/un_cuerpo/un_cuerpo1.webp",
+          "assets/products/sillones/inclinados/un_cuerpo/un_cuerpo2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Tela resistente para uso exterior en todos los colores"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Aporta confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para ofrecer durabilidad, confort y bajo mantenimiento en exterior.",
+    
+      "dimensions": [
+        {
+          "label": "Medida estándar",
+          "size": "0.80 x 0.70 x 0.60"
+        },
+        {
+          "label": "Medida personalizable",
+          "size": "Sí"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Respaldo inclinado que mejora la postura y el descanso.",
+        "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
+        "Materiales pensados para exterior con alta durabilidad frente al sol y la intemperie."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20de%201%20cuerpo%20inclinado%20Kairo"
+      }
+    },
+    {
+      "id": "sillon-2-cuerpos-inclinado-kairo",
+      "slug": "sillon-2-cuerpos-inclinado-kairo",
+      "name": "Sillón de 2 cuerpos inclinado",
+      "collection": "kairo",
+      "category": "sillones",
+    
+      "description": "Sillón de 2 cuerpos con respaldo inclinado, fabricado en aluminio anodizado. Diseñado para ofrecer una experiencia de descanso superior en espacios exteriores compartidos.",
+    
+      "images": {
+        "main": "assets/products/sillones/inclinados/dos_cuerpos/dos_cuerpo3.webp",
+        "gallery": [
+          "assets/products/sillones/inclinados/dos_cuerpos/dos_cuerpo1.webp",
+          "assets/products/sillones/inclinados/dos_cuerpos/dos_cuerpo2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Tela resistente para uso exterior en todos los colores"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Aporta confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para brindar durabilidad, confort y bajo mantenimiento en exterior.",
+    
+      "dimensions": [
+        {
+          "label": "Medida estándar",
+          "size": "0.80 x 1.30 x 0.60"
+        },
+        {
+          "label": "Medida personalizable",
+          "size": "Sí"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Respaldo inclinado que mejora la postura y el confort en uso compartido.",
+        "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
+        "Materiales pensados para exterior con alta durabilidad frente al sol y la intemperie."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20de%202%20cuerpos%20inclinado%20Kairo"
+      }
+    },
+    {
+      "id": "sillon-3-cuerpos-inclinado-kairo",
+      "slug": "sillon-3-cuerpos-inclinado-kairo",
+      "name": "Sillón de 3 cuerpos inclinado",
+      "collection": "kairo",
+      "category": "sillones",
+    
+      "description": "Sillón de 3 cuerpos con respaldo inclinado, fabricado en aluminio anodizado. Diseñado para ofrecer una experiencia de descanso superior en espacios exteriores amplios y compartidos.",
+    
+      "images": {
+        "main": "assets/products/sillones/inclinados/tres_cuerpos/tres_cuerpo3.webp",
+        "gallery": [
+          "assets/products/sillones/inclinados/tres_cuerpos/tres_cuerpo1.webp",
+          "assets/products/sillones/inclinados/tres_cuerpos/tres_cuerpo2.webp"
+        ],
+        "lifestyle": ""
+      },
+    
+      "materials": [
+        {
+          "name": "Aluminio anodizado",
+          "description": "Disponible en gris, simil madera, negro y blanco"
+        },
+        {
+          "name": "Tela Lino Outdoor",
+          "description": "Tela resistente para uso exterior en todos los colores"
+        },
+        {
+          "name": "Espuma de alta densidad",
+          "description": "Aporta confort y durabilidad"
+        }
+      ],
+    
+      "materialDescription": "Estructura de aluminio anodizado resistente a la intemperie, combinada con Tela Lino Outdoor y espuma de alta densidad, pensada para brindar durabilidad, confort y bajo mantenimiento en exterior.",
+    
+      "dimensions": [
+        {
+          "label": "Medida estándar",
+          "size": "0.80 x 1.90 x 0.60"
+        },
+        {
+          "label": "Medida personalizable",
+          "size": "Sí"
+        }
+      ],
+    
+      "customization": {
+        "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+        "fabrics": ["lino-outdoor"],
+        "customSize": true
+      },
+    
+      "features": [
+        "Respaldo inclinado que mejora la postura y el confort en uso compartido.",
+        "Estructura de aluminio anodizado: resistente, liviana y sin mantenimiento.",
+        "Materiales pensados para exterior con alta durabilidad frente al sol y la intemperie."
+      ],
+    
+      "cta": {
+        "text": "Consultar por WhatsApp",
+        "link": "https://wa.me/1234567890?text=Hola%20quiero%20consultar%20por%20el%20Sill%C3%B3n%20de%203%20cuerpos%20inclinado%20Kairo"
+      }
     }
+    
 
 
   ]

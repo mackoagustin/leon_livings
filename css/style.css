@@ -743,7 +743,11 @@ body.header-dark-text .header .nav-toggle:focus-visible {
 }
 
 .product-image {
-    aspect-ratio: 440.595 / 550.744;
+    width: 100%;
+    height: clamp(260px, 40vw, 500px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--color-surface-muted);
     margin-bottom: var(--space-6);
     overflow: hidden;
@@ -755,6 +759,10 @@ body.header-dark-text .header .nav-toggle:focus-visible {
     height: 100%;
     object-fit: cover;
     transition: transform var(--duration-image) var(--ease-out-soft);
+}
+
+.product-image--contain img {
+    object-fit: contain;
 }
 
 .product-card:hover .product-image img {
