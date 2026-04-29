@@ -43,7 +43,7 @@ const CATEGORY_LABELS = {
     "reposeras-dobles": "Reposeras",
     pergolas: "Pérgolas",
     livings: "Livings",
-    sillones: "Livings",
+    sillones: "Sillones",
     camastros: "Camastros",
     bancos: "Bancos",
     banquetas: "Banquetas",
@@ -52,7 +52,7 @@ const CATEGORY_LABELS = {
 function categoryFromProduct(product) {
     const raw = String(product?.category || "").trim().toLowerCase();
     const label = CATEGORY_LABELS[raw];
-    if (label) return { slug: raw === "sillones" ? "livings" : raw === "mesas-ratonas" ? "mesas" : raw === "mesas-de-comedor" ? "mesas" : raw === "reposeras-dobles" ? "reposeras" : raw, label };
+    if (label) return { slug: raw === "mesas-ratonas" ? "mesas" : raw === "mesas-de-comedor" ? "mesas" : raw === "reposeras-dobles" ? "reposeras" : raw, label };
     return { slug: "categorias", label: "Categorías" };
 }
 
@@ -368,9 +368,9 @@ function renderProduct(container, product) {
                 <nav class="breadcrumb-nav" aria-label="Breadcrumb">
                     <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
-                    <a class="breadcrumb-link" href="${INDEX_HREF}#categorias">Categorías</a>
+                    <a class="breadcrumb-link" href="categoria.html">Categorías</a>
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
-                    <a class="breadcrumb-link" href="category-page.html#${escapeHtml(category.slug)}">${escapeHtml(category.label)}</a>
+                    <a class="breadcrumb-link" href="categoria.html?slug=${escapeHtml(category.slug)}">${escapeHtml(category.label)}</a>
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
                     <span class="breadcrumb-current">${escapeHtml(product.name)}</span>
                 </nav>

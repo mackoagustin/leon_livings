@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Leon Livings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="contact-page header-dark-text">
+    <header id="site-header"></header>
+
+    <main class="contact-main">
+        <section class="section-products contact-hero">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Contacto</h1>
+                    <p class="section-subtitle">Estamos para ayudarte a crear tu espacio ideal</p>
+                </div>
+
+                <div class="contact-layout">
+                    <div class="contact-image-card" aria-hidden="true">
+                        <img src="assets/collections/luit/collection_luit2.webp" alt="">
+                    </div>
+
+                    <section class="contact-card">
+                        <h2 class="contact-card__title">Enviar consulta</h2>
+                        <form action="https://formspree.io/f/xqkvanpd" method="post" id="contacto" class="contact-form">
+                            <div class="contact-form__grid">
+                                <label class="contact-field">
+                                    <span>Nombre</span>
+                                    <input type="text" name="nombre" required>
+                                </label>
+                                <label class="contact-field">
+                                    <span>Apellido</span>
+                                    <input type="text" name="apellido" required>
+                                </label>
+                                <label class="contact-field">
+                                    <span>Email</span>
+                                    <input type="email" name="email" required>
+                                </label>
+                                <label class="contact-field">
+                                    <span>Teléfono</span>
+                                    <input type="tel" name="telefono" required>
+                                </label>
+                                <label class="contact-field contact-field--full">
+                                    <span>Mensaje</span>
+                                    <textarea name="mensaje" rows="5" required></textarea>
+                                </label>
+                            </div>
+                            
+                           
+                        </form>
+                        <button type="submit" class="btn-primary">Enviar consulta</button>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section-products contact-info-section">
+            <div class="container">
+                <div class="contact-quick-info" aria-label="Datos de contacto">
+                    
+                    <article class="contact-quick-item">
+                        <span class="contact-quick-icon" aria-hidden="true">
+                            <i class="fa-solid fa-phone"></i>
+                        </span>
+                        <div>
+                            <p class="contact-quick-label">Teléfono</p>
+                            <p class="contact-quick-subtitle">Atención de lunes a viernes, 9 a 18 hs.</p>
+                            <a href="tel:+5491136420547" class="contact-quick-value">11 3642 0547</a>
+                        </div>
+                    </article>
+        
+                    <article class="contact-quick-item">
+                        <span class="contact-quick-icon" aria-hidden="true">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <div>
+                            <p class="contact-quick-label">Email</p>
+                            <p class="contact-quick-subtitle">Escribinos por presupuestos o consultas.</p>
+                            <a href="mailto:leonlivings@gmail.com" class="contact-quick-value">leonlivings@gmail.com</a>
+                        </div>
+                    </article>
+        
+                    <article class="contact-quick-item">
+                        <span class="contact-quick-icon" aria-hidden="true">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                        <div>
+                            <p class="contact-quick-label">Dirección</p>
+                            <p class="contact-quick-subtitle">Visitanos en nuestro showroom.</p>
+                            <p class="contact-quick-value">Nuestra Señora de la Merced 3933, Caseros</p>
+                        </div>
+                    </article>
+        
+                </div>
+            </div>
+        </section>
+        <section class="section-collections contact-map-section">
+            <div class="container">
+          
+                <div class="contact-map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.708613495421!2d-58.55456652358999!3d-34.611529072951626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7f678eafe95%3A0x8351935451c13e34!2sNtra%20Sra%20de%20la%20Merced%203933%2C%20B1678AOY%20Caseros%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1777476996593!5m2!1ses!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Leon Livings"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer"></footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/layout.js" defer></script>
+</body>
+</html>

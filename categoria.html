@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirigiendo a category page...</title>
-    <script>
-        (function () {
-            const params = new URLSearchParams(window.location.search);
-            const slug = (params.get("slug") || "").trim().toLowerCase();
-            const target = slug ? `category-page.html#${encodeURIComponent(slug)}` : "category-page.html";
-            window.location.replace(target);
-        })();
-    </script>
+    <title>Categorías — Leon Living</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body></body>
+<body class="category-page-body header-dark-text">
+    <header id="site-header"></header>
+
+    <main data-component="category-page" aria-live="polite"></main>
+    <footer id="site-footer"></footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/layout.js" defer></script>
+    <script src="js/categories/category_page.js" defer></script>
+</body>
 </html>

@@ -12,8 +12,24 @@ async function loadComponent(id, url) {
     }
 }
 
+function ensureFontAwesome() {
+    const alreadyLoaded = document.querySelector('link[data-icon-library="font-awesome"]');
+    if (alreadyLoaded) return;
+
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href =
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css";
+    link.crossOrigin = "anonymous";
+    link.referrerPolicy = "no-referrer";
+    link.setAttribute("data-icon-library", "font-awesome");
+    document.head.appendChild(link);
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
+    ensureFontAwesome();
     await loadComponent("site-header", "partials/header.html");
+    await loadComponent("site-footer", "partials/footer.html");
 
     if (typeof window.initLeonNav === "function") {
         window.initLeonNav();

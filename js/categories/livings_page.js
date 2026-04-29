@@ -94,7 +94,7 @@ function renderLivingsPage(container, products) {
 
     container.querySelector('[data-action="back"]')?.addEventListener("click", () => {
         if (window.history.length > 1) window.history.back();
-        else window.location.href = `${INDEX_HREF}#categorias`;
+        else window.location.href = "categoria.html";
     });
 
     const grid = container.querySelector("[data-livings-products]");
@@ -122,7 +122,7 @@ async function loadLivingsPage() {
                 <div class="container product-container">
                     <p class="product-description">No pudimos cargar la sección Livings. Intentá de nuevo más tarde.</p>
                     <p class="product-description" style="margin-top:1rem;">
-                        <a href="${INDEX_HREF}#categorias">Volver al inicio</a>
+                        <a href="categoria.html">Volver a categorías</a>
                     </p>
                 </div>
             </section>

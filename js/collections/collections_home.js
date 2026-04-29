@@ -1,4 +1,5 @@
 const COLECCIONES_DATA_URL = "data/colecciones.json";
+const HOME_COLLECTIONS_ORDER = ["luit", "oasis", "capri", "lenn"];
 
 function escapeHtml(str) {
     return String(str)
@@ -40,13 +41,18 @@ async function loadCollectionsHome() {
         if (!res.ok) throw new Error(`HTTP ${res.status} al cargar ${COLECCIONES_DATA_URL}`);
         const data = await res.json();
         const collections = getCollectionsArray(data);
+        const homeCollections = HOME_COLLECTIONS_ORDER
+            .map((slug) =>
+                collections.find((collection) => (collection.slug || collection.id) === slug)
+            )
+            .filter(Boolean);
 
-        if (!collections.length) {
+        if (!homeCollections.length) {
             container.innerHTML = "";
             return;
         }
 
-        container.innerHTML = collections
+        container.innerHTML = homeCollections
             .map((c) => {
                 const slug = c.slug || c.id;
                 const name = c.name || slug;

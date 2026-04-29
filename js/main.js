@@ -69,23 +69,13 @@
             }
         });
 
-        document.addEventListener(
-            "click",
-            function anchorNav(e) {
-                const a = e.target.closest('a[href^="#"]');
-                if (!a) return;
-                const id = a.getAttribute("href");
-                if (!id || id === "#") return;
-                const target = document.querySelector(id);
-                if (!target) return;
-                e.preventDefault();
-                if (document.body.classList.contains("nav-open")) {
-                    closeMenu();
-                }
-                target.scrollIntoView({ behavior: "smooth", block: "start" });
-            },
-            false
-        );
+        drawer.addEventListener("click", (e) => {
+            const link = e.target.closest("a");
+            if (!link) return;
+            if (document.body.classList.contains("nav-open")) {
+                closeMenu();
+            }
+        });
 
         window.addEventListener(
             "scroll",

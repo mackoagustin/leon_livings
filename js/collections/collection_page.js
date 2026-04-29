@@ -113,7 +113,7 @@ function renderNotFound(container, slug) {
                 </button>
                 <p class="product-description">${msg}</p>
                 <p class="product-description" style="margin-top:1rem;">
-                    <a href="${INDEX_HREF}#colecciones">Ver colecciones</a>
+                    <a href="coleccion.html">Ver colecciones</a>
                 </p>
             </div>
         </section>`;
@@ -469,7 +469,7 @@ function renderCollection(container, collectionMeta, products) {
                 <nav class="breadcrumb-nav" aria-label="Breadcrumb">
                     <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
-                    <a class="breadcrumb-link" href="${INDEX_HREF}#colecciones">Colecciones</a>
+                    <a class="breadcrumb-link" href="coleccion.html">Colecciones</a>
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
                     <span class="breadcrumb-current">${escapeHtml(name)}</span>
                 </nav>
@@ -543,7 +543,7 @@ async function loadCollectionPage() {
                 <div class="container product-container">
                     <p class="product-description">No pudimos cargar la colección. Intentá de nuevo más tarde.</p>
                     <p class="product-description" style="margin-top:1rem;">
-                        <a href="${INDEX_HREF}#colecciones">Volver al inicio</a>
+                        <a href="coleccion.html">Volver a colecciones</a>
                     </p>
                 </div>
             </section>`;

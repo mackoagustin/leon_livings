@@ -1,6 +1,15 @@
 const PRODUCT_DATA_URL = "data/product.json";
 const INDEX_HREF = "./index.html";
 const SITE_NAME = "Leon Living";
+const CATEGORY_OVERVIEW = [
+    { slug: "sillas", title: "Sillas", image: "assets/products/sillas/silla_de_aluminio/silla1.webp" },
+    { slug: "barras", title: "Barras", image: "assets/products/barras/barra2.webp" },
+    { slug: "mesas", title: "Mesas", image: "assets/products/mesa_comedor/mesa_comedor1.webp" },
+    { slug: "reposeras", title: "Reposeras", image: "assets/products/reposeras/reposera_capri/reposera_capri2.webp" },
+    { slug: "pergolas", title: "Pérgolas", image: "assets/products/pergolas/pergola1.webp" },
+    { slug: "livings", title: "Livings", image: "assets/products/mesas_ratonas/mesa_ratona1.webp" },
+    { slug: "sillones", title: "Sillones", image: "assets/products/sillones/clasicos/luit/dos_cuerpos/dos_cuerpos1.webp" },
+];
 
 const CATEGORY_CONFIG = {
     sillas: {
@@ -26,6 +35,10 @@ const CATEGORY_CONFIG = {
     livings: {
         title: "Livings",
         includes: ["sillones", "mesas-ratonas"],
+    },
+    sillones: {
+        title: "Sillones",
+        includes: ["sillones"],
     },
 };
 
@@ -93,7 +106,7 @@ function renderInvalidCategory(container) {
                 </button>
                 <p class="product-description">No encontramos la categoría solicitada.</p>
                 <p class="product-description" style="margin-top:1rem;">
-                    <a href="${INDEX_HREF}#categorias">Ver categorías</a>
+                    <a href="categoria.html">Ver categorías</a>
                 </p>
             </div>
         </section>
@@ -127,7 +140,7 @@ function renderCategoryPage(container, config, products) {
                 <nav class="breadcrumb-nav" aria-label="Breadcrumb">
                     <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
-                    <a class="breadcrumb-link" href="${INDEX_HREF}#categorias">Categorías</a>
+                    <a class="breadcrumb-link" href="categoria.html">Categorías</a>
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
                     <span class="breadcrumb-current">${escapeHtml(config.title)}</span>
                 </nav>
@@ -152,6 +165,72 @@ function renderCategoryPage(container, config, products) {
     if (grid) bindProductGrid(grid);
 }
 
+function renderCategoriesOverview(container) {
+    const categoriesBySlug = Object.fromEntries(
+        CATEGORY_OVERVIEW.map((category) => [category.slug, category])
+    );
+    const cardMarkup = (slug, extraClass = "") => {
+        const category = categoriesBySlug[slug];
+        if (!category) return "";
+        const href = `categoria.html?slug=${encodeURIComponent(category.slug)}`;
+        const image = normalizeAssetPath(category.image);
+        return `
+            <div class="category-card ${extraClass}" role="link" tabindex="0" data-href="${escapeHtml(href)}">
+                <img src="${escapeHtml(image)}" alt="${escapeHtml(category.title)}">
+                <div class="category-overlay"></div>
+                <div class="category-content">
+                    <h3 class="category-name">${escapeHtml(category.title)}</h3>
+                    <p class="category-link">Ver más →</p>
+                </div>
+            </div>`;
+    };
+
+    container.innerHTML = `
+        <section class="section-collections collection-page-products">
+            <div class="container">
+                <div class="section-header">
+                    <h1 class="section-title">Categorías</h1>
+                    <p class="section-subtitle">Explorá todo nuestro mobiliario</p>
+                </div>
+                <div class="categories-grid" data-categories-overview>
+                    <div class="categories-left">
+                        ${cardMarkup("sillas", "category-tall")}
+                        ${cardMarkup("barras", "category-medium")}
+                    </div>
+                    <div class="categories-right">
+                        ${cardMarkup("mesas", "category-medium")}
+                        <div class="categories-bottom">
+                            ${cardMarkup("reposeras", "category-small")}
+                            ${cardMarkup("pergolas", "category-small")}
+                        </div>
+                    </div>
+                </div>
+                <div class="categories-featured">
+                    ${cardMarkup("livings", "category-medium")}
+                    ${cardMarkup("sillones", "category-medium")}
+                </div>
+            </div>
+        </section>
+    `;
+
+    document.title = `Categorías — ${SITE_NAME}`;
+
+    const cards = container.querySelectorAll(".collection-card[data-href]");
+    cards.forEach((card) => {
+        const href = card.getAttribute("data-href");
+        const go = () => {
+            if (href) window.location.href = href;
+        };
+        card.addEventListener("click", go);
+        card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                go();
+            }
+        });
+    });
+}
+
 async function loadCategoryPage() {
     const container = document.querySelector('[data-component="category-page"]');
     if (!container) {
@@ -160,12 +239,17 @@ async function loadCategoryPage() {
     }
 
     const slug = getCategorySlug();
-    const config = slug ? CATEGORY_CONFIG[slug] : null;
+    if (!slug) {
+        renderCategoriesOverview(container);
+        return;
+    }
+
+    const config = CATEGORY_CONFIG[slug];
     if (!config) {
         renderInvalidCategory(container);
         container.querySelector('[data-action="back"]')?.addEventListener("click", () => {
             if (window.history.length > 1) window.history.back();
-            else window.location.href = `${INDEX_HREF}#categorias`;
+            else window.location.href = "categoria.html";
         });
         return;
     }
@@ -184,7 +268,7 @@ async function loadCategoryPage() {
                 <div class="container product-container">
                     <p class="product-description">No pudimos cargar la categoría. Intentá de nuevo más tarde.</p>
                     <p class="product-description" style="margin-top:1rem;">
-                        <a href="${INDEX_HREF}#categorias">Volver al inicio</a>
+                        <a href="categoria.html">Volver a categorías</a>
                     </p>
                 </div>
             </section>
