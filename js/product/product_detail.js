@@ -49,11 +49,72 @@ const CATEGORY_LABELS = {
     banquetas: "Banquetas",
 };
 
+const COLOR_LIBRARY = [
+    { key: "crudo", label: "Crudo", src: "assets/colores/crudo.jpg" },
+    { key: "piedra", label: "Piedra", src: "assets/colores/piedra.jpg" },
+    { key: "gamo", label: "Gamo", src: "assets/colores/gamo.jpg" },
+    { key: "grisclaro", label: "Gris claro", src: "assets/colores/gris_claro.jpg" },
+    { key: "negro", label: "Negro", src: "assets/colores/negro.jpg" },
+    { key: "gristopo", label: "Gris topo", src: "assets/colores/gris_topo.jpg" },
+    { key: "arena", label: "Arena", src: "assets/colores/arena.jpg" },
+    { key: "azul", label: "Azul", src: "assets/colores/azul.jpg" },
+    { key: "verdeoasis", label: "Verde oasis", src: "assets/colores/verde_oasis.jpg" },
+    { key: "tostado", label: "Tostado", src: "assets/colores/tostado.jpg" },
+    { key: "grismedio", label: "Gris medio", src: "assets/colores/gris_medio.jpg" },
+];
+
+const COLOR_ALIASES = {
+    gris: "grismedio",
+    "gris-medio": "grismedio",
+    "gris-claro": "grisclaro",
+    "gris-topo": "gristopo",
+    "simil-madera": "tostado",
+    similmadera: "tostado",
+    madera: "tostado",
+    blanco: "crudo",
+    white: "crudo",
+    verde: "verdeoasis",
+};
+
 function categoryFromProduct(product) {
     const raw = String(product?.category || "").trim().toLowerCase();
     const label = CATEGORY_LABELS[raw];
     if (label) return { slug: raw === "mesas-ratonas" ? "mesas" : raw === "mesas-de-comedor" ? "mesas" : raw === "reposeras-dobles" ? "reposeras" : raw, label };
     return { slug: "categorias", label: "Categorías" };
+}
+
+function normalizeKey(input) {
+    return String(input || "")
+        .trim()
+        .toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]+/g, "");
+}
+
+function resolveColorItem(colorName) {
+    const baseKey = normalizeKey(colorName);
+    const aliasKey = COLOR_ALIASES[baseKey] || baseKey;
+    const found = COLOR_LIBRARY.find((item) => item.key === aliasKey);
+    if (found) return found;
+    return null;
+}
+
+function resolveColorSwatches(product) {
+    const custom = product?.customization;
+    const listed = Array.isArray(custom?.structureColors) ? custom.structureColors : [];
+    const seen = new Set();
+    const swatches = [];
+
+    listed.forEach((name) => {
+        const colorItem = resolveColorItem(name);
+        if (!colorItem) return;
+        if (seen.has(colorItem.key)) return;
+        seen.add(colorItem.key);
+        swatches.push(colorItem);
+    });
+
+    return swatches;
 }
 
 function titleWithBreaks(name) {
@@ -109,6 +170,105 @@ function finishesSummary(product) {
         bits.push(`Tela techo: ${c.roofFabric.join(", ")}`);
     }
     return bits.length ? bits.join(" · ") : "Consultar opciones";
+}
+
+function finishesExtraSummary(product) {
+    const c = product.customization;
+    if (!c || typeof c !== "object") return "";
+    const bits = [];
+    if (Array.isArray(c.fabrics) && c.fabrics.length) {
+        bits.push(`Telas: ${c.fabrics.join(", ")}`);
+    }
+    if (Array.isArray(c.topOptions) && c.topOptions.length) {
+        bits.push(`Tapas: ${c.topOptions.join(", ")}`);
+    }
+    if (Array.isArray(c.roofOptions) && c.roofOptions.length) {
+        bits.push(`Techo: ${c.roofOptions.join(", ")}`);
+    }
+    if (Array.isArray(c.roofFabric) && c.roofFabric.length) {
+        bits.push(`Tela techo: ${c.roofFabric.join(", ")}`);
+    }
+    return bits.join(" · ");
+}
+
+function renderFinishesValue(product) {
+    const swatches = resolveColorSwatches(product);
+    const extra = finishesExtraSummary(product);
+
+    if (!swatches.length) {
+        return `<p class="detail-value">${escapeHtml(finishesSummary(product))}</p>`;
+    }
+
+    const swatchesHtml = swatches
+        .map(
+            (swatch) => `
+        <button
+            type="button"
+            class="color-swatch"
+            data-color-src="${escapeHtml(swatch.src)}"
+            data-color-label="${escapeHtml(swatch.label)}"
+            aria-label="Ver color ${escapeHtml(swatch.label)} en grande"
+            title="${escapeHtml(swatch.label)}"
+        >
+            <img src="${escapeHtml(swatch.src)}" alt="${escapeHtml(swatch.label)}">
+        </button>`
+        )
+        .join("");
+
+    const extraHtml = extra
+        ? `<p class="detail-value detail-value--muted">${escapeHtml(extra)}</p>`
+        : "";
+
+    return `
+        ${extraHtml}
+        <div class="color-swatch-list" aria-label="Colores disponibles">
+            ${swatchesHtml}
+        </div>
+    `;
+}
+
+function bindColorSwatches(container) {
+    const swatches = container.querySelectorAll(".color-swatch[data-color-src]");
+    if (!swatches.length) return;
+
+    const modal = container.querySelector("[data-color-modal]");
+    const modalImage = container.querySelector("[data-color-modal-image]");
+    const modalLabel = container.querySelector("[data-color-modal-label]");
+    const closeBtn = container.querySelector("[data-color-modal-close]");
+    if (!modal || !modalImage || !modalLabel || !closeBtn) return;
+
+    const closeModal = () => {
+        modal.hidden = true;
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("nav-open");
+    };
+
+    const openModal = (src, label) => {
+        modalImage.src = src;
+        modalImage.alt = label;
+        modalLabel.textContent = label;
+        modal.hidden = false;
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("nav-open");
+    };
+
+    swatches.forEach((swatch) => {
+        swatch.addEventListener("click", () => {
+            const src = swatch.getAttribute("data-color-src");
+            const label = swatch.getAttribute("data-color-label") || "Color";
+            if (!src) return;
+            openModal(src, label);
+        });
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.hidden) closeModal();
+    });
 }
 
 function qualityBlocks(product) {
@@ -415,7 +575,7 @@ function renderProduct(container, product) {
                                 </div>
                                 <div class="detail-item">
                                     <h4 class="detail-label">Acabados disponibles</h4>
-                                    <p class="detail-value">${escapeHtml(finishesSummary(product))}</p>
+                                    ${renderFinishesValue(product)}
                                 </div>
                             </div>
                         </div>
@@ -437,6 +597,14 @@ function renderProduct(container, product) {
                 </div>
             </div>
         </section>
+
+        <div class="color-modal" data-color-modal hidden aria-hidden="true">
+            <div class="color-modal__dialog" role="dialog" aria-modal="true" aria-label="Vista ampliada de color">
+                <button type="button" class="color-modal__close" data-color-modal-close aria-label="Cerrar vista de color">×</button>
+                <img data-color-modal-image src="" alt="">
+                <p class="color-modal__label" data-color-modal-label></p>
+            </div>
+        </div>
     `;
 
     document.title = `${product.name} — ${SITE_NAME}`;
@@ -448,6 +616,8 @@ function renderProduct(container, product) {
             window.open(ctaUrl, "_blank", "noopener,noreferrer");
         });
     });
+
+    bindColorSwatches(container);
 }
 
 async function loadProductDetail() {

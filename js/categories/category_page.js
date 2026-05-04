@@ -215,7 +215,7 @@ function renderCategoriesOverview(container) {
 
     document.title = `Categorías — ${SITE_NAME}`;
 
-    const cards = container.querySelectorAll(".collection-card[data-href]");
+    const cards = container.querySelectorAll(".category-card[data-href]");
     cards.forEach((card) => {
         const href = card.getAttribute("data-href");
         const go = () => {
