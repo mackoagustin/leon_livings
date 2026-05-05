@@ -63,6 +63,12 @@ const COLOR_LIBRARY = [
     { key: "grismedio", label: "Gris medio", src: "assets/colores/gris_medio.jpg" },
 ];
 
+const ALUMINUM_LIBRARY = [
+    { key: "plata", label: "Plata", src: "assets/Aluminio/plata.webp" },
+    { key: "madera", label: "Madera", src: "assets/Aluminio/madera.webp" },
+    { key: "negro", label: "Negro", src: "assets/Aluminio/negro.webp" },
+];
+
 const COLOR_ALIASES = {
     gris: "grismedio",
     "gris-medio": "grismedio",
@@ -101,20 +107,7 @@ function resolveColorItem(colorName) {
 }
 
 function resolveColorSwatches(product) {
-    const custom = product?.customization;
-    const listed = Array.isArray(custom?.structureColors) ? custom.structureColors : [];
-    const seen = new Set();
-    const swatches = [];
-
-    listed.forEach((name) => {
-        const colorItem = resolveColorItem(name);
-        if (!colorItem) return;
-        if (seen.has(colorItem.key)) return;
-        seen.add(colorItem.key);
-        swatches.push(colorItem);
-    });
-
-    return swatches;
+    return [...COLOR_LIBRARY];
 }
 
 function titleWithBreaks(name) {
@@ -193,9 +186,10 @@ function finishesExtraSummary(product) {
 
 function renderFinishesValue(product) {
     const swatches = resolveColorSwatches(product);
+    const aluminumSwatches = [...ALUMINUM_LIBRARY];
     const extra = finishesExtraSummary(product);
 
-    if (!swatches.length) {
+    if (!swatches.length && !aluminumSwatches.length) {
         return `<p class="detail-value">${escapeHtml(finishesSummary(product))}</p>`;
     }
 
@@ -215,14 +209,35 @@ function renderFinishesValue(product) {
         )
         .join("");
 
+    const aluminumHtml = aluminumSwatches
+        .map(
+            (swatch) => `
+        <button
+            type="button"
+            class="color-swatch"
+            data-color-src="${escapeHtml(swatch.src)}"
+            data-color-label="Aluminio ${escapeHtml(swatch.label)}"
+            aria-label="Ver aluminio ${escapeHtml(swatch.label)} en grande"
+            title="Aluminio ${escapeHtml(swatch.label)}"
+        >
+            <img src="${escapeHtml(swatch.src)}" alt="Aluminio ${escapeHtml(swatch.label)}">
+        </button>`
+        )
+        .join("");
+
     const extraHtml = extra
         ? `<p class="detail-value detail-value--muted">${escapeHtml(extra)}</p>`
         : "";
 
     return `
         ${extraHtml}
-        <div class="color-swatch-list" aria-label="Colores disponibles">
+        <p class="detail-value detail-value--group-title">Colores de tela</p>
+        <div class="color-swatch-list" aria-label="Colores de tela disponibles">
             ${swatchesHtml}
+        </div>
+        <p class="detail-value detail-value--group-title">Color de aluminio</p>
+        <div class="color-swatch-list" aria-label="Colores de aluminio disponibles">
+            ${aluminumHtml}
         </div>
     `;
 }

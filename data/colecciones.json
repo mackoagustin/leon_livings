@@ -80,7 +80,13 @@
             "collectionImage": [
                 "assets/collections/kairo/collection_kairo3.webp",
                 "assets/collections/kairo/collection_kairo2.webp",
-                "assets/collections/kairo/collection_kairo1.webp"
+                "assets/collections/kairo/collection_kairo1.webp",
+                "assets/collections/kairo/collection_kairo4.webp",
+                "assets/collections/kairo/collection_kairo5.webp",
+                "assets/collections/kairo/collection_kairo6.webp",
+                "assets/collections/kairo/collection_kairo7.webp",
+                "assets/collections/kairo/collection_kairo8.webp",
+                "assets/collections/kairo/collection_kairo9.webp"
             ],
             "thumbnail": "/assets/collections/kairo/collection_kairo1.webp",
           
@@ -186,7 +192,10 @@
             "collectionImage": [
                 "assets/collections/liz/collection_liz3.webp",
                 "assets/collections/liz/collection_liz4.webp",
-                "assets/collections/liz/collection_liz1.webp"
+                "assets/collections/liz/collection_liz1.webp",
+                "assets/collections/liz/collection_liz5.webp",
+                "assets/collections/liz/collection_liz6.webp",
+                "assets/collections/liz/collection_liz7.webp"
             ],
             "thumbnail": "/assets/collections/liz/collection_liz4.webp",
           

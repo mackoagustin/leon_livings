@@ -123,8 +123,9 @@
       "description": "Barra de exterior en aluminio anodizado, diseñada para espacios sociales. Combina funcionalidad, resistencia y un diseño moderno adaptable a distintos ambientes.",
     
       "images": {
-        "main": "assets/products/barras/barra2.webp",
+        "main": "assets/products/barras/barra3.webp",
         "gallery": [
+          "assets/products/barras/barra2.webp",
           "assets/products/barras/barra1.webp"
         ],
         "lifestyle": ""

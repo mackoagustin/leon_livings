@@ -494,6 +494,18 @@ body.header-dark-text .header .nav-toggle:focus-visible {
     height: var(--logo-height);
     width: auto;
     display: block;
+    filter: none;
+    transition: filter 0.35s ease;
+}
+
+.header.header--scrolled .logo {
+    filter: brightness(0);
+}
+
+body.header-dark-text .header .logo,
+.product-page .header .logo,
+.collection-page .header .logo {
+    filter: brightness(0);
 }
 
 .nav-mobile-bar {
@@ -2105,6 +2117,15 @@ body.header-dark-text .header .nav-toggle:focus-visible {
     font-size: 15px;
 }
 
+.detail-value--group-title {
+    margin-top: 14px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+}
+
 .color-swatch-list {
     display: flex;
     flex-wrap: wrap;
@@ -2180,10 +2201,16 @@ body.header-dark-text .header .nav-toggle:focus-visible {
     position: absolute;
     top: 6px;
     right: 10px;
-    border: none;
-    background: transparent;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-white);
     font-size: 28px;
     line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     color: var(--color-text);
 }
