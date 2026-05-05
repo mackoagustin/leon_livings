@@ -60,6 +60,7 @@
             </button>
             <a href="./index.html" class="nav-mobile-logo" aria-label="Inicio — Leon Living">
                 <img src="assets/logo/logo_blanco.png" alt="Leon Livings" class="logo" width="160" height="40">
+                <span class="nav-mobile-logo-text">Leon Livings</span>
             </a>
             <span class="nav-mobile-spacer" aria-hidden="true"></span>
         </div>
@@ -78,8 +79,58 @@
         <div class="nav-drawer-inner">
             <h2 id="nav-drawer-heading" class="visually-hidden">Menú de navegación</h2>
             <nav class="nav-drawer-nav" aria-label="Secciones del sitio">
-                <a href="./coleccion.html" class="nav-drawer-link">Colecciones</a>
-                <a href="./categoria.html" class="nav-drawer-link">Productos</a>
+                <div class="nav-drawer-group">
+                    <div class="nav-drawer-parent-row">
+                        <a href="./coleccion.html" class="nav-drawer-link nav-drawer-link--parent">Colecciones</a>
+                        <button
+                            type="button"
+                            class="nav-drawer-toggle"
+                            aria-label="Abrir subcategorías de colecciones"
+                            aria-expanded="false"
+                            aria-controls="nav-submenu-colecciones"
+                        >
+                            <span class="nav-drawer-toggle-icon" aria-hidden="true">⌄</span>
+                        </button>
+                    </div>
+                    <div class="nav-drawer-submenu" id="nav-submenu-colecciones" hidden>
+                        <a href="./coleccion.html?slug=capri" class="nav-drawer-sublink">Capri</a>
+                        <a href="./coleccion.html?slug=kairo" class="nav-drawer-sublink">Kairo</a>
+                        <a href="./coleccion.html?slug=lenn" class="nav-drawer-sublink">Lenn</a>
+                        <a href="./coleccion.html?slug=liz" class="nav-drawer-sublink">Liz</a>
+                        <a href="./coleccion.html?slug=cove" class="nav-drawer-sublink">Cove</a>
+                        <a href="./coleccion.html?slug=lone" class="nav-drawer-sublink">Lone</a>
+                        <a href="./coleccion.html?slug=luit" class="nav-drawer-sublink">Luit</a>
+                        <a href="./coleccion.html?slug=niss" class="nav-drawer-sublink">Niss</a>
+                        <a href="./coleccion.html?slug=oasis" class="nav-drawer-sublink">Oasis</a>
+                        <a href="./coleccion.html?slug=terra" class="nav-drawer-sublink">Terra</a>
+                    </div>
+                </div>
+
+                <div class="nav-drawer-group">
+                    <div class="nav-drawer-parent-row">
+                        <a href="./categoria.html" class="nav-drawer-link nav-drawer-link--parent">Mobiliario</a>
+                        <button
+                            type="button"
+                            class="nav-drawer-toggle"
+                            aria-label="Abrir subcategorías de mobiliario"
+                            aria-expanded="false"
+                            aria-controls="nav-submenu-mobiliario"
+                        >
+                            <span class="nav-drawer-toggle-icon" aria-hidden="true">⌄</span>
+                        </button>
+                    </div>
+                    <div class="nav-drawer-submenu" id="nav-submenu-mobiliario" hidden>
+                        <a href="./categoria.html?slug=sillas" class="nav-drawer-sublink">Sillas</a>
+                        <a href="./categoria.html?slug=barras" class="nav-drawer-sublink">Barras</a>
+                        <a href="./categoria.html?slug=mesas" class="nav-drawer-sublink">Mesas</a>
+                        <a href="./categoria.html?slug=reposeras" class="nav-drawer-sublink">Reposeras</a>
+                        <a href="./categoria.html?slug=pergolas" class="nav-drawer-sublink">Pérgolas</a>
+                        <a href="./categoria.html?slug=livings" class="nav-drawer-sublink">Livings</a>
+                        <a href="./categoria.html?slug=sillones" class="nav-drawer-sublink">Sillones</a>
+                    </div>
+                </div>
+
+                <span class="nav-drawer-link nav-drawer-link--disabled" aria-disabled="true">Arma tu living</span>
                 <a href="./profesionales.html" class="nav-drawer-link">Profesionales</a>
                 <a href="./nosotros.html" class="nav-drawer-link">Nosotros</a>
                 <a href="./contacto.html" class="nav-drawer-link">Contacto</a>

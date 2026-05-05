@@ -29,6 +29,16 @@
             return window.matchMedia("(max-width: 768px)").matches;
         }
 
+        function setSubmenuOpen(toggleBtn, open) {
+            const controls = toggleBtn.getAttribute("aria-controls");
+            if (!controls) return;
+            const panel = drawer.querySelector(`#${controls}`);
+            if (!panel) return;
+            toggleBtn.setAttribute("aria-expanded", open ? "true" : "false");
+            panel.hidden = !open;
+            panel.style.display = open ? "flex" : "none";
+        }
+
         function setMenuOpen(open) {
             toggle.setAttribute("aria-expanded", open ? "true" : "false");
             toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
@@ -38,6 +48,11 @@
             overlay.setAttribute("aria-hidden", open ? "false" : "true");
             document.body.classList.toggle("nav-open", open);
             toggle.classList.toggle("is-open", open);
+            if (!open) {
+                drawer.querySelectorAll(".nav-drawer-toggle[aria-expanded='true']").forEach((btn) => {
+                    setSubmenuOpen(btn, false);
+                });
+            }
             if (open) {
                 const firstLink = drawer.querySelector(".nav-drawer-link");
                 if (firstLink) firstLink.focus({ preventScroll: true });
@@ -49,6 +64,10 @@
         function closeMenu() {
             setMenuOpen(false);
         }
+
+        drawer.querySelectorAll(".nav-drawer-toggle").forEach((btn) => {
+            setSubmenuOpen(btn, false);
+        });
 
         toggle.addEventListener("click", () => {
             const open = toggle.getAttribute("aria-expanded") === "true";
@@ -70,6 +89,12 @@
         });
 
         drawer.addEventListener("click", (e) => {
+            const toggleBtn = e.target.closest(".nav-drawer-toggle");
+            if (toggleBtn) {
+                const willOpen = toggleBtn.getAttribute("aria-expanded") !== "true";
+                setSubmenuOpen(toggleBtn, willOpen);
+                return;
+            }
             const link = e.target.closest("a");
             if (!link) return;
             if (document.body.classList.contains("nav-open")) {

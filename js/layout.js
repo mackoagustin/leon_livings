@@ -3,7 +3,7 @@ async function loadComponent(id, url) {
     if (!el) return;
 
     try {
-        const res = await fetch(url);
+        const res = await fetch(url, { cache: "no-store" });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const html = await res.text();
         el.innerHTML = html;
