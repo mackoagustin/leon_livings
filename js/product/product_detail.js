@@ -69,6 +69,12 @@ const ALUMINUM_LIBRARY = [
     { key: "negro", label: "Negro", src: "assets/Aluminio/negro.webp" },
 ];
 
+const WPC_LIBRARY = [
+    { key: "marron", label: "Marron", src: "assets/wpc/marron.webp" },
+    { key: "marron-oscuro", label: "Marron oscuro", src: "assets/wpc/marron_oscuro.webp" },
+    { key: "gris", label: "Gris", src: "assets/wpc/gris.webp" },
+];
+
 const COLOR_ALIASES = {
     gris: "grismedio",
     "gris-medio": "grismedio",
@@ -150,46 +156,53 @@ function finishesSummary(product) {
     if (Array.isArray(c.structureColors) && c.structureColors.length) {
         bits.push(c.structureColors.join(", "));
     }
-    if (Array.isArray(c.fabrics) && c.fabrics.length) {
-        bits.push(`Telas: ${c.fabrics.join(", ")}`);
-    }
-    if (Array.isArray(c.topOptions) && c.topOptions.length) {
-        bits.push(`Tapas: ${c.topOptions.join(", ")}`);
-    }
-    if (Array.isArray(c.roofOptions) && c.roofOptions.length) {
-        bits.push(`Techo: ${c.roofOptions.join(", ")}`);
-    }
-    if (Array.isArray(c.roofFabric) && c.roofFabric.length) {
-        bits.push(`Tela techo: ${c.roofFabric.join(", ")}`);
-    }
+    // if (Array.isArray(c.fabrics) && c.fabrics.length) {
+    //     bits.push(`Telas: ${c.fabrics.join(", ")}`);
+    // }
+    // if (Array.isArray(c.topOptions) && c.topOptions.length) {
+    //     bits.push(`Tapas: ${c.topOptions.join(", ")}`);
+    // }
+    // if (Array.isArray(c.roofOptions) && c.roofOptions.length) {
+    //     bits.push(`Techo: ${c.roofOptions.join(", ")}`);
+    // }
+    // if (Array.isArray(c.roofFabric) && c.roofFabric.length) {
+    //     bits.push(`Tela techo: ${c.roofFabric.join(", ")}`);
+    // }
     return bits.length ? bits.join(" · ") : "Consultar opciones";
 }
 
 function finishesExtraSummary(product) {
     const c = product.customization;
     if (!c || typeof c !== "object") return "";
-    const bits = [];
-    if (Array.isArray(c.fabrics) && c.fabrics.length) {
-        bits.push(`Telas: ${c.fabrics.join(", ")}`);
-    }
-    if (Array.isArray(c.topOptions) && c.topOptions.length) {
-        bits.push(`Tapas: ${c.topOptions.join(", ")}`);
-    }
-    if (Array.isArray(c.roofOptions) && c.roofOptions.length) {
-        bits.push(`Techo: ${c.roofOptions.join(", ")}`);
-    }
-    if (Array.isArray(c.roofFabric) && c.roofFabric.length) {
-        bits.push(`Tela techo: ${c.roofFabric.join(", ")}`);
-    }
-    return bits.join(" · ");
+    // Se comentan textos de detalle para mostrar solo swatches en "Acabados disponibles".
+    // const bits = [];
+    // if (Array.isArray(c.fabrics) && c.fabrics.length) {
+    //     bits.push(`Telas: ${c.fabrics.join(", ")}`);
+    // }
+    // if (Array.isArray(c.topOptions) && c.topOptions.length) {
+    //     bits.push(`Tapas: ${c.topOptions.join(", ")}`);
+    // }
+    // if (Array.isArray(c.roofOptions) && c.roofOptions.length) {
+    //     bits.push(`Techo: ${c.roofOptions.join(", ")}`);
+    // }
+    // if (Array.isArray(c.roofFabric) && c.roofFabric.length) {
+    //     bits.push(`Tela techo: ${c.roofFabric.join(", ")}`);
+    // }
+    // return bits.join(" · ");
+    return "";
 }
 
 function renderFinishesValue(product) {
     const swatches = resolveColorSwatches(product);
     const aluminumSwatches = [...ALUMINUM_LIBRARY];
+    const topOptions = Array.isArray(product?.customization?.topOptions)
+        ? product.customization.topOptions.map((option) => normalizeKey(option))
+        : [];
+    const hasWpcTopOption = topOptions.includes("wpc");
+    const wpcSwatches = hasWpcTopOption ? [...WPC_LIBRARY] : [];
     const extra = finishesExtraSummary(product);
 
-    if (!swatches.length && !aluminumSwatches.length) {
+    if (!swatches.length && !aluminumSwatches.length && !wpcSwatches.length) {
         return `<p class="detail-value">${escapeHtml(finishesSummary(product))}</p>`;
     }
 
@@ -225,6 +238,30 @@ function renderFinishesValue(product) {
         )
         .join("");
 
+    const wpcHtml = wpcSwatches
+        .map(
+            (swatch) => `
+        <button
+            type="button"
+            class="color-swatch"
+            data-color-src="${escapeHtml(swatch.src)}"
+            data-color-label="WPC ${escapeHtml(swatch.label)}"
+            aria-label="Ver color WPC ${escapeHtml(swatch.label)} en grande"
+            title="WPC ${escapeHtml(swatch.label)}"
+        >
+            <img src="${escapeHtml(swatch.src)}" alt="WPC ${escapeHtml(swatch.label)}">
+        </button>`
+        )
+        .join("");
+
+    const wpcSectionHtml = wpcHtml
+        ? `
+        <p class="detail-value detail-value--group-title">Color de WPC</p>
+        <div class="color-swatch-list" aria-label="Colores de WPC disponibles">
+            ${wpcHtml}
+        </div>`
+        : "";
+
     const extraHtml = extra
         ? `<p class="detail-value detail-value--muted">${escapeHtml(extra)}</p>`
         : "";
@@ -239,6 +276,7 @@ function renderFinishesValue(product) {
         <div class="color-swatch-list" aria-label="Colores de aluminio disponibles">
             ${aluminumHtml}
         </div>
+        ${wpcSectionHtml}
     `;
 }
 

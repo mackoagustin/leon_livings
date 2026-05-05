@@ -417,7 +417,7 @@ function renderCollection(container, collectionMeta, products) {
             }
             <div class="product-info">
                 <div>
-                    <p class="product-category">${escapeHtml(categoryLine)}</p>
+                    <p class="product-category product-category--desktop">${escapeHtml(categoryLine)}</p>
                     <h2 class="product-title">${escapeHtml(name)}</h2>
                     ${
                         collectionMeta.description
@@ -473,6 +473,7 @@ function renderCollection(container, collectionMeta, products) {
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
                     <span class="breadcrumb-current">${escapeHtml(name)}</span>
                 </nav>
+                <p class="product-category product-category--mobile">${escapeHtml(categoryLine)}</p>
                 ${showcaseHtml}
             </div>
         </section>
