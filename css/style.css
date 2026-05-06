@@ -3117,6 +3117,10 @@ body.nav-open .header .logo {
    Ajustes mobile globales de UI (home + páginas internas)
    ========================================================================== */
 @media (max-width: 768px) {
+    .hero-image img {
+        object-position: 72% center;
+    }
+
     .section-products,
     .section-collections,
     .section-categories,

@@ -67,6 +67,7 @@ const ALUMINUM_LIBRARY = [
     { key: "plata", label: "Plata", src: "assets/Aluminio/plata.webp" },
     { key: "madera", label: "Madera", src: "assets/Aluminio/madera.webp" },
     { key: "negro", label: "Negro", src: "assets/Aluminio/negro.webp" },
+    { key: "crema", label: "Crema", src: "assets/Aluminio/crema.webp" },
 ];
 
 const WPC_LIBRARY = [

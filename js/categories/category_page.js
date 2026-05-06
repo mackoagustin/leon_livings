@@ -14,7 +14,7 @@ const CATEGORY_OVERVIEW = [
 const CATEGORY_CONFIG = {
     sillas: {
         title: "Sillas",
-        includes: ["sillas"],
+        includes: ["sillas", "bancos"],
     },
     barras: {
         title: "Barras",
