@@ -645,13 +645,15 @@ function renderProduct(container, product) {
             </div>
         </section>
 
-        <section class="quality-section">
+         ${/*
+            seccion inferior con informacion del producto
+            <section class="quality-section">
             <div class="product-container">
                 <div class="quality-grid">
                     ${qualityHtml}
                 </div>
             </div>
-        </section>
+        </section> */""}
 
         <div class="color-modal" data-color-modal hidden aria-hidden="true">
             <div class="color-modal__dialog" role="dialog" aria-modal="true" aria-label="Vista ampliada de color">
