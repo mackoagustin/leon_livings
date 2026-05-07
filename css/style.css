@@ -205,6 +205,24 @@ body.nav-open {
     .nav-toggle-bar {
         transition-duration: 0.01ms !important;
     }
+
+    .hero-text,
+    .hero-text .hero-subtitle,
+    .hero-text .hero-description,
+    .hero-text .btn-primary,
+    .hero-title-line-inner {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .collection-card--enter-left,
+    .collection-card--enter-right,
+    .collection-card.is-visible {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
 
 .visually-hidden {
@@ -832,6 +850,58 @@ body.nav-open .header .logo {
 .hero-text {
     max-width: var(--hero-text-max);
     color: var(--color-text-on-dark);
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.55s ease, transform 0.55s var(--ease-out-soft);
+}
+
+.hero-text.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero-text .hero-subtitle,
+.hero-text .hero-description,
+.hero-text .btn-primary {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.45s ease, transform 0.45s var(--ease-out-soft);
+}
+
+.hero-text.is-visible .hero-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.08s;
+}
+
+.hero-text.is-visible .hero-description {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.hero-text.is-visible .btn-primary {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.52s;
+}
+
+.hero-title-line {
+    display: block;
+    overflow: hidden;
+}
+
+.hero-title-line-inner {
+    display: block;
+    transform: translateY(115%);
+    opacity: 0.96;
+    transition: transform 0.55s var(--ease-out-soft), opacity 0.55s ease;
+}
+
+.hero-text.is-visible .hero-title-line-inner {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(0.16s + (var(--hero-line-index, 0) * 0.1s));
 }
 
 .hero-subtitle {
@@ -881,6 +951,8 @@ body.nav-open .header .logo {
 
 .btn-primary:hover {
     background: var(--color-interactive-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
 }
 
 .btn-icon {
@@ -1062,6 +1134,26 @@ body.nav-open .header .logo {
     overflow: hidden;
     border-radius: var(--radius-md);
     cursor: pointer;
+}
+
+.collection-card--enter-left,
+.collection-card--enter-right {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: transform 0.75s var(--ease-out-soft), opacity 0.75s ease;
+}
+
+.collection-card--enter-left {
+    transform: translateX(-28px);
+}
+
+.collection-card--enter-right {
+    transform: translateX(28px);
+}
+
+.collection-card.is-visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .collection-card img {

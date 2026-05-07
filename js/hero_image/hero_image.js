@@ -19,6 +19,20 @@ async function loadHero() {
             throw new Error('JSON sin propiedad "hero"');
         }
 
+        const titleLines = String(hero.title || "")
+            .split(/\n+/)
+            .map((line) => line.trim())
+            .filter(Boolean);
+
+        const titleHtml = titleLines.length
+            ? titleLines
+                  .map(
+                      (line, i) =>
+                          `<span class="hero-title-line"><span class="hero-title-line-inner" style="--hero-line-index:${i};">${line}</span></span>`
+                  )
+                  .join("")
+            : String(hero.title || "").replace(/\n/g, "<br>");
+
         container.innerHTML = `
       <div class="hero-image">
         <img src="${hero.image}" alt="Outdoor Furniture">
@@ -27,9 +41,7 @@ async function loadHero() {
       <div class="hero-content">
         <div class="hero-text">
           <p class="hero-subtitle">${hero.subtitle}</p>
-          <h1 class="hero-title">
-            ${hero.title.replace(/\n/g, "<br>")}
-          </h1>
+          <h1 class="hero-title">${titleHtml}</h1>
           <p class="hero-description">
             ${hero.description}
           </p>
@@ -42,6 +54,10 @@ async function loadHero() {
         </div>
       </div>
     `;
+
+        requestAnimationFrame(() => {
+            container.querySelector(".hero-text")?.classList.add("is-visible");
+        });
     } catch (err) {
         console.error("[hero]", err);
     }
