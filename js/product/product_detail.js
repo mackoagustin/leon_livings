@@ -218,7 +218,7 @@ function renderFinishesValue(product) {
             aria-label="Ver color ${escapeHtml(swatch.label)} en grande"
             title="${escapeHtml(swatch.label)}"
         >
-            <img src="${escapeHtml(swatch.src)}" alt="${escapeHtml(swatch.label)}">
+            <img src="${escapeHtml(swatch.src)}" alt="${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
         </button>`
         )
         .join("");
@@ -234,7 +234,7 @@ function renderFinishesValue(product) {
             aria-label="Ver aluminio ${escapeHtml(swatch.label)} en grande"
             title="Aluminio ${escapeHtml(swatch.label)}"
         >
-            <img src="${escapeHtml(swatch.src)}" alt="Aluminio ${escapeHtml(swatch.label)}">
+            <img src="${escapeHtml(swatch.src)}" alt="Aluminio ${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
         </button>`
         )
         .join("");
@@ -250,7 +250,7 @@ function renderFinishesValue(product) {
             aria-label="Ver color WPC ${escapeHtml(swatch.label)} en grande"
             title="WPC ${escapeHtml(swatch.label)}"
         >
-            <img src="${escapeHtml(swatch.src)}" alt="WPC ${escapeHtml(swatch.label)}">
+            <img src="${escapeHtml(swatch.src)}" alt="WPC ${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
         </button>`
         )
         .join("");
@@ -599,15 +599,15 @@ function renderProduct(container, product) {
                             <div class="gallery-slide-viewport">
                                 <div class="gallery-slide-track" id="gallerySlideTrack">
                                     <div class="gallery-slide">
-                                        <img class="gallery-slide-img" data-slide="0" src="${escapeHtml(mainSrc)}" alt="${escapeHtml(product.name)}" width="700" height="600">
+                                        <img class="gallery-slide-img" data-slide="0" src="${escapeHtml(mainSrc)}" alt="${escapeHtml(product.name)}" width="700" height="600" decoding="async" fetchpriority="high">
                                     </div>
                                     <div class="gallery-slide">
-                                        <img class="gallery-slide-img" data-slide="1" src="${escapeHtml(secondSrc)}" alt="" width="700" height="600">
+                                        <img class="gallery-slide-img" data-slide="1" src="${escapeHtml(secondSrc)}" alt="" width="700" height="600" loading="lazy" decoding="async">
                                     </div>
                                 </div>
                             </div>`
                                     : `
-                            <img src="${escapeHtml(mainSrc)}" alt="${escapeHtml(product.name)}" id="productDetailMainImg" width="700" height="600">`
+                            <img src="${escapeHtml(mainSrc)}" alt="${escapeHtml(product.name)}" id="productDetailMainImg" width="700" height="600" decoding="async" fetchpriority="high">`
                             }
                             ${navArrowsHtml}
                         </div>
@@ -661,7 +661,7 @@ function renderProduct(container, product) {
         <div class="color-modal" data-color-modal hidden aria-hidden="true">
             <div class="color-modal__dialog" role="dialog" aria-modal="true" aria-label="Vista ampliada de color">
                 <button type="button" class="color-modal__close" data-color-modal-close aria-label="Cerrar vista de color">×</button>
-                <img data-color-modal-image src="" alt="">
+                <img data-color-modal-image src="" alt="" loading="lazy" decoding="async">
                 <p class="color-modal__label" data-color-modal-label></p>
             </div>
         </div>

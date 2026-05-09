@@ -138,7 +138,7 @@ function renderAllCollections(container, collections) {
 
             return `
                 <div class="collection-card" role="link" tabindex="0" data-href="${escapeHtml(href)}">
-                    ${imgSrc ? `<img src="${imgSrc}" alt="${alt}">` : ""}
+                    ${imgSrc ? `<img src="${imgSrc}" alt="${alt}" loading="lazy" decoding="async">` : ""}
                     <div class="collection-overlay"></div>
                     <div class="collection-content">
                         <h3 class="collection-name">${escapeHtml(name)}</h3>
@@ -202,7 +202,7 @@ function renderCollectionFinishesValue() {
         .map(
             (swatch) => `
         <button type="button" class="color-swatch" title="${escapeHtml(swatch.label)}">
-            <img src="${escapeHtml(swatch.src)}" alt="${escapeHtml(swatch.label)}">
+            <img src="${escapeHtml(swatch.src)}" alt="${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
         </button>`
         )
         .join("");
@@ -211,7 +211,7 @@ function renderCollectionFinishesValue() {
         .map(
             (swatch) => `
         <button type="button" class="color-swatch" title="Aluminio ${escapeHtml(swatch.label)}">
-            <img src="${escapeHtml(swatch.src)}" alt="Aluminio ${escapeHtml(swatch.label)}">
+            <img src="${escapeHtml(swatch.src)}" alt="Aluminio ${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
         </button>`
         )
         .join("");
@@ -444,10 +444,10 @@ function renderCollection(container, collectionMeta, products) {
                             ? `<div class="gallery-slide-viewport">
                         <div class="gallery-slide-track" id="gallerySlideTrack">
                             <div class="gallery-slide">
-                                <img class="gallery-slide-img" data-slide="0" src="${collectionImgSrc}" alt="${escapeHtml(name)} — ambientación principal" width="700" height="600">
+                                <img class="gallery-slide-img" data-slide="0" src="${collectionImgSrc}" alt="${escapeHtml(name)} — ambientación principal" width="700" height="600" decoding="async" fetchpriority="high">
                             </div>
                             <div class="gallery-slide">
-                                <img class="gallery-slide-img" data-slide="1" src="${secondSrc}" alt="" width="700" height="600">
+                                <img class="gallery-slide-img" data-slide="1" src="${secondSrc}" alt="" width="700" height="600" loading="lazy" decoding="async">
                             </div>
                         </div>
                     </div>
@@ -457,7 +457,7 @@ function renderCollection(container, collectionMeta, products) {
                     <button type="button" class="gallery-nav gallery-nav--next" aria-label="Imagen siguiente">
                         ${GALLERY_NEXT_SVG}
                     </button>`
-                            : `<img src="${collectionImgSrc}" alt="${escapeHtml(name)} — ambientación">`
+                            : `<img src="${collectionImgSrc}" alt="${escapeHtml(name)} — ambientación" decoding="async" fetchpriority="high">`
                     }
                 </div>
                 ${
@@ -508,7 +508,7 @@ function renderCollection(container, collectionMeta, products) {
                       return `
             <div class="product-card" role="link" tabindex="0" data-href="${escapeHtml(detailUrl)}" data-cta="${escapeHtml(ctaLink)}">
                 <div class="product-image">
-                    <img src="${escapeHtml(main)}" alt="${escapeHtml(product.name)}">
+                    <img src="${escapeHtml(main)}" alt="${escapeHtml(product.name)}" loading="lazy" decoding="async">
                 </div>
                 <h3 class="product-name">${escapeHtml(product.name)}</h3>
                 <button type="button" class="btn-primary">
@@ -525,7 +525,7 @@ function renderCollection(container, collectionMeta, products) {
     container.innerHTML = `
         <section class="collection-hero-banner" aria-labelledby="collection-page-title">
             <div class="collection-hero-banner__media">
-                ${heroSrc ? `<img src="${heroSrc}" alt="${escapeHtml(name)}">` : ""}
+                ${heroSrc ? `<img src="${heroSrc}" alt="${escapeHtml(name)}" decoding="async" fetchpriority="high">` : ""}
                 <div class="collection-hero-banner__overlay"></div>
             </div>
             <div class="collection-hero-banner__content">

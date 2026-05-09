@@ -125,7 +125,7 @@ function renderCategoryPage(container, config, products) {
                       return `
             <div class="product-card" role="link" tabindex="0" data-href="${escapeHtml(detailUrl)}" data-cta="${escapeHtml(ctaLink)}">
                 <div class="product-image">
-                    <img src="${escapeHtml(image)}" alt="${escapeHtml(product.name)}">
+                    <img src="${escapeHtml(image)}" alt="${escapeHtml(product.name)}" loading="lazy" decoding="async">
                 </div>
                 <h3 class="product-name">${escapeHtml(product.name)}</h3>
                 <button type="button" class="btn-primary">
@@ -181,7 +181,7 @@ function renderCategoriesOverview(container) {
         const image = normalizeAssetPath(category.image);
         return `
             <div class="category-card ${extraClass}" role="link" tabindex="0" data-href="${escapeHtml(href)}">
-                <img src="${escapeHtml(image)}" alt="${escapeHtml(category.title)}">
+                <img src="${escapeHtml(image)}" alt="${escapeHtml(category.title)}" loading="lazy" decoding="async">
                 <div class="category-overlay"></div>
                 <div class="category-content">
                     <h3 class="category-name">${escapeHtml(category.title)}</h3>

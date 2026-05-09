@@ -88,7 +88,7 @@ async function loadCollectionsHome() {
                 const alt = escapeHtml(c.alt);
                 return `
             <div class="collection-card" role="link" tabindex="0" data-href="${escapeHtml(href)}">
-                <img src="${imgSrc}" alt="${alt}">
+                <img src="${imgSrc}" alt="${alt}" loading="lazy" decoding="async">
                 <div class="collection-overlay"></div>
                 <div class="collection-content">
                     <h3 class="collection-name">${escapeHtml(name)}</h3>

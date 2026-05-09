@@ -57,7 +57,7 @@ function renderLivingsPage(container, products) {
                       return `
             <div class="product-card" role="link" tabindex="0" data-href="${escapeHtml(detailUrl)}" data-cta="${escapeHtml(ctaLink)}">
                 <div class="product-image">
-                    <img src="${escapeHtml(image)}" alt="${escapeHtml(product.name)}">
+                    <img src="${escapeHtml(image)}" alt="${escapeHtml(product.name)}" loading="lazy" decoding="async">
                 </div>
                 <h3 class="product-name">${escapeHtml(product.name)}</h3>
                 <button type="button" class="btn-primary">

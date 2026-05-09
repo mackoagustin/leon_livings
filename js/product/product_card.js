@@ -47,7 +47,7 @@ async function loadProductCard() {
             return `
             <article class="product-card" role="link" tabindex="0" data-href="${detailUrl}">
                 <div class="product-image">
-                    <img src="${product.images.main}" alt="${product.name}">
+                    <img src="${product.images.main}" alt="${product.name}" loading="lazy" decoding="async">
                 </div>
                 <h3 class="product-name">${HOME_FEATURED_LABELS[product.slug] || product.name}</h3>
                 <button type="button" class="btn-primary">
