@@ -1,6 +1,13 @@
 
 const HERO_DATA_URL = "data/hero_image.json";
 
+function escapeHtmlAttr(value) {
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/</g, "&lt;");
+}
+
 async function loadHero() {
     const container = document.querySelector('[data-component="hero"]');
     if (!container) {
@@ -33,9 +40,25 @@ async function loadHero() {
                   .join("")
             : String(hero.title || "").replace(/\n/g, "<br>");
 
+        const imageSrc = String(hero.image || "").trim();
+        const imageMobile = String(hero.image_mobile || "").trim();
+        const imgAlt = String(
+            hero.image_alt || hero.image_alt_mobile || "",
+        ).trim();
+
+        let heroPictureHtml;
+        if (imageMobile) {
+            heroPictureHtml = `<picture>
+          <source media="(max-width: 768px)" srcset="${escapeHtmlAttr(imageMobile)}" type="image/webp">
+          <img src="${escapeHtmlAttr(imageSrc)}" alt="${escapeHtmlAttr(imgAlt)}" decoding="async" fetchpriority="high">
+        </picture>`;
+        } else {
+            heroPictureHtml = `<img src="${escapeHtmlAttr(imageSrc)}" alt="${escapeHtmlAttr(imgAlt)}" decoding="async" fetchpriority="high">`;
+        }
+
         container.innerHTML = `
       <div class="hero-image">
-        <img src="${hero.image}" alt="Outdoor Furniture">
+        ${heroPictureHtml}
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
