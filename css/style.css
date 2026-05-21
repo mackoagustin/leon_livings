@@ -265,11 +265,18 @@ body.collection-page .collection-page-root:has(> .collection-hero-banner:first-c
     }
 
     /* Línea decorativa centrada del hero personalizable */
-    .personalizable-hero__subtitle.profesionales-line-heading::after,
-    .personalizable-hero__subtitle.profesionales-line-heading.is-visible::after,
-    .profesionales-reveal-group.is-visible .personalizable-hero__subtitle.profesionales-line-heading::after,
-    .personalizable-hero__text.is-visible .personalizable-hero__subtitle.profesionales-line-heading::after {
+    .personalizable-hero .personalizable-hero__subtitle.profesionales-line-heading::after,
+    .personalizable-hero .personalizable-hero__subtitle.profesionales-line-heading.is-visible::after,
+    .personalizable-hero .profesionales-reveal-group.is-visible .personalizable-hero__subtitle.profesionales-line-heading::after,
+    .personalizable-hero .personalizable-hero__text.is-visible .personalizable-hero__subtitle.profesionales-line-heading::after {
         transform: translateX(-50%) scaleX(1) !important;
+        transition: none !important;
+    }
+
+    .personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__subtitle.profesionales-line-heading::after,
+    .personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__subtitle.profesionales-line-heading.is-visible::after,
+    .personalizable-page .section-cta.personalizable-final-cta .profesionales-reveal-group.is-visible .personalizable-hero__subtitle.profesionales-line-heading::after {
+        transform: scaleX(1) !important;
         transition: none !important;
     }
 
@@ -3309,6 +3316,9 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
 .profesionales-content {
     padding-top: 0;
 }
+body.personalizable-page .profesionales-content.section-products {
+    padding-bottom: 0;
+}
 
 .personalizable-page .profesionales-content > .container > .breadcrumb-nav {
     margin-top: var(--space-6);
@@ -3803,13 +3813,6 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
         padding-block: var(--space-8);
     }
 
-    .personalizable-final-cta {
-        width: 100%;
-        max-width: none;
-        padding-block: var(--space-8) var(--space-12);
-        align-items: stretch;
-    }
-
     .personalizable-final-cta .btn-primary,
     .profesionales-hero-content .btn-primary,
     .profesionales-cta .btn-primary {
@@ -3858,7 +3861,7 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
 
     body.personalizable-page .profesionales-content.section-products {
         padding-top: var(--space-8);
-        padding-bottom: var(--space-12);
+        padding-bottom: 0;
     }
 }
 
@@ -4580,17 +4583,133 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     transition-delay: 0.12s;
 }
 
-.personalizable-final-cta {
-    max-width: 36rem;
-    padding-block: var(--space-6) var(--space-16);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-5);
-    align-items: flex-start;
+/* CTA final — misma altura y tipografía que .personalizable-hero, texto a la izquierda */
+.personalizable-page .section-cta.personalizable-final-cta {
+    width: 100%;
+    max-width: none;
+    height: 500px;
+    margin-top: var(--space-8);
 }
 
-.personalizable-final-cta .profesionales-cta-title {
+.personalizable-page .section-cta.personalizable-final-cta .cta-overlay {
+    background: var(--overlay-hero);
+}
+
+.personalizable-page .section-cta.personalizable-final-cta .cta-content {
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--space-8) var(--padding-x);
+}
+
+.personalizable-page .section-cta.personalizable-final-cta .personalizable-final-cta__text {
+    max-width: 40rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-6);
+    color: var(--color-text-on-dark);
+}
+
+.personalizable-page .section-cta.personalizable-final-cta .personalizable-final-cta__label {
     margin: 0;
+    font-size: var(--text-overline-13);
+    font-weight: var(--font-weight-regular);
+    line-height: 1.4;
+    letter-spacing: var(--tracking-label-wide);
+    text-transform: uppercase;
+    opacity: 0.9;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__title {
+    margin: 0;
+    color: inherit;
+}
+
+.personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__subtitle {
+    margin: 0;
+    max-width: 36rem;
+    text-align: left;
+}
+
+.personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__subtitle.profesionales-line-heading {
+    padding-bottom: var(--space-5);
+}
+
+.personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__subtitle.profesionales-line-heading::after {
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left center;
+    max-width: 7.5rem;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.profesionales-reveal-group.is-visible .personalizable-final-cta .personalizable-hero__subtitle.profesionales-line-heading::after,
+.personalizable-final-cta__text.is-visible .personalizable-hero__subtitle.profesionales-line-heading::after,
+.personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__subtitle.profesionales-line-heading.is-visible::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    .personalizable-page .section-cta.personalizable-final-cta {
+        height: min(68vh, 480px);
+        height: min(68dvh, 480px);
+    }
+
+    .personalizable-page .section-cta.personalizable-final-cta .cta-content {
+        padding: var(--space-6) var(--padding-x);
+    }
+
+    .personalizable-page .section-cta.personalizable-final-cta .personalizable-final-cta__text {
+        gap: var(--space-5);
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__title {
+        font-size: clamp(28px, 8.5vw, 36px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__subtitle {
+        font-size: 15px;
+        line-height: 1.5;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .personalizable-page .section-cta.personalizable-final-cta .personalizable-hero__subtitle.profesionales-line-heading {
+        padding-bottom: var(--space-4);
+    }
+
+    .personalizable-page .section-cta.personalizable-final-cta .personalizable-final-cta__text .btn-primary {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 900px) {
+    .personalizable-page .section-cta.personalizable-final-cta {
+        height: min(68vh, 480px);
+        height: min(68dvh, 480px);
+    }
+}
+
+@media (max-width: 480px) {
+    .personalizable-page .section-cta.personalizable-final-cta {
+        height: min(62vh, 420px);
+        height: min(62dvh, 420px);
+    }
 }
 
 @media (max-width: 900px) {
