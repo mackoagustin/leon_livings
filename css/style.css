@@ -242,10 +242,37 @@ body.collection-page .collection-page-root:has(> .collection-hero-banner:first-c
         transition: none !important;
     }
 
+    /* Texto reveal: sin translateX (evita texto cortado en personalizable/profesionales) */
     .profesionales-reveal,
-    .profesionales-reveal-group.is-visible .profesionales-reveal,
-    .profesionales-line-expand::after,
-    .profesionales-line-heading::after,
+    .profesionales-reveal-group.is-visible .profesionales-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+        transition: none !important;
+    }
+
+    .profesionales-line-expand.is-visible::after {
+        transform: scaleX(1) !important;
+        transition: none !important;
+    }
+
+    .profesionales-line-heading.is-visible::after,
+    .profesionales-reveal-group.is-visible .profesionales-line-heading::after,
+    .is-visible .profesionales-line-heading::after,
+    .profesionales-zigzag-item.is-visible .profesionales-line-heading::after {
+        transform: scaleX(1) !important;
+        transition: none !important;
+    }
+
+    /* Línea decorativa centrada del hero personalizable */
+    .personalizable-hero__subtitle.profesionales-line-heading::after,
+    .personalizable-hero__subtitle.profesionales-line-heading.is-visible::after,
+    .profesionales-reveal-group.is-visible .personalizable-hero__subtitle.profesionales-line-heading::after,
+    .personalizable-hero__text.is-visible .personalizable-hero__subtitle.profesionales-line-heading::after {
+        transform: translateX(-50%) scaleX(1) !important;
+        transition: none !important;
+    }
+
     .home-catalog-fab-wrap,
     .home-catalog-fab-wrap.is-visible {
         opacity: 1 !important;
