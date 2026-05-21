@@ -3791,10 +3791,13 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     .btn-secondary,
     .btn-secondary-large,
     a.btn-secondary-large {
+        box-sizing: border-box;
+        height: 40px;
+        min-height: 40px;
+        padding: 0 16px;
         font-size: 0.82rem;
-        line-height: 1.15;
+        line-height: 1;
         letter-spacing: 0.05em;
-        padding: 10px 16px;
     }
 
     .btn-secondary,
@@ -3819,7 +3822,9 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     }
 
     .product-cta .btn-primary {
-        padding: 12px 16px !important;
+        height: 40px !important;
+        min-height: 40px !important;
+        padding: 0 16px !important;
     }
 
     .collections-container {
@@ -4005,9 +4010,12 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     .btn-primary,
     .btn-primary-dark,
     .btn-secondary,
-    .btn-secondary-large {
+    .btn-secondary-large,
+    a.btn-secondary-large {
+        height: 40px;
+        min-height: 40px;
+        padding: 0 14px;
         font-size: 0.78rem;
-        padding: 9px 14px;
     }
 
     .nav-mobile-logo-text {
