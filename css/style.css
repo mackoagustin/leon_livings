@@ -1497,10 +1497,12 @@ body.nav-open .header .logo {
     color: var(--color-text-body);
 }
 
-.btn-secondary-large {
+.btn-secondary-large,
+a.btn-secondary-large {
     border: 1px solid var(--color-interactive);
     background: transparent;
-    color: var(--color-interactive);
+    color: var(--color-text);
+    -webkit-text-fill-color: var(--color-text);
     font-family: inherit;
     padding: var(--space-4) var(--space-6);
     font-size: var(--text-overline-13);
@@ -1513,17 +1515,39 @@ body.nav-open .header .logo {
     align-items: center;
     gap: 10px;
     width: fit-content;
-    transition: all var(--duration-fast);
+    transition: background var(--duration-fast), color var(--duration-fast), border-color var(--duration-fast);
     -webkit-tap-highlight-color: transparent;
+    appearance: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
 }
 
-.btn-secondary-large:focus:not(:focus-visible) {
+a.btn-secondary-large {
+    text-decoration: none;
+}
+
+a.btn-secondary-large:link,
+a.btn-secondary-large:visited,
+a.btn-secondary-large:active {
+    color: var(--color-text);
+    -webkit-text-fill-color: var(--color-text);
+}
+
+button.btn-secondary-large {
+    color: var(--color-text);
+    -webkit-text-fill-color: var(--color-text);
+}
+
+.btn-secondary-large:focus:not(:focus-visible),
+a.btn-secondary-large:focus:not(:focus-visible) {
     outline: none;
 }
 
-.btn-secondary-large:hover {
+.btn-secondary-large:hover,
+a.btn-secondary-large:hover {
     background: var(--color-interactive);
     color: var(--color-text-on-dark);
+    -webkit-text-fill-color: var(--color-text-on-dark);
 }
 
 .customization-wrapper {
@@ -3756,7 +3780,8 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
 
     .btn-primary,
     .btn-primary-dark,
-    .btn-secondary-large {
+    .btn-secondary-large,
+    a.btn-secondary-large {
         width: 100%;
         justify-content: center;
     }
@@ -3764,11 +3789,23 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     .btn-primary,
     .btn-primary-dark,
     .btn-secondary,
-    .btn-secondary-large {
+    .btn-secondary-large,
+    a.btn-secondary-large {
         font-size: 0.82rem;
         line-height: 1.15;
         letter-spacing: 0.05em;
         padding: 10px 16px;
+    }
+
+    .btn-secondary,
+    .btn-secondary-large,
+    a.btn-secondary-large,
+    a.btn-secondary-large:link,
+    a.btn-secondary-large:visited,
+    a.btn-secondary-large:active,
+    button.btn-secondary-large {
+        color: var(--color-text);
+        -webkit-text-fill-color: var(--color-text);
     }
 
     .btn-icon {
