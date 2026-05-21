@@ -97,6 +97,15 @@ function bindProductGrid(container) {
 
 function renderInvalidCategory(container) {
     container.innerHTML = `
+        <section class="collection-page-top section-products">
+            <div class="container product-container">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <a class="breadcrumb-link" href="categoria.html">Categorías</a>
+                </nav>
+            </div>
+        </section>
         <section class="collection-page-intro section-products">
             <div class="container product-container">
                 <button type="button" class="back-button" data-action="back">
@@ -141,7 +150,7 @@ function renderCategoryPage(container, config, products) {
             : `<p class="collection-page-empty">No hay productos cargados para esta categoría todavía.</p>`;
 
     container.innerHTML = `
-        <section class="collection-page-intro section-products">
+        <section class="collection-page-top section-products">
             <div class="container product-container">
                 <nav class="breadcrumb-nav" aria-label="Breadcrumb">
                     <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
@@ -194,6 +203,11 @@ function renderCategoriesOverview(container) {
     container.innerHTML = `
         <section class="section-collections collection-page-products">
             <div class="container">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <span class="breadcrumb-current">Categorías</span>
+                </nav>
                 <div class="section-header">
                     <h1 class="section-title">Categorías</h1>
                     <p class="section-subtitle">Explorá todo nuestro mobiliario</p>
@@ -270,6 +284,15 @@ async function loadCategoryPage() {
     } catch (err) {
         console.error("[category-page]", err);
         container.innerHTML = `
+            <section class="collection-page-top section-products">
+                <div class="container product-container">
+                    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                        <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">></span>
+                        <a class="breadcrumb-link" href="categoria.html">Categorías</a>
+                    </nav>
+                </div>
+            </section>
             <section class="collection-page-intro section-products">
                 <div class="container product-container">
                     <p class="product-description">No pudimos cargar la categoría. Intentá de nuevo más tarde.</p>

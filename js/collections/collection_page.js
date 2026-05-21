@@ -104,6 +104,15 @@ function renderNotFound(container, slug) {
             ? "Falta el parámetro de colección en la URL (por ejemplo <code>?slug=capri</code>)."
             : `No encontramos la colección «${escapeHtml(slug)}».`;
     container.innerHTML = `
+        <section class="collection-page-top section-products">
+            <div class="container product-container">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <a class="breadcrumb-link" href="coleccion.html">Colecciones</a>
+                </nav>
+            </div>
+        </section>
         <section class="collection-page-intro section-products">
             <div class="container product-container">
                 <button type="button" class="back-button" data-action="back">
@@ -152,6 +161,11 @@ function renderAllCollections(container, collections) {
     container.innerHTML = `
         <section class="section-collections collection-page-products">
             <div class="container">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <span class="breadcrumb-current">Colecciones</span>
+                </nav>
                 <div class="section-header">
                     <h1 class="section-title">Todas las colecciones</h1>
                     <p class="section-subtitle">Explorá nuestras líneas de diseño</p>
@@ -524,6 +538,17 @@ function renderCollection(container, collectionMeta, products) {
             : `<p class="collection-page-empty">No hay productos cargados para esta colección todavía.</p>`;
 
     container.innerHTML = `
+        <section class="collection-page-top section-products">
+            <div class="container product-container">
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <a class="breadcrumb-link" href="coleccion.html">Colecciones</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <span class="breadcrumb-current">${escapeHtml(name)}</span>
+                </nav>
+            </div>
+        </section>
         <section class="collection-hero-banner" aria-labelledby="collection-page-title">
             <div class="collection-hero-banner__media">
                 ${heroSrc ? `<img src="${heroSrc}" alt="${escapeHtml(name)}" decoding="async" fetchpriority="high">` : ""}
@@ -535,13 +560,6 @@ function renderCollection(container, collectionMeta, products) {
         </section>
         <section class="collection-page-intro section-products1">
             <div class="container product-container">
-                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-                    <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
-                    <span class="breadcrumb-separator" aria-hidden="true">></span>
-                    <a class="breadcrumb-link" href="coleccion.html">Colecciones</a>
-                    <span class="breadcrumb-separator" aria-hidden="true">></span>
-                    <span class="breadcrumb-current">${escapeHtml(name)}</span>
-                </nav>
                 <p class="product-category product-category--mobile">${escapeHtml(categoryLine)}</p>
                 ${showcaseHtml}
             </div>
@@ -609,6 +627,15 @@ async function loadCollectionPage() {
     } catch (err) {
         console.error("[collection-page]", err);
         container.innerHTML = `
+            <section class="collection-page-top section-products">
+                <div class="container product-container">
+                    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                        <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
+                        <span class="breadcrumb-separator" aria-hidden="true">></span>
+                        <a class="breadcrumb-link" href="coleccion.html">Colecciones</a>
+                    </nav>
+                </div>
+            </section>
             <section class="collection-page-intro section-products">
                 <div class="container product-container">
                     <p class="product-description">No pudimos cargar la colección. Intentá de nuevo más tarde.</p>
