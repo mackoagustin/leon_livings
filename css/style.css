@@ -2576,7 +2576,7 @@ body.nav-open .header .logo {
     display: grid;
     grid-template-columns: 1.15fr 1fr;
     gap: var(--space-10);
-    align-items: start;
+    align-items:center;
 }
 
 .nosotros-title {
@@ -2605,6 +2605,16 @@ body.nav-open .header .logo {
     border-radius: var(--radius-md);
     overflow: hidden;
     background: var(--color-surface-muted);
+}
+
+.nosotros-video-wrap img,
+.nosotros-media-img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-inline: auto; /* centra si el contenedor es más ancho */
+    object-fit: contain; /* o quitá object-fit */
 }
 
 .nosotros-video {

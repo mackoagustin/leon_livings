@@ -52,13 +52,9 @@ const CATEGORY_LABELS = {
 const COLOR_LIBRARY = [
     { key: "crudo", label: "Crudo", src: "assets/colores/crudo.jpg" },
     { key: "piedra", label: "Piedra", src: "assets/colores/piedra.jpg" },
-    { key: "gamo", label: "Gamo", src: "assets/colores/gamo.jpg" },
-    { key: "grisclaro", label: "Gris claro", src: "assets/colores/gris_claro.jpg" },
     { key: "negro", label: "Negro", src: "assets/colores/negro.jpg" },
     { key: "gristopo", label: "Gris topo", src: "assets/colores/gris_topo.jpg" },
     { key: "arena", label: "Arena", src: "assets/colores/arena.jpg" },
-    { key: "azul", label: "Azul", src: "assets/colores/azul.jpg" },
-    { key: "verdeoasis", label: "Verde oasis", src: "assets/colores/verde_oasis.jpg" },
     { key: "tostado", label: "Tostado", src: "assets/colores/tostado.jpg" },
     { key: "grismedio", label: "Gris medio", src: "assets/colores/gris_medio.jpg" },
 ];
@@ -66,6 +62,7 @@ const COLOR_LIBRARY = [
 const ALUMINUM_LIBRARY = [
     { key: "plata", label: "Plata", src: "assets/Aluminio/plata.webp" },
     { key: "madera", label: "Madera", src: "assets/Aluminio/madera.webp" },
+    { Key: "madera blanco", label: "Madera blanco", src: "assets/Aluminio/simil_madera_blanco.webp" },
     { key: "negro", label: "Negro", src: "assets/Aluminio/negro.webp" },
     { key: "crema", label: "Crema", src: "assets/Aluminio/crema.webp" },
 ];
@@ -218,7 +215,7 @@ function renderFinishesValue(product) {
             aria-label="Ver color ${escapeHtml(swatch.label)} en grande"
             title="${escapeHtml(swatch.label)}"
         >
-            <img src="${escapeHtml(swatch.src)}" alt="${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
+            <img src="${escapeHtml(swatch.src)}" alt="${escapeHtml(swatch.label)}">
         </button>`
         )
         .join("");
@@ -234,7 +231,7 @@ function renderFinishesValue(product) {
             aria-label="Ver aluminio ${escapeHtml(swatch.label)} en grande"
             title="Aluminio ${escapeHtml(swatch.label)}"
         >
-            <img src="${escapeHtml(swatch.src)}" alt="Aluminio ${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
+            <img src="${escapeHtml(swatch.src)}" alt="Aluminio ${escapeHtml(swatch.label)}"  decoding="async">
         </button>`
         )
         .join("");
@@ -250,7 +247,7 @@ function renderFinishesValue(product) {
             aria-label="Ver color WPC ${escapeHtml(swatch.label)} en grande"
             title="WPC ${escapeHtml(swatch.label)}"
         >
-            <img src="${escapeHtml(swatch.src)}" alt="WPC ${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
+            <img src="${escapeHtml(swatch.src)}" alt="WPC ${escapeHtml(swatch.label)}"  decoding="async">
         </button>`
         )
         .join("");
@@ -602,7 +599,7 @@ function renderProduct(container, product) {
                                         <img class="gallery-slide-img" data-slide="0" src="${escapeHtml(mainSrc)}" alt="${escapeHtml(product.name)}" width="700" height="600" decoding="async" fetchpriority="high">
                                     </div>
                                     <div class="gallery-slide">
-                                        <img class="gallery-slide-img" data-slide="1" src="${escapeHtml(secondSrc)}" alt="" width="700" height="600" loading="lazy" decoding="async">
+                                        <img class="gallery-slide-img" data-slide="1" src="${escapeHtml(secondSrc)}" alt="" width="700" height="600"  decoding="async">
                                     </div>
                                 </div>
                             </div>`
@@ -661,7 +658,7 @@ function renderProduct(container, product) {
         <div class="color-modal" data-color-modal hidden aria-hidden="true">
             <div class="color-modal__dialog" role="dialog" aria-modal="true" aria-label="Vista ampliada de color">
                 <button type="button" class="color-modal__close" data-color-modal-close aria-label="Cerrar vista de color">×</button>
-                <img data-color-modal-image src="" alt="" loading="lazy" decoding="async">
+                <img data-color-modal-image src="" alt=""  decoding="async">
                 <p class="color-modal__label" data-color-modal-label></p>
             </div>
         </div>
