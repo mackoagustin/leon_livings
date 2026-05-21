@@ -585,7 +585,11 @@ function renderProduct(container, product) {
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
                     <span class="breadcrumb-current">${escapeHtml(product.name)}</span>
                 </nav>
-                <p class="product-category product-category--mobile">${escapeHtml(collectionLabel(product.collection))}</p>
+
+                <div class="product-lead product-lead--mobile">
+                    <p class="product-category product-category--mobile">${escapeHtml(collectionLabel(product.collection))}</p>
+                    <h1 class="product-title product-title--mobile">${product.name}</h1>
+                </div>
 
                 <div class="product-grid">
                     <div class="product-gallery">
@@ -614,7 +618,7 @@ function renderProduct(container, product) {
                     <div class="product-info">
                         <div>
                             <p class="product-category product-category--desktop">${escapeHtml(collectionLabel(product.collection))}</p>
-                            <h1 class="product-title">${(product.name)}</h1>
+                            <h1 class="product-title product-title--desktop">${product.name}</h1>
                             <p class="product-description">${escapeHtml(product.description)}</p>
                             <div class="product-details">
                                 <div class="detail-item">
