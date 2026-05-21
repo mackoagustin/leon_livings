@@ -190,10 +190,16 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--font-family-sans);
     background: var(--color-surface);
     color: var(--color-text);
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body.nav-open {
@@ -3293,6 +3299,8 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
 
 .profesionales-block {
     max-width: 980px;
+    width: 100%;
+    min-width: 0;
 }
 
 .profesionales-zigzag-item {
@@ -3690,6 +3698,11 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     .profesionales-zigzag-item {
         grid-template-columns: 1fr;
         gap: var(--space-6);
+        min-width: 0;
+    }
+
+    .profesionales-zigzag-item > * {
+        min-width: 0;
     }
 
     .profesionales-zigzag-item--reverse .profesionales-zigzag-media,
@@ -3754,9 +3767,38 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
         justify-content: center;
     }
 
-    body.profesionales-page,
-    body.personalizable-page {
-        overflow-x: clip;
+    .profesionales-main,
+    .personalizable-main,
+    .profesionales-hero,
+    .personalizable-hero,
+    .profesionales-content,
+    .profesionales-hero-card,
+    .profesionales-hero-content,
+    .profesionales-block,
+    .personalizable-hero__inner,
+    .personalizable-hero__text {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .profesionales-zigzag-media,
+    .profesionales-hero-media {
+        max-width: 100%;
+    }
+
+    .profesionales-zigzag-media img,
+    .profesionales-hero-media img {
+        max-width: 100%;
+    }
+
+    .profesionales-block-title,
+    .profesionales-block-text,
+    .profesionales-hero-subtitle,
+    .personalizable-hero__title,
+    .personalizable-hero__subtitle,
+    .personalizable-copy p {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     body.profesionales-page .profesionales-hero.section-products {
@@ -4146,6 +4188,7 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     position: relative;
     height: 500px;
     width: 100%;
+    max-width: 100%;
     overflow: hidden;
 }
 
@@ -4173,6 +4216,7 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     z-index: 1;
     box-sizing: border-box;
     height: 100%;
+    width: 100%;
     max-width: var(--container-max);
     margin: 0 auto;
     padding: var(--header-bar-height) var(--padding-x) var(--space-8);
@@ -4266,16 +4310,24 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     display: none;
 }
 
-/* Banda full-bleed con fondo muted (personalizable, nosotros) */
+/* Banda full-bleed con fondo muted (personalizable, nosotros, profesionales) */
 .content-band--muted,
 .personalizable-project-band {
     background: var(--color-surface-muted);
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     padding-block: var(--space-12);
     box-sizing: border-box;
+}
+
+/* Fallback si la banda quedara dentro de .container (no usar 100vw en iOS) */
+.container > .content-band--muted {
+    width: calc(100% + 2 * var(--padding-x));
+    max-width: none;
+    margin-left: calc(-1 * var(--padding-x));
+    margin-right: calc(-1 * var(--padding-x));
 }
 
 .content-band--muted .profesionales-zigzag-media,
