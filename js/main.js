@@ -53,10 +53,12 @@
                     setSubmenuOpen(btn, false);
                 });
             }
-            if (open) {
+            // En touch (iPhone) no mover foco: Safari muestra recuadro negro/azul no deseado
+            const isTouchNav = window.matchMedia("(pointer: coarse)").matches;
+            if (open && !isTouchNav) {
                 const firstLink = drawer.querySelector(".nav-drawer-link");
                 if (firstLink) firstLink.focus({ preventScroll: true });
-            } else if (isMobileNav()) {
+            } else if (!open && !isTouchNav && isMobileNav()) {
                 toggle.focus({ preventScroll: true });
             }
         }
