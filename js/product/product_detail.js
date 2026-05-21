@@ -566,7 +566,7 @@ function renderProduct(container, product) {
         )
         .join("");
 
-    const ctaUrl = product.cta?.link || "https://wa.me/1234567890";
+    const ctaUrl = product.cta?.link || "https://wa.me/5491136420547";
     const category = categoryFromProduct(product);
     const ctaNote =
         product.customization?.customSize === true

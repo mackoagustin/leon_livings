@@ -1,4 +1,5 @@
 const PRODUCT_DATA_URL = "data/product.json";
+const WHATSAPP_URL = "https://wa.me/5491136420547";
 const INDEX_HREF = "./index.html";
 const SITE_NAME = "Leon Living";
 const LIVING_CATEGORIES = ["sillones", "mesas-ratonas"];
@@ -36,8 +37,8 @@ function bindProductGrid(container) {
             }
         });
         const btn = card.querySelector(".btn-primary");
-        const link = card.getAttribute("data-cta");
-        if (btn && link) {
+        const link = card.getAttribute("data-cta") || WHATSAPP_URL;
+        if (btn) {
             btn.addEventListener("click", (e) => {
                 e.stopPropagation();
                 window.open(link, "_blank", "noopener,noreferrer");
@@ -53,7 +54,7 @@ function renderLivingsPage(container, products) {
                   .map((product) => {
                       const detailUrl = `product.html?slug=${encodeURIComponent(product.slug)}`;
                       const image = normalizeAssetPath(product.images?.main || "");
-                      const ctaLink = product.cta?.link || "";
+                      const ctaLink = product.cta?.link || WHATSAPP_URL;
                       return `
             <div class="product-card" role="link" tabindex="0" data-href="${escapeHtml(detailUrl)}" data-cta="${escapeHtml(ctaLink)}">
                 <div class="product-image">

@@ -1,4 +1,5 @@
 const PRODUCT_DATA_URL = "data/product.json";
+const WHATSAPP_URL = "https://wa.me/5491136420547";
 const COLECCIONES_DATA_URL = "data/colecciones.json";
 const SITE_NAME = "Leon Living";
 const INDEX_HREF = "./index.html";
@@ -87,8 +88,8 @@ function bindProductGrid(container) {
             }
         });
         const btn = card.querySelector(".btn-primary");
-        const link = card.getAttribute("data-cta");
-        if (btn && link) {
+        const link = card.getAttribute("data-cta") || WHATSAPP_URL;
+        if (btn) {
             btn.addEventListener("click", (e) => {
                 e.stopPropagation();
                 window.open(link, "_blank", "noopener,noreferrer");
@@ -412,7 +413,7 @@ function renderCollection(container, collectionMeta, products) {
     const waLink =
         collectionMeta.cta?.link ||
         (products[0] && products[0].cta?.link) ||
-        "https://wa.me/1234567890";
+        WHATSAPP_URL;
 
     const hasShowcaseContent =
         collectionImages.length > 0 ||
@@ -504,7 +505,7 @@ function renderCollection(container, collectionMeta, products) {
                   .map((product) => {
                       const detailUrl = `product.html?slug=${encodeURIComponent(product.slug)}`;
                       const main = product.images?.main ? normalizeAssetPath(product.images.main) : "";
-                      const ctaLink = product.cta?.link || "";
+                      const ctaLink = product.cta?.link || WHATSAPP_URL;
                       return `
             <div class="product-card" role="link" tabindex="0" data-href="${escapeHtml(detailUrl)}" data-cta="${escapeHtml(ctaLink)}">
                 <div class="product-image">

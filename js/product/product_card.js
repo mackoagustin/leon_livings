@@ -1,4 +1,5 @@
 const PRODUCT_DATA_URL = "data/product.json";
+const WHATSAPP_URL = "https://wa.me/5491136420547";
 const HOME_FEATURED_PRODUCTS = [
     "sillon-luit-2-cuerpos",
     "reposera-capri",
@@ -81,10 +82,11 @@ async function loadProductCard() {
                 }
             });
             const btn = card.querySelector(".btn-primary");
-            if (btn && product.cta?.link) {
+            const waLink = product.cta?.link || WHATSAPP_URL;
+            if (btn) {
                 btn.addEventListener("click", (e) => {
                     e.stopPropagation();
-                    window.open(product.cta.link, "_blank", "noopener,noreferrer");
+                    window.open(waLink, "_blank", "noopener,noreferrer");
                 });
             }
         });
