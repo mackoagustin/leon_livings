@@ -3236,6 +3236,7 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     grid-template-columns: 1.05fr 1fr;
     gap: var(--space-8);
     align-items: center;
+    padding-top: 30px;
 }
 
 .profesionales-hero-media {
@@ -3698,9 +3699,74 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
 
     .profesionales-page .section-title,
     .profesionales-block-title,
-    .profesionales-cta-title {
-        font-size: var(--text-section-48);
-        line-height: var(--text-section-48-lh);
+    .profesionales-cta-title,
+    .personalizable-hero__title {
+        font-size: clamp(28px, 8.5vw, 36px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+    }
+
+    .profesionales-hero-card {
+        padding-top: 0;
+    }
+
+    .profesionales-hero {
+        padding-bottom: var(--space-10);
+    }
+
+    .profesionales-hero-content {
+        padding: 0;
+        gap: var(--space-5);
+    }
+
+    .profesionales-hero-subtitle,
+    .personalizable-hero__subtitle {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .personalizable-page .profesionales-content > .container > .breadcrumb-nav {
+        margin-top: var(--space-4);
+        margin-bottom: var(--space-8);
+    }
+
+    .personalizable-page .profesionales-content > .container > .profesionales-zigzag-item,
+    .profesionales-content-row,
+    .nosotros-materials-row {
+        padding-block: 32px;
+    }
+
+    .content-band--muted {
+        padding-block: var(--space-8);
+    }
+
+    .personalizable-final-cta {
+        width: 100%;
+        max-width: none;
+        padding-block: var(--space-8) var(--space-12);
+        align-items: stretch;
+    }
+
+    .personalizable-final-cta .btn-primary,
+    .profesionales-hero-content .btn-primary,
+    .profesionales-cta .btn-primary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    body.profesionales-page,
+    body.personalizable-page {
+        overflow-x: clip;
+    }
+
+    body.profesionales-page .profesionales-hero.section-products {
+        padding-top: var(--space-8);
+        padding-bottom: var(--space-8);
+    }
+
+    body.personalizable-page .profesionales-content.section-products {
+        padding-top: var(--space-8);
+        padding-bottom: var(--space-12);
     }
 }
 
@@ -3975,6 +4041,21 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
         gap: 18px;
     }
 
+    .personalizable-page .personalizable-copy p {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .profesionales-cta-title,
+    .profesionales-block-title {
+        margin-bottom: var(--space-4);
+    }
+
+    .profesionales-line-heading.profesionales-block-title,
+    .profesionales-line-heading.profesionales-cta-title {
+        padding-bottom: var(--space-3);
+    }
+
     .product-hero {
         padding-top: calc(var(--header-bar-height) + var(--space-8));
         padding-bottom: 56px;
@@ -4151,10 +4232,31 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
     transition-delay: 0.22s;
 }
 
-@media (max-width: 900px) {
+@media (min-width: 769px) and (max-width: 900px) {
     .personalizable-hero {
         height: 100vh;
         height: 100dvh;
+    }
+}
+
+@media (max-width: 768px) {
+    .personalizable-hero {
+        height: min(68vh, 480px);
+        height: min(68dvh, 480px);
+    }
+
+    .personalizable-hero__inner {
+        padding: calc(var(--header-bar-height) + 12px) var(--padding-x) var(--space-6);
+    }
+
+    .personalizable-hero__text {
+        gap: var(--space-5);
+        width: 100%;
+        max-width: none;
+    }
+
+    .personalizable-hero__subtitle.profesionales-line-heading {
+        padding-bottom: var(--space-4);
     }
 }
 
@@ -4250,8 +4352,28 @@ body.collection-page .collection-page-root:has(> .collection-page-top:first-chil
         max-height: none;
         aspect-ratio: 4 / 3;
     }
+}
 
-    .profesionales-content-row {
-        padding-block: 48px;
+@media (max-width: 480px) {
+    .personalizable-hero {
+        height: min(62vh, 420px);
+        height: min(62dvh, 420px);
+    }
+
+    .personalizable-page .profesionales-content > .container > .profesionales-zigzag-item,
+    .profesionales-content-row,
+    .nosotros-materials-row {
+        padding-block: 24px;
+    }
+
+    .content-band--muted {
+        padding-block: var(--space-6);
+    }
+
+    .profesionales-hero-media img,
+    .personalizable-page .profesionales-content .profesionales-zigzag-media img,
+    .profesionales-page .profesionales-content .profesionales-zigzag-media img {
+        min-height: 220px;
+        aspect-ratio: 5 / 4;
     }
 }
