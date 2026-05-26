@@ -9,138 +9,308 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="profesionales-page header-dark-text">
+<body class="profesionales-page">
     <header id="site-header"></header>
 
     <main class="profesionales-main">
-        <section class="section-products profesionales-hero">
-            <div class="container">
-                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-                    <a class="breadcrumb-link" href="./index.html">Inicio</a>
-                    <span class="breadcrumb-separator" aria-hidden="true">></span>
-                    <span class="breadcrumb-current">Profesionales</span>
-                </nav>
-
-                <div class="profesionales-hero-card">
-                    <div class="profesionales-hero-media">
-                        <img
-                            loading="lazy"
-                            decoding="async"
-                            src="assets/collections/oasis/collection_oasis1.webp"
-                            alt="Proyecto profesional de exterior"
-                            width="1200"
-                            height="704"
-                        >
-                    </div>
-                    <div class="profesionales-hero-content profesionales-reveal-group">
-                        <h1 class="section-title profesionales-reveal">Soluciones para profesionales</h1>
-                        <p class="profesionales-hero-subtitle profesionales-reveal profesionales-line-heading">
-                            Trabajamos con arquitectos, diseñadores y desarrolladores para crear espacios exteriores a medida
-                        </p>
-                        <button class="btn-primary profesionales-reveal" type="button" onclick="window.open('https://wa.me/5491136420547', '_blank', 'noopener,noreferrer')">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="btn-icon" viewBox="0 0 16 16" aria-hidden="true">
-                                <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-                            </svg>
-                            Contactar por WhatsApp
-                        </button>
-                    </div>
+        <section class="hero profesionales-page-hero" aria-label="Profesionales">
+            <div class="hero-image">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="assets/hero/hero_living2_mobile.webp" type="image/webp">
+                    <img
+                        src="assets/collections/oasis/collection_oasis1.webp"
+                        alt="Proyecto profesional de exterior"
+                        width="1200"
+                        height="800"
+                        decoding="async"
+                        fetchpriority="high"
+                    >
+                </picture>
+            </div>
+            <div class="hero-overlay" aria-hidden="true"></div>
+            <div class="hero-content">
+                <div class="hero-text profesionales-reveal-group">
+                
+                    <h1 class="section-title personalizable-hero__title profesionales-reveal">
+                        <span class="hero-title-line"><span class="hero-title-line-inner" style="--hero-line-index:0;">Soluciones para</span></span>
+                        <span class="hero-title-line"><span class="hero-title-line-inner" style="--hero-line-index:1;">proyectos exteriores</span></span>
+                    </h1>
+                    <p class="hero-description profesionales-reveal">
+                        Trabajamos junto a arquitectos, diseñadores y desarrolladores creando espacios exteriores funcionales, estéticos y duraderos.
+                    </p>
+                    <button class="btn-primary profesionales-reveal" type="button" onclick="window.open('https://wa.me/5491136420547', '_blank', 'noopener,noreferrer')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="btn-icon" viewBox="0 0 16 16" aria-hidden="true">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                        </svg>
+                        Contactar por WhatsApp
+                    </button>
                 </div>
             </div>
         </section>
 
         <section class="section-products profesionales-content">
             <div class="container">
-                <article class="profesionales-zigzag-item profesionales-zigzag-item--reverse profesionales-content-row">
-                    <div class="profesionales-zigzag-media">
-                        <img
-                            loading="lazy"
-                            decoding="async"
-                            src="assets/collections/luit/collection_luit4.webp"
-                            alt="Asesoramiento para profesionales"
-                            width="1200"
-                            height="704"
-                        >
-                    </div>
-                    <div class="profesionales-block">
-                        <h2 class="profesionales-block-title profesionales-reveal profesionales-line-heading">Asesoramiento para cada proyecto</h2>
-                        <p class="profesionales-block-text profesionales-reveal">
-                            Trabajamos junto a arquitectos, diseñadores y desarrolladores para encontrar la mejor solución según cada espacio.
-                            Nos adaptamos a distintas necesidades, ofreciendo opciones personalizadas que combinan diseño, funcionalidad y durabilidad.
-                        </p>
-                    </div>
-                </article>
+                <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+                    <a class="breadcrumb-link" href="./index.html">Inicio</a>
+                    <span class="breadcrumb-separator" aria-hidden="true">></span>
+                    <span class="breadcrumb-current">Profesionales</span>
+                </nav>
             </div>
 
-            <div class="content-band--muted">
+            <section class="profesionales-pillars profesionales-desktop-only profesionales-zigzag-item" aria-label="Beneficios para profesionales">
                 <div class="container">
-                    <article class="profesionales-zigzag-item">
+                    <ul class="profesionales-pillars__grid">
+                        <li class="profesionales-pillar profesionales-reveal">
+                            <span class="profesionales-pillar__icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 26l8-20 4 10 4-6 4 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 26h24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <h2 class="profesionales-pillar__title">Adaptación a cada proyecto</h2>
+                            <p class="profesionales-pillar__text">
+                                Entendemos las necesidades técnicas y estéticas de cada espacio para proponer soluciones coherentes con el proyecto.
+                            </p>
+                        </li>
+                        <li class="profesionales-pillar profesionales-reveal">
+                            <span class="profesionales-pillar__icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 22l8-14 8 14H8z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                    <path d="M6 26h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <h2 class="profesionales-pillar__title">Materiales pensados para exterior</h2>
+                            <p class="profesionales-pillar__text">
+                                Utilizamos aluminio anodizado y tapizados outdoor que garantizan durabilidad, resistencia y bajo mantenimiento.
+                            </p>
+                        </li>
+                        <li class="profesionales-pillar profesionales-reveal">
+                            <span class="profesionales-pillar__icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="11" r="4" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M8 26c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <h2 class="profesionales-pillar__title">Acompañamiento personalizado</h2>
+                            <p class="profesionales-pillar__text">
+                                Brindamos asesoramiento durante todo el proceso, desde la selección de piezas hasta la entrega final.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="profesionales-split-banner profesionales-desktop-only profesionales-zigzag-item" aria-labelledby="profesionales-split-title">
+                <div class="profesionales-split-banner__inner container">
+                    <div class="profesionales-split-banner__text">
+                        <h2 id="profesionales-split-title" class="profesionales-split-banner__title profesionales-reveal profesionales-line-heading">
+                            Diseñado para integrarse a proyectos contemporáneos.
+                        </h2>
+                    </div>
+                </div>
+                <div class="profesionales-split-banner__media">
+                    <img
+                        src="assets/collections/niss/collection_niss1.webp"
+                        alt="Espacio exterior con mobiliario Leon Livings"
+                        width="1200"
+                        height="704"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+            </section>
+
+            <section class="profesionales-process profesionales-desktop-only profesionales-zigzag-item" aria-labelledby="profesionales-process-title">
+                <div class="container">
+                    <p id="profesionales-process-title" class="profesionales-process__eyebrow profesionales-reveal profesionales-line-heading">Cómo trabajamos</p>
+                    <ol class="profesionales-process__grid">
+                        <li class="profesionales-process__step profesionales-reveal">
+                            <div class="profesionales-process__head">
+                                <span class="profesionales-process__num">01</span>
+                                <span class="profesionales-process__line" aria-hidden="true"></span>
+                            </div>
+                            <h3 class="profesionales-process__title">Análisis del espacio</h3>
+                            <p class="profesionales-process__text">Comprendemos el uso, las medidas y las necesidades del proyecto.</p>
+                        </li>
+                        <li class="profesionales-process__step profesionales-reveal">
+                            <div class="profesionales-process__head">
+                                <span class="profesionales-process__num">02</span>
+                                <span class="profesionales-process__line" aria-hidden="true"></span>
+                            </div>
+                            <h3 class="profesionales-process__title">Propuesta y selección</h3>
+                            <p class="profesionales-process__text">Desarrollamos una propuesta personalizada con materiales y configuraciones.</p>
+                        </li>
+                        <li class="profesionales-process__step profesionales-reveal">
+                            <span class="profesionales-process__num">03</span>
+                            <h3 class="profesionales-process__title">Producción</h3>
+                            <p class="profesionales-process__text">Fabricamos cada pieza con atención al detalle y control de calidad.</p>
+                        </li>
+                        <li class="profesionales-process__step profesionales-reveal">
+                            <span class="profesionales-process__num">04</span>
+                            <h3 class="profesionales-process__title">Entrega y seguimiento</h3>
+                            <p class="profesionales-process__text">Coordinamos la entrega y acompañamos la puesta en marcha del espacio.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <div class="profesionales-mobile-only">
+                <div class="container">
+                    <article class="profesionales-zigzag-item profesionales-zigzag-item--reverse profesionales-content-row">
                         <div class="profesionales-zigzag-media">
                             <img
                                 loading="lazy"
                                 decoding="async"
-                                src="assets/collections/niss/collection_niss1.webp"
-                                alt="Soluciones a medida para proyectos"
+                                src="assets/collections/luit/collection_luit4.webp"
+                                alt="Asesoramiento para profesionales"
                                 width="1200"
                                 height="704"
                             >
                         </div>
                         <div class="profesionales-block">
-                            <h2 class="profesionales-block-title profesionales-reveal profesionales-line-heading">Soluciones a medida</h2>
+                            <h2 class="profesionales-block-title profesionales-reveal profesionales-line-heading">Asesoramiento para cada proyecto</h2>
                             <p class="profesionales-block-text profesionales-reveal">
-                                Diseñamos y fabricamos mobiliario adaptado a cada proyecto, teniendo en cuenta medidas, distribución y uso real del espacio.
-                                Desde espacios residenciales hasta desarrollos en escala, buscamos lograr un resultado coherente y bien resuelto.
+                                Trabajamos junto a arquitectos, diseñadores y desarrolladores para encontrar la mejor solución según cada espacio.
+                                Nos adaptamos a distintas necesidades, ofreciendo opciones personalizadas que combinan diseño, funcionalidad y durabilidad.
                             </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="content-band--muted">
+                    <div class="container">
+                        <article class="profesionales-zigzag-item">
+                            <div class="profesionales-zigzag-media">
+                                <img
+                                    loading="lazy"
+                                    decoding="async"
+                                    src="assets/collections/niss/collection_niss1.webp"
+                                    alt="Soluciones a medida para proyectos"
+                                    width="1200"
+                                    height="704"
+                                >
+                            </div>
+                            <div class="profesionales-block">
+                                <h2 class="profesionales-block-title profesionales-reveal profesionales-line-heading">Soluciones a medida</h2>
+                                <p class="profesionales-block-text profesionales-reveal">
+                                    Diseñamos y fabricamos mobiliario adaptado a cada proyecto, teniendo en cuenta medidas, distribución y uso real del espacio.
+                                    Desde espacios residenciales hasta desarrollos en escala, buscamos lograr un resultado coherente y bien resuelto.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <article class="profesionales-zigzag-item profesionales-zigzag-item--reverse profesionales-content-row">
+                        <div class="profesionales-zigzag-media">
+                            <img
+                                loading="lazy"
+                                decoding="async"
+                                src="assets/collections/oasis/collection_oasis4.webp"
+                                alt="Proceso de trabajo para proyectos profesionales"
+                                width="1200"
+                                height="704"
+                            >
+                        </div>
+                        <div class="profesionales-block">
+                            <h2 class="profesionales-block-title profesionales-reveal profesionales-line-heading">Un proceso simple y claro</h2>
+                            <ul class="profesionales-steps profesionales-reveal">
+                                <li>Análisis del espacio</li>
+                                <li>Definición de propuesta</li>
+                                <li>Producción a medida</li>
+                                <li>Entrega y seguimiento</li>
+                            </ul>
                         </div>
                     </article>
                 </div>
             </div>
 
-            <div class="container">
-                <article class="profesionales-zigzag-item profesionales-zigzag-item--reverse profesionales-content-row">
-                    <div class="profesionales-zigzag-media">
-                        <img
-                            loading="lazy"
-                            decoding="async"
-                            src="assets/collections/oasis/collection_oasis4.webp"
-                            alt="Proceso de trabajo para proyectos profesionales"
-                            width="1200"
-                            height="704"
+            <section
+                class="section-cta profesionales-final-cta personalizable-final-cta profesionales-zigzag-item"
+                aria-label="Consultar por tu proyecto profesional"
+            >
+                <div class="cta-image">
+                    <img
+                        loading="lazy"
+                        decoding="async"
+                        src="assets/collections/lenn/collection_lenn1.webp"
+                        alt="Detalle de mobiliario exterior Leon Livings"
+                        width="1200"
+                        height="800"
+                    >
+                </div>
+                <div class="cta-overlay" aria-hidden="true"></div>
+                <div class="cta-content">
+                    <div class="cta-text personalizable-final-cta__text profesionales-reveal-group">
+                        <h2 class="section-title personalizable-hero__title profesionales-reveal">¿Tenés un proyecto en mente?</h2>
+                        <p class="personalizable-hero__subtitle profesionales-reveal profesionales-line-heading">
+                            Hablemos y encontremos juntos la mejor solución para tu espacio
+                        </p>
+                        <button
+                            class="btn-primary profesionales-reveal"
+                            type="button"
+                            onclick="window.open('https://wa.me/5491136420547', '_blank', 'noopener,noreferrer')"
                         >
-                    </div>
-                    <div class="profesionales-block">
-                        <h2 class="profesionales-block-title profesionales-reveal profesionales-line-heading">Un proceso simple y claro</h2>
-                        <ul class="profesionales-steps profesionales-reveal">
-                            <li>Análisis del espacio</li>
-                            <li>Definición de propuesta</li>
-                            <li>Producción a medida</li>
-                            <li>Entrega y seguimiento</li>
-                        </ul>
-                    </div>
-                </article>
-
-                <article class="profesionales-zigzag-item profesionales-content-row profesionales-content-row--cta">
-                    <div class="profesionales-zigzag-media">
-                        <img
-                            loading="lazy"
-                            decoding="async"
-                            src="assets/collections/lenn/collection_lenn1.webp"
-                            alt="Proyecto profesional en desarrollo"
-                            width="1200"
-                            height="704"
-                        >
-                    </div>
-                    <div class="profesionales-cta">
-                        <p class="profesionales-cta-title profesionales-reveal profesionales-line-heading">¿Tenés un proyecto en mente?</p>
-                        <p class="profesionales-cta-text profesionales-reveal">Escribinos y lo desarrollamos juntos</p>
-                        <button class="btn-primary profesionales-reveal" type="button" onclick="window.open('https://wa.me/5491136420547', '_blank', 'noopener,noreferrer')">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="btn-icon" viewBox="0 0 16 16" aria-hidden="true">
                                 <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
                             </svg>
-                            WhatsApp Contactanos
+                            Consultar por WhatsApp
                         </button>
                     </div>
-                </article>
-            </div>
+                </div>
+            </section>
+
+            <section class="profesionales-segments profesionales-desktop-only" aria-label="Tipos de proyectos">
+                <div class="container">
+                    <ul class="profesionales-segments__grid">
+                        <li class="profesionales-segment">
+                            <span class="profesionales-segment__icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 12h8v12H4V12zm12 6h8v6h-8v-6zM4 4h20v4H4V4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
+                            <span class="profesionales-segment__label">Viviendas</span>
+                        </li>
+                        <li class="profesionales-segment">
+                            <span class="profesionales-segment__icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 24V10l8-6 8 6v14H6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                    <path d="M11 24v-8h6v8" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </span>
+                            <span class="profesionales-segment__label">Edificios</span>
+                        </li>
+                        <li class="profesionales-segment">
+                            <span class="profesionales-segment__icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 10h20v12H4V10z" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M8 10V6h12v4" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </span>
+                            <span class="profesionales-segment__label">Hoteles</span>
+                        </li>
+                        <li class="profesionales-segment">
+                            <span class="profesionales-segment__icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="5" y="8" width="8" height="16" stroke="currentColor" stroke-width="1.5"/>
+                                    <rect x="15" y="4" width="8" height="20" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </span>
+                            <span class="profesionales-segment__label">Condominios</span>
+                        </li>
+                        <li class="profesionales-segment">
+                            <span class="profesionales-segment__icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 4v20M8 24c0-3.314 2.686-8 6-8s6 4.686 6 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    <circle cx="14" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </span>
+                            <span class="profesionales-segment__label">Barrios privados</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </section>
     </main>
 

@@ -104,17 +104,13 @@ function renderNotFound(container, slug) {
             ? "Falta el parámetro de colección en la URL (por ejemplo <code>?slug=capri</code>)."
             : `No encontramos la colección «${escapeHtml(slug)}».`;
     container.innerHTML = `
-        <section class="collection-page-top section-products">
+        <section class="collection-page-intro section-products">
             <div class="container product-container">
                 <nav class="breadcrumb-nav" aria-label="Breadcrumb">
                     <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
                     <a class="breadcrumb-link" href="coleccion.html">Colecciones</a>
                 </nav>
-            </div>
-        </section>
-        <section class="collection-page-intro section-products">
-            <div class="container product-container">
                 <button type="button" class="back-button" data-action="back">
                     <svg class="back-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -538,6 +534,15 @@ function renderCollection(container, collectionMeta, products) {
             : `<p class="collection-page-empty">No hay productos cargados para esta colección todavía.</p>`;
 
     container.innerHTML = `
+        <section class="collection-hero-banner" aria-labelledby="collection-page-title">
+            <div class="collection-hero-banner__media">
+                ${heroSrc ? `<img src="${heroSrc}" alt="${escapeHtml(name)}" decoding="async" fetchpriority="high">` : ""}
+                <div class="collection-hero-banner__overlay"></div>
+            </div>
+            <div class="collection-hero-banner__content">
+                <h1 id="collection-page-title" class="collection-hero-banner__title">${escapeHtml(name)}</h1>
+            </div>
+        </section>
         <section class="collection-page-top section-products">
             <div class="container product-container">
                 <nav class="breadcrumb-nav" aria-label="Breadcrumb">
@@ -547,15 +552,6 @@ function renderCollection(container, collectionMeta, products) {
                     <span class="breadcrumb-separator" aria-hidden="true">></span>
                     <span class="breadcrumb-current">${escapeHtml(name)}</span>
                 </nav>
-            </div>
-        </section>
-        <section class="collection-hero-banner" aria-labelledby="collection-page-title">
-            <div class="collection-hero-banner__media">
-                ${heroSrc ? `<img src="${heroSrc}" alt="${escapeHtml(name)}" decoding="async" fetchpriority="high">` : ""}
-                <div class="collection-hero-banner__overlay"></div>
-            </div>
-            <div class="collection-hero-banner__content">
-                <h1 id="collection-page-title" class="collection-hero-banner__title">${escapeHtml(name)}</h1>
             </div>
         </section>
         <section class="collection-page-intro section-products1">
@@ -627,17 +623,13 @@ async function loadCollectionPage() {
     } catch (err) {
         console.error("[collection-page]", err);
         container.innerHTML = `
-            <section class="collection-page-top section-products">
+            <section class="collection-page-intro section-products">
                 <div class="container product-container">
                     <nav class="breadcrumb-nav" aria-label="Breadcrumb">
                         <a class="breadcrumb-link" href="${INDEX_HREF}">Inicio</a>
                         <span class="breadcrumb-separator" aria-hidden="true">></span>
                         <a class="breadcrumb-link" href="coleccion.html">Colecciones</a>
                     </nav>
-                </div>
-            </section>
-            <section class="collection-page-intro section-products">
-                <div class="container product-container">
                     <p class="product-description">No pudimos cargar la colección. Intentá de nuevo más tarde.</p>
                     <p class="product-description" style="margin-top:1rem;">
                         <a href="coleccion.html">Volver a colecciones</a>

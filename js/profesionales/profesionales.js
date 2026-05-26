@@ -15,7 +15,7 @@ function revealElement(el) {
 function observeScrollReveals() {
     const reduced = prefersReducedMotion();
     const scrollTargets = document.querySelectorAll(
-        ".profesionales-zigzag-item, .profesionales-line-expand, .personalizable-final-cta"
+        ".profesionales-zigzag-item, .profesionales-line-expand, .personalizable-final-cta, .profesionales-final-cta"
     );
 
     if (!scrollTargets.length) return;
@@ -50,6 +50,7 @@ function initHeroReveal() {
 
     if (prefersReducedMotion()) {
         heroGroup.classList.add("is-visible");
+        heroGroup.closest(".hero-text")?.classList.add("is-visible");
         heroGroup.querySelectorAll(".profesionales-reveal, .profesionales-line-heading").forEach((el) => {
             el.classList.add("is-visible");
         });
@@ -58,6 +59,7 @@ function initHeroReveal() {
 
     requestAnimationFrame(() => {
         heroGroup.classList.add("is-visible");
+        heroGroup.closest(".hero-text")?.classList.add("is-visible");
     });
 }
 
