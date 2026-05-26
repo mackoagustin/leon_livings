@@ -4793,23 +4793,7 @@ body.profesionales-page:not(.personalizable-page) .profesionales-content > .cont
     margin-bottom: var(--space-10);
 }
 
-.profesionales-desktop-only {
-    display: none;
-}
-
-.profesionales-mobile-only {
-    display: block;
-}
-
 @media (min-width: 901px) {
-    .profesionales-desktop-only {
-        display: block;
-    }
-
-    .profesionales-mobile-only {
-        display: none;
-    }
-
     body.profesionales-page:not(.personalizable-page) .profesionales-content > .container > .breadcrumb-nav {
         margin-bottom: var(--space-12);
     }
@@ -5105,6 +5089,7 @@ body.profesionales-page:not(.personalizable-page) .profesionales-content {
 }
 
 @media (max-width: 900px) {
+    /* Hero — altura tipo personalizable */
     body.profesionales-page:not(.personalizable-page) .profesionales-page-hero {
         min-height: min(68vh, 480px);
         min-height: min(68dvh, 480px);
@@ -5114,6 +5099,12 @@ body.profesionales-page:not(.personalizable-page) .profesionales-content {
     body.profesionales-page:not(.personalizable-page) .profesionales-page-hero .hero-content {
         min-height: min(68vh, 480px);
         min-height: min(68dvh, 480px);
+        align-items: flex-end;
+        padding-bottom: var(--space-10);
+    }
+
+    body.profesionales-page:not(.personalizable-page) .profesionales-page-hero .hero-text {
+        max-width: 100%;
     }
 
     body.profesionales-page:not(.personalizable-page) .profesionales-page-hero .section-title.personalizable-hero__title {
@@ -5123,6 +5114,7 @@ body.profesionales-page:not(.personalizable-page) .profesionales-content {
         max-width: 100%;
         overflow-wrap: break-word;
         word-wrap: break-word;
+        margin-bottom: var(--space-5);
     }
 
     body.profesionales-page:not(.personalizable-page) .profesionales-page-hero .section-title.personalizable-hero__title .hero-title-line-inner {
@@ -5132,6 +5124,7 @@ body.profesionales-page:not(.personalizable-page) .profesionales-content {
     body.profesionales-page:not(.personalizable-page) .profesionales-page-hero .hero-description {
         font-size: 15px;
         line-height: 1.5;
+        margin-bottom: var(--space-6);
     }
 
     body.profesionales-page:not(.personalizable-page) .profesionales-page-hero .btn-primary {
@@ -5141,9 +5134,108 @@ body.profesionales-page:not(.personalizable-page) .profesionales-content {
         box-sizing: border-box;
     }
 
+    body.profesionales-page:not(.personalizable-page) .profesionales-content > .container > .breadcrumb-nav {
+        margin-top: var(--space-4);
+        margin-bottom: var(--space-8);
+    }
+
+    /* Pilares — una columna */
+    .profesionales-pillars {
+        padding-block: var(--space-8) var(--space-10);
+    }
+
+    .profesionales-pillars__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .profesionales-pillar__title {
+        font-size: clamp(20px, 5.5vw, 24px);
+    }
+
+    /* Banner — texto arriba, imagen abajo */
+    .profesionales-split-banner {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        margin-block: var(--space-6) var(--space-10);
+    }
+
+    .profesionales-split-banner__inner {
+        height: auto;
+        padding-block: var(--space-10);
+    }
+
+    .profesionales-split-banner__text {
+        max-width: 100%;
+    }
+
+    .profesionales-split-banner__title {
+        font-size: clamp(28px, 8.5vw, 36px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        max-width: 100%;
+    }
+
+    .profesionales-split-banner__media {
+        position: static;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        margin-left: 0;
+        clip-path: none;
+    }
+
+    .profesionales-split-banner__media img {
+        width: 100%;
+        min-height: 220px;
+        max-height: none;
+        aspect-ratio: 4 / 3;
+        border-radius: 0;
+    }
+
+    /* Proceso — una columna */
+    .profesionales-process {
+        padding-block: var(--space-10) var(--space-12);
+    }
+
+    .profesionales-process__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+    }
+
+    .profesionales-process__title {
+        font-size: clamp(18px, 4.5vw, 20px);
+    }
+
+    /* Segmentos — grilla 2 columnas */
+    .profesionales-segments {
+        padding-block: var(--space-10) var(--space-12);
+    }
+
+    .profesionales-segments__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8) var(--space-6);
+        justify-items: center;
+    }
+
+    .profesionales-segment {
+        flex: none;
+        min-width: 0;
+        max-width: none;
+        width: 100%;
+    }
+
+    /* CTA final */
     .profesionales-page .section-cta.profesionales-final-cta {
         height: min(68vh, 480px);
         height: min(68dvh, 480px);
+        margin-top: var(--space-6);
     }
 
     .profesionales-page .section-cta.profesionales-final-cta .personalizable-hero__title {
