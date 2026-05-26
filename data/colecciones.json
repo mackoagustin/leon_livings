@@ -139,7 +139,7 @@
             "combinations": ["sillas", "bancos", "mixto"]
         },
         
-        "heroImage": "assets/collections/lenn/collection_lenn1.webp",
+        "heroImage": "assets/collections/lenn/collection_lenn6.webp",
         "collectionImage": [
             "assets/collections/lenn/collection_lenn3.webp",
             "assets/collections/lenn/collection_lenn4.webp",
@@ -190,7 +190,7 @@
               "customSize": true
             },
           
-            "heroImage": "assets/collections/liz/collection_liz1.webp",
+            "heroImage": "assets/collections/liz/collection_liz9.webp",
             "collectionImage": [
                 "assets/collections/liz/collection_liz3.webp",
                 "assets/collections/liz/collection_liz4.webp",
@@ -350,7 +350,12 @@
             "collectionImage": [
               "assets/collections/luit/collection_luit2.webp",
               "assets/collections/luit/collection_luit3.webp",
-              "assets/collections/luit/collection_luit4.webp"
+              "assets/collections/luit/collection_luit4.webp",
+              "assets/collections/luit/collection_luit6.webp",
+              "assets/collections/luit/collection_luit7.webp",
+              "assets/collections/luit/collection_luit8.webp",
+              "assets/collections/luit/collection_luit9.webp",
+              "assets/collections/luit/collection_luit10.webp"
             ],
             "thumbnail": "/assets/collections/luit/collection_luit2.webp",
           
@@ -512,11 +517,17 @@
               "customSize": true
             },
           
-            "heroImage": "assets/collections/terra/collection_terra1.webp",
+            "heroImage": "assets/collections/terra/collection_terra11.webp",
             "collectionImage": [
               "assets/collections/terra/collection_terra2.webp",
               "assets/collections/terra/collection_terra3.webp",
-              "assets/collections/terra/collection_terra4.webp"
+              "assets/collections/terra/collection_terra4.webp",
+              "assets/collections/terra/collection_terra5.webp",
+              "assets/collections/terra/collection_terra6.webp",
+              "assets/collections/terra/collection_terra7.webp",
+              "assets/collections/terra/collection_terra8.webp",
+              "assets/collections/terra/collection_terra9.webp",
+              "assets/collections/terra/collection_terra10.webp"
             ],
             "thumbnail": "assets/collections/terra/collection_terra2.webp",
           

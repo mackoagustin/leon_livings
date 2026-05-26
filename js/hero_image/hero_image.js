@@ -63,7 +63,7 @@ async function loadHero() {
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <div class="hero-text">
-          <p class="hero-subtitle">${hero.subtitle}</p>
+         
           <h1 class="hero-title">${titleHtml}</h1>
           <p class="hero-description">
             ${hero.description}

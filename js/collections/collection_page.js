@@ -175,7 +175,12 @@ function renderAllCollections(container, collections) {
 
     document.title = `Colecciones — ${SITE_NAME}`;
     const grid = container.querySelector("[data-collections-grid]");
-    if (grid) bindCollectionCards(grid);
+    if (grid) {
+        bindCollectionCards(grid);
+        if (typeof animateCollectionCards === "function") {
+            animateCollectionCards(grid);
+        }
+    }
 }
 
 const COLLECTION_SPEC_LABELS = [
@@ -187,32 +192,46 @@ const COLLECTION_SPEC_LABELS = [
 const COLOR_LIBRARY = [
     { key: "crudo", label: "Crudo", src: "assets/colores/crudo.jpg" },
     { key: "piedra", label: "Piedra", src: "assets/colores/piedra.jpg" },
-    { key: "gamo", label: "Gamo", src: "assets/colores/gamo.jpg" },
-    { key: "grisclaro", label: "Gris claro", src: "assets/colores/gris_claro.jpg" },
     { key: "negro", label: "Negro", src: "assets/colores/negro.jpg" },
     { key: "gristopo", label: "Gris topo", src: "assets/colores/gris_topo.jpg" },
     { key: "arena", label: "Arena", src: "assets/colores/arena.jpg" },
-    { key: "azul", label: "Azul", src: "assets/colores/azul.jpg" },
-    { key: "verdeoasis", label: "Verde oasis", src: "assets/colores/verde_oasis.jpg" },
     { key: "tostado", label: "Tostado", src: "assets/colores/tostado.jpg" },
     { key: "grismedio", label: "Gris medio", src: "assets/colores/gris_medio.jpg" },
 ];
 
 const ALUMINUM_LIBRARY = [
-    { key: "plata", label: "Plata", src: "assets/Aluminio/plata.webp" },
-    { key: "madera", label: "Madera", src: "assets/Aluminio/madera.webp" },
-    { key: "negro", label: "Negro", src: "assets/Aluminio/negro.webp" },
+    { key: "plata", label: "Anodizado Natural", src: "assets/Aluminio/plata.webp" },
+    { key: "madera", label: "Simil Madera Nogal", src: "assets/Aluminio/madera.webp" },
+    { Key: "madera blanco", label: "Simil Madera Linen", src: "assets/Aluminio/simil_madera_blanco.webp" },
+    { key: "negro", label: "Negro Mate", src: "assets/Aluminio/negro.webp" },
+    { key: "crema", label: "Blanco Mate", src: "assets/Aluminio/crema.webp" },
 ];
 
 const GALLERY_PREV_SVG = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>`;
 const GALLERY_NEXT_SVG = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>`;
 const GALLERY_SLIDE_MS = 480;
 
+const COLOR_MODAL_HTML = `
+        <div class="color-modal" data-color-modal hidden aria-hidden="true">
+            <div class="color-modal__dialog" role="dialog" aria-modal="true" aria-label="Vista ampliada de color">
+                <button type="button" class="color-modal__close" data-color-modal-close aria-label="Cerrar vista de color">×</button>
+                <img data-color-modal-image src="" alt="" decoding="async">
+                <p class="color-modal__label" data-color-modal-label></p>
+            </div>
+        </div>`;
+
 function renderCollectionFinishesValue() {
     const swatchesHtml = COLOR_LIBRARY
         .map(
             (swatch) => `
-        <button type="button" class="color-swatch" title="${escapeHtml(swatch.label)}">
+        <button
+            type="button"
+            class="color-swatch"
+            data-color-src="${escapeHtml(swatch.src)}"
+            data-color-label="${escapeHtml(swatch.label)}"
+            aria-label="Ver color ${escapeHtml(swatch.label)} en grande"
+            title="${escapeHtml(swatch.label)}"
+        >
             <img src="${escapeHtml(swatch.src)}" alt="${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
         </button>`
         )
@@ -221,7 +240,14 @@ function renderCollectionFinishesValue() {
     const aluminumHtml = ALUMINUM_LIBRARY
         .map(
             (swatch) => `
-        <button type="button" class="color-swatch" title="Aluminio ${escapeHtml(swatch.label)}">
+        <button
+            type="button"
+            class="color-swatch"
+            data-color-src="${escapeHtml(swatch.src)}"
+            data-color-label="Aluminio ${escapeHtml(swatch.label)}"
+            aria-label="Ver aluminio ${escapeHtml(swatch.label)} en grande"
+            title="Aluminio ${escapeHtml(swatch.label)}"
+        >
             <img src="${escapeHtml(swatch.src)}" alt="Aluminio ${escapeHtml(swatch.label)}" loading="lazy" decoding="async">
         </button>`
         )
@@ -237,6 +263,50 @@ function renderCollectionFinishesValue() {
             ${aluminumHtml}
         </div>
     `;
+}
+
+function bindColorSwatches(container) {
+    const swatches = container.querySelectorAll(".color-swatch[data-color-src]");
+    if (!swatches.length) return;
+
+    const modal = container.querySelector("[data-color-modal]");
+    const modalImage = container.querySelector("[data-color-modal-image]");
+    const modalLabel = container.querySelector("[data-color-modal-label]");
+    const closeBtn = container.querySelector("[data-color-modal-close]");
+    if (!modal || !modalImage || !modalLabel || !closeBtn) return;
+
+    const closeModal = () => {
+        modal.hidden = true;
+        modal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("nav-open");
+    };
+
+    const openModal = (src, label) => {
+        modalImage.src = src;
+        modalImage.alt = label;
+        modalLabel.textContent = label;
+        modal.hidden = false;
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("nav-open");
+    };
+
+    swatches.forEach((swatch) => {
+        swatch.addEventListener("click", () => {
+            const src = swatch.getAttribute("data-color-src");
+            const label = swatch.getAttribute("data-color-label") || "Color";
+            if (!src) return;
+            openModal(src, label);
+        });
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && !modal.hidden) closeModal();
+    });
 }
 
 function preloadImage(src) {
@@ -569,7 +639,8 @@ function renderCollection(container, collectionMeta, products) {
                     ${productsHtml}
                 </div>
             </div>
-        </section>`;
+        </section>
+        ${COLOR_MODAL_HTML}`;
 
     document.title = `${name} — ${SITE_NAME}`;
 
@@ -583,6 +654,8 @@ function renderCollection(container, collectionMeta, products) {
     if (showGallery) {
         bindCollectionGallery(container, collectionImages);
     }
+
+    bindColorSwatches(container);
 }
 
 async function loadCollectionPage() {

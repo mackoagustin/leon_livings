@@ -60,11 +60,11 @@ const COLOR_LIBRARY = [
 ];
 
 const ALUMINUM_LIBRARY = [
-    { key: "plata", label: "Plata", src: "assets/Aluminio/plata.webp" },
-    { key: "madera", label: "Madera", src: "assets/Aluminio/madera.webp" },
-    { Key: "madera blanco", label: "Madera blanco", src: "assets/Aluminio/simil_madera_blanco.webp" },
-    { key: "negro", label: "Negro", src: "assets/Aluminio/negro.webp" },
-    { key: "crema", label: "Crema", src: "assets/Aluminio/crema.webp" },
+    { key: "plata", label: "Anodizado Natural", src: "assets/Aluminio/plata.webp" },
+    { key: "madera", label: "Simil Madera Nogal", src: "assets/Aluminio/madera.webp" },
+    { Key: "madera blanco", label: "Simil Madera Linen", src: "assets/Aluminio/simil_madera_blanco.webp" },
+    { key: "negro", label: "Negro Mate", src: "assets/Aluminio/negro.webp" },
+    { key: "crema", label: "Blanco Mate", src: "assets/Aluminio/crema.webp" },
 ];
 
 const WPC_LIBRARY = [

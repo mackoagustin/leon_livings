@@ -164,42 +164,6 @@
     --z-nav-drawer: 105;
 }
 
-/* Tablet: una columna — texto e imágenes sin superponer */
-@media (max-width: 1024px) {
-    .customization-wrapper {
-        grid-template-columns: 1fr;
-        min-height: 0;
-        gap: var(--space-10);
-    }
-
-    .customization-content {
-        max-width: 100%;
-    }
-
-    .customization-images {
-        justify-self: center;
-        margin-left: 0;
-        min-height: 0;
-        max-width: min(100%, 520px);
-        aspect-ratio: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        gap: var(--space-6);
-        padding-top: var(--space-4);
-    }
-
-    .floating-image-1,
-    .floating-image-2 {
-        position: static;
-        width: min(100%, var(--float-image-w));
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 356 / 475;
-    }
-}
-
 @media (max-width: 1200px) {
     :root {
         --padding-x: 40px;
@@ -241,8 +205,6 @@ body {
 body.nav-open {
     overflow: hidden;
 }
-
-
 
 /* Contenido debajo del header fijo (todas las páginas con <main>) */
 body > main {
@@ -1632,17 +1594,11 @@ a.btn-secondary-large:hover {
 
 .customization-wrapper {
     position: relative;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: clamp(var(--space-8), 4vw, var(--space-16));
-    align-items: start;
-    height: auto;
-    min-height: var(--customization-height);
+    height: var(--customization-height);
 }
 
 .customization-content {
     max-width: var(--customization-text-max);
-    min-width: 0;
 }
 
 .customization-label {
@@ -1707,26 +1663,18 @@ a.btn-secondary-large:hover {
     flex-wrap: wrap;
 }
 
-/* Caja de imágenes: proporciones del diseño (356×475, offset ~382px) en % para no invadir el texto */
 .customization-images {
-    position: relative;
-    width: 100%;
-    min-width: 0;
-    max-width: 738px;
-    aspect-ratio: 738 / 505;
-    min-height: 360px;
-    justify-self: end;
-    margin-left: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 .floating-image-1 {
     position: absolute;
     right: 0;
-    top: 5.9%;
-    width: 48.24%;
-    max-width: var(--float-image-w);
-    height: auto;
-    aspect-ratio: 356 / 475;
+    top: var(--float-1-top);
+    width: var(--float-image-w);
+    height: var(--float-image-h);
     object-fit: cover;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-floating-image);
@@ -1734,12 +1682,10 @@ a.btn-secondary-large:hover {
 
 .floating-image-2 {
     position: absolute;
-    right: 51.76%;
-    top: 34%;
-    width: 48.24%;
-    max-width: var(--float-image-w);
-    height: auto;
-    aspect-ratio: 356 / 475;
+    right: var(--float-2-right);
+    top: var(--float-2-top);
+    width: var(--float-image-w);
+    height: var(--float-image-h);
     object-fit: cover;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-floating-image);
@@ -3001,7 +2947,8 @@ body.collection-page .collection-page-root:has(> .collection-page-intro.section-
     line-height: var(--text-section-48-lh);
 }
 
-.materiales-lead {
+.materiales-lead,
+.materiales-text {
     margin: 0 0 var(--space-5);
     font-size: var(--text-body-18);
     line-height: 1.65;
@@ -3009,20 +2956,8 @@ body.collection-page .collection-page-root:has(> .collection-page-intro.section-
     padding-top: 10px;
 }
 
-.materiales-text {
-    margin: 0;
-    font-weight: var(--font-weight-light);
-    font-size: var(--text-body-18);
-    line-height: 1.3;
-    color: var(--color-text-body);
-}
-
-.materiales-text + .materiales-text {
-    margin-top: var(--space-4);
-}
-
 .materiales-text:last-of-type {
-    margin-bottom: 0;
+    margin-bottom: var(--space-6);
 }
 
 .materiales-swatches-group {
@@ -4654,11 +4589,11 @@ body.personalizable-page .profesionales-content.section-products {
 
 .personalizable-page .personalizable-copy p {
     margin: 0;
-    font-weight: 300;
     font-size: var(--text-body-18);
-    line-height: 1.3;
-    color: var(--color-text-body);
+    line-height: 1.65;
+    color: var(--color-text-soft);
 }
+
 .personalizable-page .profesionales-zigzag-item.is-visible .personalizable-copy {
     transition-delay: 0.12s;
 }
