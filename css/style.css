@@ -1424,6 +1424,9 @@ body.nav-open .header .logo {
 }
 
 .btn-primary-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: var(--color-interactive);
     color: var(--color-text-on-dark);
     padding: var(--space-4) 18px;
@@ -1436,6 +1439,7 @@ body.nav-open .header .logo {
     border-radius: var(--radius-sm);
     cursor: pointer;
     transition: background var(--duration-fast);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn-primary-dark:hover {
@@ -2109,9 +2113,7 @@ a.btn-secondary-large:hover {
 }
 
 .collections-cta .btn-primary-dark {
-    display: inline-block;
     text-decoration: none;
-    text-align: center;
 }
 
 .collection-page-root {
