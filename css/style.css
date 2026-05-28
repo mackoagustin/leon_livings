@@ -343,8 +343,20 @@ body.collection-page .collection-page-root:has(> .collection-hero-banner:first-c
 
 /* Salto de línea solo en viewport ≥901px (mismo corte que zigzag mobile) */
 @media (max-width: 900px) {
-    .br-desktop {
+    .br-desktop,
+    .hide-mobile {
         display: none;
+    }
+
+    .nosotros-materials .materiales-zigzag--intro {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+    }
+
+    .nosotros-materials .materiales-eyebrow,
+    .nosotros-materials .materiales-heading {
+        width: 100%;
+        text-align: left;
     }
 }
 
@@ -3873,17 +3885,45 @@ body.personalizable-page .profesionales-content.section-products {
         padding-block: 48px;
     }
 
-    .materiales-zigzag__media {
-        order: -1;
+    /* Nosotros materiales: eyebrow → título → media → textos (solo mobile) */
+    .nosotros-materials .materiales-zigzag {
+        align-items: stretch;
     }
 
-    .materiales-zigzag--reverse .materiales-zigzag__media,
-    .materiales-zigzag--reverse .materiales-zigzag__content {
-        order: initial;
+    .nosotros-materials .materiales-zigzag:not(.materiales-zigzag--intro) {
+        display: flex;
+        flex-direction: column;
     }
 
-    .materiales-zigzag--reverse .materiales-zigzag__media {
-        order: -1;
+    .nosotros-materials .materiales-zigzag:not(.materiales-zigzag--intro) .materiales-zigzag__content {
+        display: contents;
+    }
+
+    .nosotros-materials .materiales-eyebrow,
+    .nosotros-materials .materiales-heading {
+        width: 100%;
+        text-align: left;
+        align-self: stretch;
+    }
+
+    .nosotros-materials .materiales-zigzag:not(.materiales-zigzag--intro) .materiales-eyebrow {
+        order: 1;
+    }
+
+    .nosotros-materials .materiales-zigzag:not(.materiales-zigzag--intro) .materiales-heading {
+        order: 2;
+    }
+
+    .nosotros-materials .materiales-zigzag:not(.materiales-zigzag--intro) .materiales-zigzag__media {
+        order: 3;
+    }
+
+    .nosotros-materials .materiales-zigzag:not(.materiales-zigzag--intro) .materiales-text {
+        order: 4;
+    }
+
+    .nosotros-materials .materiales-zigzag:not(.materiales-zigzag--intro) .materiales-swatches-group {
+        order: 5;
     }
 
     .materiales-zigzag__media img,
