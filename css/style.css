@@ -79,7 +79,7 @@
     --text-cta-96: 6rem;
     --text-cta-96-lh: 5.7rem;
     --text-collection-36: 2.25rem;
-    --text-btn-primary: 1.125rem;
+    --text-btn-primary: 1;
     --text-btn-secondary: 0.9130625rem;
     --text-btn-dark: 1rem;
 
@@ -1596,7 +1596,7 @@ a.btn-secondary-large {
     -webkit-text-fill-color: var(--color-text);
     font-family: inherit;
     padding: var(--space-4) var(--space-6);
-    font-size: var(--text-overline-13);
+    font-size: var(--text-btn-primary);
     font-weight: var(--font-weight-medium);
     letter-spacing: var(--tracking-nav);
     text-transform: uppercase;

@@ -1,5 +1,5 @@
 const COLECCIONES_DATA_URL = "data/colecciones.json";
-const HOME_COLLECTIONS_ORDER = ["luit", "oasis", "capri", "lenn"];
+const HOME_COLLECTIONS_ORDER = ["luit", "terra", "kairo", "capri"];
 
 function escapeHtml(str) {
     return String(str)

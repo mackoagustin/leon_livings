@@ -1,423 +1,268 @@
 {
     "collections": [
-        {
-            "id": "capri",
-            "slug": "capri",
-            "name": "Capri",
-            "alt": "Colección Capri Exterior",
-
-            "description": "Capri es una colección de reposeras en aluminio anodizado, pensada para exterior, que combina durabilidad, confort y estética minimalista.",
-
-            "style": "moderno y minimalista",
-
-            "features": [
-                "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
-                "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
-                "Confort superior con tela lino outdoor y espuma de alta densidad."
-            ],
-
-            "heroImage": "assets/collections/capri/collections_capri5.webp",
-            "collectionImage": [
-                "assets/collections/capri/collections_capri3.webp",
-                "assets/collections/capri/collections_capri4.webp",
-                "assets/collections/capri/collections_capri5.webp",
-                "assets/collections/capri/collections_capri6.webp",
-                "assets/collections/capri/collections_capri7.webp"
-            ],
-            "thumbnail": "assets/collections/capri/collections_capri5.webp",
-
-            "categories": ["reposeras", "reposeras-dobles"],
-
-            "featuredProducts": [
-                "reposera-capri",
-                "reposera-doble-capri"
-            ]
-        },
-        {
-            "id": "kairo",
-            "slug": "kairo",
-            "name": "Kairo",
-            "alt": "Colección Kairo Exterior",
-          
-            "type": "living-set",
-          
-            "description": "Kairo es un set de living exterior en aluminio anodizado, diseñado para ofrecer confort superior, respaldos inclinados y una estética moderna y elegante.",
-          
-            "style": "moderno y minimalista",
-          
-            "features": [
-              "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
-              "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
-              "Confort superior: tela lino outdoor y espuma de alta densidad que mantienen su forma y comodidad."
-            ],
-          
-            "differentiator": "Set de living completo con respaldos inclinados, una característica poco común que mejora notablemente el confort.",
-          
-            "includes": [
-              {
-                "name": "Sillón 1 cuerpo",
-                "quantity": 2,
-                "size": "0.80 x 0.70 x 0.60"
-              },
-              {
-                "name": "Sillón 2 cuerpos",
-                "quantity": 1,
-                "size": "0.80 x 1.30 x 0.60"
-              },
-              {
-                "name": "Mesa ratona",
-                "quantity": 1,
-                "size": "0.60 x 1.00 x 0.35"
-              }
-            ],
-          
-            "customization": {
-              "structureColors": ["gris", "simil-madera", "negro", "blanco"],
-              "fabrics": ["lino-outdoor"],
-              "topOptions": ["aluminio", "wpc"],
-              "customSize": true
-            },
-          
-            "heroImage": "assets/collections/kairo/collection_kairo2.webp",
-            "collectionImage": [
-                "assets/collections/kairo/collection_kairo3.webp",
-                "assets/collections/kairo/collection_kairo2.webp",
-                "assets/collections/kairo/collection_kairo1.webp",
-                "assets/collections/kairo/collection_kairo4.webp",
-                "assets/collections/kairo/collection_kairo5.webp",
-                "assets/collections/kairo/collection_kairo6.webp",
-                "assets/collections/kairo/collection_kairo7.webp",
-                "assets/collections/kairo/collection_kairo8.webp",
-                "assets/collections/kairo/collection_kairo9.webp"
-            ],
-            "thumbnail": "/assets/collections/kairo/collection_kairo1.webp",
-          
-            "categories": ["livings", "mesas-ratonas"],
-          
-            "featuredProducts": []
-        },
-        {
-        "id": "lenn",
-        "slug": "lenn",
-        "name": "Lenn",
-        "alt": "Colección Lenn Exterior",
-        
-        "type": "dining-set",
-        
-        "description": "Lenn es una colección de sets de comedor en aluminio anodizado, diseñada para exteriores, que combina funcionalidad, resistencia y un estilo moderno y personalizable.",
-        
-        "style": "moderno y funcional",
-        
+      {
+        "id": "luit",
+        "slug": "luit",
+        "name": "Luit",
+        "alt": "Colección Luit Exterior",
+      
+        "type": "living-set",
+      
+        "description": "Luit es un set de living exterior en aluminio anodizado, diseñado para ofrecer confort, funcionalidad y una estética moderna y elegante.",
+      
+        "style": "moderno y versátil",
+      
         "features": [
+          "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+          "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+          "Confort y funcionalidad para espacios exteriores de uso diario."
+        ],
+      
+        "differentiator": "Set de living completo con configuración amplia y versátil, fabricado en aluminio anodizado y combinado con Tela Lino Outdoor y espuma de alta densidad, ofreciendo durabilidad y flexibilidad de uso.",
+      
+        "includes": [
+          {
+            "name": "Sillón individual",
+            "description": "0.67 x 0.75 x 0.67"
+          },
+          {
+            "name": "Sillón tres cuerpos",
+            "description": "0.67 x 1.95 x 0.67"
+          },
+          {
+            "name": "Mesa ratona",
+            "description": "0.60 x 1.00 x 0.40"
+          }
+        ],
+      
+        "customization": {
+          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+          "fabrics": ["lino-outdoor"],
+          "topOptions": ["aluminio", "wpc"],
+          "variants": [],
+          "customSize": true
+        },
+      
+        "heroImage": "assets/collections/luit/collection_luit1.webp",
+        "collectionImage": [
+          "assets/collections/luit/collection_luit2.webp",
+          "assets/collections/luit/collection_luit3.webp",
+          "assets/collections/luit/collection_luit4.webp",
+          "assets/collections/luit/collection_luit6.webp",
+          "assets/collections/luit/collection_luit7.webp",
+          "assets/collections/luit/collection_luit8.webp",
+          "assets/collections/luit/collection_luit9.webp",
+          "assets/collections/luit/collection_luit10.webp"
+        ],
+        "thumbnail": "/assets/collections/luit/collection_luit2.webp",
+      
+        "categories": ["sillones", "mesas-ratonas"],
+      
+        "featuredProducts": []
+      },
+      {
+        "id": "terra",
+        "slug": "terra",
+        "name": "Terra",
+        "alt": "Colección Terra Exterior",
+      
+        "type": "living-set",
+      
+        "description": "Terra es un set de living exterior en aluminio anodizado, diseñado para ofrecer amplitud, confort y una estética moderna y equilibrada.",
+      
+        "style": "moderno y sobrio",
+      
+        "features": [
+          "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+          "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+          "Diseño amplio y equilibrado, ideal para integrarse en distintos espacios exteriores."
+        ],
+      
+        "differentiator": "Set de living de diseño amplio y equilibrado, sin elementos visuales protagonistas, pensado para integrarse fácilmente en distintos espacios exteriores manteniendo confort y durabilidad.",
+      
+        "includes": [
+          {
+            "name": "Sillón individual",
+            "description": "0.82 x 0.90 x 0.67"
+          },
+          {
+            "name": "Sillón tres cuerpos",
+            "description": "0.82 x 2.40 x 0.67"
+          },
+          {
+            "name": "Mesa ratona",
+            "description": "0.60 x 1.20 x 0.40"
+          }
+        ],
+      
+        "customization": {
+          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+          "fabrics": ["lino-outdoor"],
+          "topOptions": ["aluminio", "wpc"],
+          "variants": [],
+          "customSize": true
+        },
+      
+        "heroImage": "assets/collections/terra/collection_terra11.webp",
+        "collectionImage": [
+          "assets/collections/terra/collection_terra2.webp",
+          "assets/collections/terra/collection_terra3.webp",
+          "assets/collections/terra/collection_terra4.webp",
+          "assets/collections/terra/collection_terra5.webp",
+          "assets/collections/terra/collection_terra6.webp",
+          "assets/collections/terra/collection_terra7.webp",
+          "assets/collections/terra/collection_terra8.webp",
+          "assets/collections/terra/collection_terra9.webp",
+          "assets/collections/terra/collection_terra10.webp"
+        ],
+        "thumbnail": "assets/collections/terra/collection_terra2.webp",
+      
+        "categories": ["sillones", "mesas-ratonas"],
+      
+        "featuredProducts": []
+      },
+      {
+          "id": "kairo",
+          "slug": "kairo",
+          "name": "Kairo",
+          "alt": "Colección Kairo Exterior",
+        
+          "type": "living-set",
+        
+          "description": "Kairo es un set de living exterior en aluminio anodizado, diseñado para ofrecer confort superior, respaldos inclinados y una estética moderna y elegante.",
+        
+          "style": "moderno y minimalista",
+        
+          "features": [
             "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
             "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
-            "Diseño funcional y personalizable, adaptable a distintos espacios y necesidades."
-        ],
+            "Confort superior: tela lino outdoor y espuma de alta densidad que mantienen su forma y comodidad."
+          ],
         
-        "differentiator": "Línea de comedor completamente modular y personalizable, con mesas adaptables y combinación de sillas o bancos.",
+          "differentiator": "Set de living completo con respaldos inclinados, una característica poco común que mejora notablemente el confort.",
         
-        "includes": [
+          "includes": [
             {
-            "name": "Mesas",
-            "description": "Dimensiones adaptables según cantidad de asientos"
+              "name": "Sillón 1 cuerpo",
+              "quantity": 2,
+              "size": "0.80 x 0.70 x 0.60"
             },
             {
-            "name": "Sillas",
-            "description": "Configurables según necesidad"
+              "name": "Sillón 2 cuerpos",
+              "quantity": 1,
+              "size": "0.80 x 1.30 x 0.60"
             },
             {
-            "name": "Bancos",
-            "description": "Opcionales o combinables con sillas"
+              "name": "Mesa ratona",
+              "quantity": 1,
+              "size": "0.60 x 1.00 x 0.35"
             }
-        ],
+          ],
         
-        "customization": {
+          "customization": {
             "structureColors": ["gris", "simil-madera", "negro", "blanco"],
             "fabrics": ["lino-outdoor"],
             "topOptions": ["aluminio", "wpc"],
-            "customSize": true,
-            "combinations": ["sillas", "bancos", "mixto"]
-        },
+            "customSize": true
+          },
         
-        "heroImage": "assets/collections/lenn/collection_lenn6.webp",
-        "collectionImage": [
-            "assets/collections/lenn/collection_lenn3.webp",
-            "assets/collections/lenn/collection_lenn4.webp",
-            "assets/collections/lenn/collection_lenn5.webp"
+          "heroImage": "assets/collections/kairo/collection_kairo2.webp",
+          "collectionImage": [
+              "assets/collections/kairo/collection_kairo3.webp",
+              "assets/collections/kairo/collection_kairo2.webp",
+              "assets/collections/kairo/collection_kairo1.webp",
+              "assets/collections/kairo/collection_kairo4.webp",
+              "assets/collections/kairo/collection_kairo5.webp",
+              "assets/collections/kairo/collection_kairo6.webp",
+              "assets/collections/kairo/collection_kairo7.webp",
+              "assets/collections/kairo/collection_kairo8.webp",
+              "assets/collections/kairo/collection_kairo9.webp"
+          ],
+          "thumbnail": "/assets/collections/kairo/collection_kairo1.webp",
+        
+          "categories": ["livings", "mesas-ratonas"],
+        
+          "featuredProducts": []
+      },
+      {
+          "id": "capri",
+          "slug": "capri",
+          "name": "Capri",
+          "alt": "Colección Capri Exterior",
+
+          "description": "Capri es una colección de reposeras en aluminio anodizado, pensada para exterior, que combina durabilidad, confort y estética minimalista.",
+
+          "style": "moderno y minimalista",
+
+          "features": [
+              "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+              "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+              "Confort superior con tela lino outdoor y espuma de alta densidad."
+          ],
+
+          "heroImage": "assets/collections/capri/collections_capri5.webp",
+          "collectionImage": [
+              "assets/collections/capri/collections_capri3.webp",
+              "assets/collections/capri/collections_capri4.webp",
+              "assets/collections/capri/collections_capri5.webp",
+              "assets/collections/capri/collections_capri6.webp",
+              "assets/collections/capri/collections_capri7.webp"
+          ],
+          "thumbnail": "assets/collections/capri/collections_capri5.webp",
+
+          "categories": ["reposeras", "reposeras-dobles"],
+
+          "featuredProducts": [
+              "reposera-capri",
+              "reposera-doble-capri"
+          ]
+      },
+      {
+        "id": "lone",
+        "slug": "lone",
+        "name": "Lone",
+        "alt": "Colección Lone Exterior",
+      
+        "type": "lounger",
+      
+        "description": "Lone es una colección de reposeras en aluminio anodizado diseñada para exterior, que prioriza la resistencia, la estabilidad y el confort en el uso diario.",
+      
+        "style": "moderno y funcional",
+      
+        "features": [
+          "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+          "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+          "Refuerzos estructurales que aportan mayor estabilidad y durabilidad."
         ],
-        "thumbnail": "/assets/collections/lenn/collection_lenn2.webp",
-        
-        "categories": ["mesas-de-comedor", "sillas", "bancos"],
-        
-        "featuredProducts": []
+      
+        "differentiator": "Colección de reposeras con estructura reforzada que aporta mayor estabilidad y resistencia frente al uso intensivo, manteniendo confort y bajo mantenimiento.",
+      
+        "includes": [
+          {
+            "name": "Reposeras",
+            "description": "Disponibles en distintas medidas y configuraciones"
+          }
+        ],
+      
+        "customization": {
+          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+          "fabrics": ["lino-outdoor"],
+          "customSize": true
         },
-        {
-            "id": "liz",
-            "slug": "liz",
-            "name": "Liz",
-            "alt": "Colección Liz Exterior",
-          
-            "type": "bar-set",
-          
-            "description": "Liz es una colección de sets de barra en aluminio anodizado, diseñada para exteriores, que combina funcionalidad, resistencia y un diseño moderno y personalizable.",
-          
-            "style": "moderno y funcional",
-          
-            "features": [
-              "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
-              "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
-              "Diseño funcional y personalizable, adaptable a distintos espacios y necesidades, con banquetas con o sin respaldo."
-            ],
-          
-            "differentiator": "Línea de barra completamente modular y personalizable, con opción de banquetas con o sin respaldo y tapas en aluminio o WPC.",
-          
-            "includes": [
-              {
-                "name": "Barra",
-                "description": "Dimensiones adaptables según cantidad de banquetas"
-              },
-              {
-                "name": "Banquetas",
-                "description": "Disponibles con o sin respaldo, configurables según necesidad"
-              }
-            ],
-          
-            "customization": {
-              "structureColors": ["gris", "simil-madera", "negro", "blanco"],
-              "fabrics": ["lino-outdoor"],
-              "topOptions": ["aluminio", "wpc"],
-              "variants": ["con-respaldo", "sin-respaldo"],
-              "customSize": true
-            },
-          
-            "heroImage": "assets/collections/liz/collection_liz9.webp",
-            "collectionImage": [
-                "assets/collections/liz/collection_liz3.webp",
-                "assets/collections/liz/collection_liz4.webp",
-                "assets/collections/liz/collection_liz1.webp",
-                "assets/collections/liz/collection_liz5.webp",
-                "assets/collections/liz/collection_liz6.webp",
-                "assets/collections/liz/collection_liz7.webp"
-            ],
-            "thumbnail": "/assets/collections/liz/collection_liz4.webp",
-          
-            "categories": ["barras", "banquetas"],
-          
-            "featuredProducts": []
-          },
-          {
-            "id": "cove",
-            "slug": "cove",
-            "name": "Cove",
-            "alt": "Colección Cove Exterior",
-          
-            "type": "lounger",
-          
-            "description": "Cove es un camastro con techo de diseño contemporáneo en aluminio anodizado, pensado para exterior, que combina confort, protección solar y estética minimalista.",
-          
-            "style": "moderno y minimalista",
-          
-            "features": [
-              "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
-              "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
-              "Confort superior: tela lino outdoor y espuma de alta densidad que mantienen su forma y comodidad."
-            ],
-          
-            "differentiator": "Camastro con techo incorporado que brinda protección solar y confort superior, combinado con materiales premium para uso exterior prolongado.",
-          
-            "includes": [
-              {
-                "name": "Camastro",
-                "description": "Estructura amplia diseñada para descanso prolongado"
-              },
-              {
-                "name": "Techo",
-                "description": "Disponible en formato fijo o desmontable para protección solar"
-              }
-            ],
-          
-            "customization": {
-              "structureColors": ["gris", "simil-madera", "negro", "blanco"],
-              "fabrics": ["lino-outdoor"],
-              "roofOptions": ["fijo", "desmontable"],
-              "customSize": true
-            },
-          
-            "heroImage": "assets/collections/cove/collection_cove1.webp",
-           
-           
-            "collectionImage": [
-              "assets/collections/cove/collection_cove1.webp",
-              "assets/collections/cove/collection_cove2.webp",
-              "assets/collections/cove/collection_cove3.webp"
-              
-            ],
-            "thumbnail": "assets/collections/cove/collection_cove1.webp",
-          
-            "categories": ["camastros"],
-          
-            "featuredProducts": []
-          },
-          {
-            "id": "lone",
-            "slug": "lone",
-            "name": "Lone",
-            "alt": "Colección Lone Exterior",
-          
-            "type": "lounger",
-          
-            "description": "Lone es una colección de reposeras en aluminio anodizado diseñada para exterior, que prioriza la resistencia, la estabilidad y el confort en el uso diario.",
-          
-            "style": "moderno y funcional",
-          
-            "features": [
-              "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
-              "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
-              "Refuerzos estructurales que aportan mayor estabilidad y durabilidad."
-            ],
-          
-            "differentiator": "Colección de reposeras con estructura reforzada que aporta mayor estabilidad y resistencia frente al uso intensivo, manteniendo confort y bajo mantenimiento.",
-          
-            "includes": [
-              {
-                "name": "Reposeras",
-                "description": "Disponibles en distintas medidas y configuraciones"
-              }
-            ],
-          
-            "customization": {
-              "structureColors": ["gris", "simil-madera", "negro", "blanco"],
-              "fabrics": ["lino-outdoor"],
-              "customSize": true
-            },
-          
-            "heroImage": "assets/collections/lone/collection_lone1.webp",
-            "collectionImage": [
-              "assets/collections/lone/collection_lone2.webp",
-              "assets/collections/lone/collection_lone3.webp",
-              "assets/collections/lone/collection_lone1.webp"
-            ],
-            "thumbnail": "/assets/collections/lone/collection_lone3.webp",
-          
-            "categories": ["reposeras", "reposeras-dobles"],
-          
-            "featuredProducts": []
-          },
-          {
-            "id": "luit",
-            "slug": "luit",
-            "name": "Luit",
-            "alt": "Colección Luit Exterior",
-          
-            "type": "living-set",
-          
-            "description": "Luit es un set de living exterior en aluminio anodizado, diseñado para ofrecer confort, funcionalidad y una estética moderna y elegante.",
-          
-            "style": "moderno y versátil",
-          
-            "features": [
-              "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
-              "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
-              "Confort y funcionalidad para espacios exteriores de uso diario."
-            ],
-          
-            "differentiator": "Set de living completo con configuración amplia y versátil, fabricado en aluminio anodizado y combinado con Tela Lino Outdoor y espuma de alta densidad, ofreciendo durabilidad y flexibilidad de uso.",
-          
-            "includes": [
-              {
-                "name": "Sillón individual",
-                "description": "0.67 x 0.75 x 0.67"
-              },
-              {
-                "name": "Sillón tres cuerpos",
-                "description": "0.67 x 1.95 x 0.67"
-              },
-              {
-                "name": "Mesa ratona",
-                "description": "0.60 x 1.00 x 0.40"
-              }
-            ],
-          
-            "customization": {
-              "structureColors": ["gris", "simil-madera", "negro", "blanco"],
-              "fabrics": ["lino-outdoor"],
-              "topOptions": ["aluminio", "wpc"],
-              "variants": [],
-              "customSize": true
-            },
-          
-            "heroImage": "assets/collections/luit/collection_luit1.webp",
-            "collectionImage": [
-              "assets/collections/luit/collection_luit2.webp",
-              "assets/collections/luit/collection_luit3.webp",
-              "assets/collections/luit/collection_luit4.webp",
-              "assets/collections/luit/collection_luit6.webp",
-              "assets/collections/luit/collection_luit7.webp",
-              "assets/collections/luit/collection_luit8.webp",
-              "assets/collections/luit/collection_luit9.webp",
-              "assets/collections/luit/collection_luit10.webp"
-            ],
-            "thumbnail": "/assets/collections/luit/collection_luit2.webp",
-          
-            "categories": ["sillones", "mesas-ratonas"],
-          
-            "featuredProducts": []
-          },
-          {
-            "id": "niss",
-            "slug": "niss",
-            "name": "Niss",
-            "alt": "Colección Niss Exterior",
-          
-            "type": "living-set",
-          
-            "description": "Niss es un set de living exterior en aluminio anodizado, diseñado para ofrecer mayor amplitud, confort y una estética moderna con carácter distintivo.",
-          
-            "style": "moderno y sólido",
-          
-            "features": [
-              "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
-              "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
-              "Mayor amplitud y diseño distintivo, que elevan el confort y la estética del conjunto."
-            ],
-          
-            "differentiator": "Set de living con mayor profundidad y amplitud, con laterales en aluminio tipo entramado que aportan identidad visual y una estética diferencial.",
-          
-            "includes": [
-              {
-                "name": "Sillón individual",
-                "description": "0.82 x 0.90 x 0.67"
-              },
-              {
-                "name": "Sillón dos cuerpos",
-                "description": "0.82 x 1.65 x 0.67"
-              },
-              {
-                "name": "Mesa ratona",
-                "description": "0.60 x 1.00 x 0.40"
-              }
-            ],
-          
-            "customization": {
-              "structureColors": ["gris", "simil-madera", "negro", "blanco"],
-              "fabrics": ["lino-outdoor"],
-              "topOptions": ["aluminio", "wpc"],
-              "variants": [],
-              "customSize": true
-            },
-          
-            "heroImage": "assets/collections/niss/collection_niss1.webp",
-            "collectionImage": [
-              "assets/collections/niss/collection_niss2.webp",
-              "assets/collections/niss/collection_niss3.webp"
-            ],
-            "thumbnail": "/assets/collections/niss/collection_niss4.webp",
-          
-            "categories": ["sillones", "mesas-ratonas"],
-          
-            "featuredProducts": []
-          },
-          {
+      
+        "heroImage": "assets/collections/lone/collection_lone1.webp",
+        "collectionImage": [
+          "assets/collections/lone/collection_lone2.webp",
+          "assets/collections/lone/collection_lone3.webp",
+          "assets/collections/lone/collection_lone1.webp"
+        ],
+        "thumbnail": "/assets/collections/lone/collection_lone3.webp",
+      
+        "categories": ["reposeras", "reposeras-dobles"],
+      
+        "featuredProducts": []
+      },
+      {
             "id": "oasis",
             "slug": "oasis",
             "name": "Oasis",
@@ -473,39 +318,143 @@
             "categories": ["sillones", "mesas-ratonas"],
           
             "featuredProducts": []
+      },    {
+        "id": "niss",
+        "slug": "niss",
+        "name": "Niss",
+        "alt": "Colección Niss Exterior",
+      
+        "type": "living-set",
+      
+        "description": "Niss es un set de living exterior en aluminio anodizado, diseñado para ofrecer mayor amplitud, confort y una estética moderna con carácter distintivo.",
+      
+        "style": "moderno y sólido",
+      
+        "features": [
+          "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+          "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+          "Mayor amplitud y diseño distintivo, que elevan el confort y la estética del conjunto."
+        ],
+      
+        "differentiator": "Set de living con mayor profundidad y amplitud, con laterales en aluminio tipo entramado que aportan identidad visual y una estética diferencial.",
+      
+        "includes": [
+          {
+            "name": "Sillón individual",
+            "description": "0.82 x 0.90 x 0.67"
           },
           {
-            "id": "terra",
-            "slug": "terra",
-            "name": "Terra",
-            "alt": "Colección Terra Exterior",
+            "name": "Sillón dos cuerpos",
+            "description": "0.82 x 1.65 x 0.67"
+          },
+          {
+            "name": "Mesa ratona",
+            "description": "0.60 x 1.00 x 0.40"
+          }
+        ],
+      
+        "customization": {
+          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+          "fabrics": ["lino-outdoor"],
+          "topOptions": ["aluminio", "wpc"],
+          "variants": [],
+          "customSize": true
+        },
+      
+        "heroImage": "assets/collections/niss/collection_niss1.webp",
+        "collectionImage": [
+          "assets/collections/niss/collection_niss2.webp",
+          "assets/collections/niss/collection_niss3.webp"
+        ],
+        "thumbnail": "/assets/collections/niss/collection_niss4.webp",
+      
+        "categories": ["sillones", "mesas-ratonas"],
+      
+        "featuredProducts": []
+      },   
+      {
+      "id": "lenn",
+      "slug": "lenn",
+      "name": "Lenn",
+      "alt": "Colección Lenn Exterior",
+      
+      "type": "dining-set",
+      
+      "description": "Lenn es una colección de sets de comedor en aluminio anodizado, diseñada para exteriores, que combina funcionalidad, resistencia y un estilo moderno y personalizable.",
+      
+      "style": "moderno y funcional",
+      
+      "features": [
+          "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+          "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+          "Diseño funcional y personalizable, adaptable a distintos espacios y necesidades."
+      ],
+      
+      "differentiator": "Línea de comedor completamente modular y personalizable, con mesas adaptables y combinación de sillas o bancos.",
+      
+      "includes": [
+          {
+          "name": "Mesas",
+          "description": "Dimensiones adaptables según cantidad de asientos"
+          },
+          {
+          "name": "Sillas",
+          "description": "Configurables según necesidad"
+          },
+          {
+          "name": "Bancos",
+          "description": "Opcionales o combinables con sillas"
+          }
+      ],
+      
+      "customization": {
+          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+          "fabrics": ["lino-outdoor"],
+          "topOptions": ["aluminio", "wpc"],
+          "customSize": true,
+          "combinations": ["sillas", "bancos", "mixto"]
+      },
+      
+      "heroImage": "assets/collections/lenn/collection_lenn6.webp",
+      "collectionImage": [
+          "assets/collections/lenn/collection_lenn3.webp",
+          "assets/collections/lenn/collection_lenn4.webp",
+          "assets/collections/lenn/collection_lenn5.webp"
+      ],
+      "thumbnail": "/assets/collections/lenn/collection_lenn2.webp",
+      
+      "categories": ["mesas-de-comedor", "sillas", "bancos"],
+      
+      "featuredProducts": []
+      },
+      {
+            "id": "liz",
+            "slug": "liz",
+            "name": "Liz",
+            "alt": "Colección Liz Exterior",
           
-            "type": "living-set",
+            "type": "bar-set",
           
-            "description": "Terra es un set de living exterior en aluminio anodizado, diseñado para ofrecer amplitud, confort y una estética moderna y equilibrada.",
+            "description": "Liz es una colección de sets de barra en aluminio anodizado, diseñada para exteriores, que combina funcionalidad, resistencia y un diseño moderno y personalizable.",
           
-            "style": "moderno y sobrio",
+            "style": "moderno y funcional",
           
             "features": [
               "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
               "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
-              "Diseño amplio y equilibrado, ideal para integrarse en distintos espacios exteriores."
+              "Diseño funcional y personalizable, adaptable a distintos espacios y necesidades, con banquetas con o sin respaldo."
             ],
           
-            "differentiator": "Set de living de diseño amplio y equilibrado, sin elementos visuales protagonistas, pensado para integrarse fácilmente en distintos espacios exteriores manteniendo confort y durabilidad.",
+            "differentiator": "Línea de barra completamente modular y personalizable, con opción de banquetas con o sin respaldo y tapas en aluminio o WPC.",
           
             "includes": [
               {
-                "name": "Sillón individual",
-                "description": "0.82 x 0.90 x 0.67"
+                "name": "Barra",
+                "description": "Dimensiones adaptables según cantidad de banquetas"
               },
               {
-                "name": "Sillón tres cuerpos",
-                "description": "0.82 x 2.40 x 0.67"
-              },
-              {
-                "name": "Mesa ratona",
-                "description": "0.60 x 1.20 x 0.40"
+                "name": "Banquetas",
+                "description": "Disponibles con o sin respaldo, configurables según necesidad"
               }
             ],
           
@@ -513,28 +462,78 @@
               "structureColors": ["gris", "simil-madera", "negro", "blanco"],
               "fabrics": ["lino-outdoor"],
               "topOptions": ["aluminio", "wpc"],
-              "variants": [],
+              "variants": ["con-respaldo", "sin-respaldo"],
               "customSize": true
             },
           
-            "heroImage": "assets/collections/terra/collection_terra11.webp",
+            "heroImage": "assets/collections/liz/collection_liz9.webp",
             "collectionImage": [
-              "assets/collections/terra/collection_terra2.webp",
-              "assets/collections/terra/collection_terra3.webp",
-              "assets/collections/terra/collection_terra4.webp",
-              "assets/collections/terra/collection_terra5.webp",
-              "assets/collections/terra/collection_terra6.webp",
-              "assets/collections/terra/collection_terra7.webp",
-              "assets/collections/terra/collection_terra8.webp",
-              "assets/collections/terra/collection_terra9.webp",
-              "assets/collections/terra/collection_terra10.webp"
+                "assets/collections/liz/collection_liz3.webp",
+                "assets/collections/liz/collection_liz4.webp",
+                "assets/collections/liz/collection_liz1.webp",
+                "assets/collections/liz/collection_liz5.webp",
+                "assets/collections/liz/collection_liz6.webp",
+                "assets/collections/liz/collection_liz7.webp"
             ],
-            "thumbnail": "assets/collections/terra/collection_terra2.webp",
+            "thumbnail": "/assets/collections/liz/collection_liz4.webp",
           
-            "categories": ["sillones", "mesas-ratonas"],
+            "categories": ["barras", "banquetas"],
           
             "featuredProducts": []
+      },
+      {
+        "id": "cove",
+        "slug": "cove",
+        "name": "Cove",
+        "alt": "Colección Cove Exterior",
+      
+        "type": "lounger",
+      
+        "description": "Cove es un camastro con techo de diseño contemporáneo en aluminio anodizado, pensado para exterior, que combina confort, protección solar y estética minimalista.",
+      
+        "style": "moderno y minimalista",
+      
+        "features": [
+          "Estructura de aluminio anodizado: liviana, resistente y sin mantenimiento.",
+          "Materiales pensados para exterior: alta durabilidad frente al sol y la intemperie.",
+          "Confort superior: tela lino outdoor y espuma de alta densidad que mantienen su forma y comodidad."
+        ],
+      
+        "differentiator": "Camastro con techo incorporado que brinda protección solar y confort superior, combinado con materiales premium para uso exterior prolongado.",
+      
+        "includes": [
+          {
+            "name": "Camastro",
+            "description": "Estructura amplia diseñada para descanso prolongado"
+          },
+          {
+            "name": "Techo",
+            "description": "Disponible en formato fijo o desmontable para protección solar"
           }
+        ],
+      
+        "customization": {
+          "structureColors": ["gris", "simil-madera", "negro", "blanco"],
+          "fabrics": ["lino-outdoor"],
+          "roofOptions": ["fijo", "desmontable"],
+          "customSize": true
+        },
+      
+        "heroImage": "assets/collections/cove/collection_cove1.webp",
+        
+        
+        "collectionImage": [
+          "assets/collections/cove/collection_cove1.webp",
+          "assets/collections/cove/collection_cove2.webp",
+          "assets/collections/cove/collection_cove3.webp"
+          
+        ],
+        "thumbnail": "assets/collections/cove/collection_cove1.webp",
+      
+        "categories": ["camastros"],
+      
+        "featuredProducts": []
+      }   
     ]
 }
 
