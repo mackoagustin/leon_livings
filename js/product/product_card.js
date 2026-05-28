@@ -2,7 +2,7 @@ const PRODUCT_DATA_URL = "data/product.json";
 const WHATSAPP_URL = "https://wa.me/5491136420547";
 const HOME_FEATURED_PRODUCTS = [
     "sillon-luit-1-cuerpo",
-    "sillon-luit-2-cuerpos",
+    "sillon-terra-2-cuerpos",
     "reposera-capri",
     "sillon-niss-1-cuerpo",
     "camastro-con-techo", 
@@ -11,7 +11,7 @@ const HOME_FEATURED_PRODUCTS = [
 ];
 const HOME_FEATURED_LABELS = {
     "sillon-luit-1-cuerpo": "Sillón de un cuerpo Luit",
-    "sillon-luit-2-cuerpos": "Sillón de dos cuerpos Luit",
+    "sillon-terra-2-cuerpos": "Sillón de dos cuerpos Terra",
     "reposera-capri": "Reposera Capri",
     "sillon-niss-1-cuerpo": "Sillón de un cuerpo Niss",
     "camastro-con-techo": "Camastro con Techo",
