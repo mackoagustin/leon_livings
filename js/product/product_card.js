@@ -1,22 +1,22 @@
 const PRODUCT_DATA_URL = "data/product.json";
 const WHATSAPP_URL = "https://wa.me/5491136420547";
 const HOME_FEATURED_PRODUCTS = [
+    "sillon-luit-1-cuerpo",
     "sillon-luit-2-cuerpos",
     "reposera-capri",
-    "mesa-comedor",
-    "camastro-con-techo",
+    "sillon-niss-1-cuerpo",
+    "camastro-con-techo", 
     "silla-aluminio",
-    "mesa-ratona",
     "pergola",
 ];
 const HOME_FEATURED_LABELS = {
+    "sillon-luit-1-cuerpo": "Sillón de un cuerpo Luit",
     "sillon-luit-2-cuerpos": "Sillón de dos cuerpos Luit",
     "reposera-capri": "Reposera Capri",
-    "mesa-comedor": "Mesa de Comedor",
+    "sillon-niss-1-cuerpo": "Sillón de un cuerpo Niss",
     "camastro-con-techo": "Camastro con Techo",
     "silla-aluminio": "Silla aluminio",
-    "mesa-ratona": "Mesa ratona",
-    pergola: "Pérgola",
+    "pergola": "Pérgola",
 };
 
 async function loadProductCard() {

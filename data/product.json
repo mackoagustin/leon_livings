@@ -941,9 +941,10 @@
       "description": "Sillón de exterior en aluminio anodizado, diseñado para ofrecer confort, durabilidad y una estética moderna. Ideal para espacios compactos o como complemento dentro de un set de living.",
     
       "images": {
-        "main": "assets/products/sillones/clasicos/luit/un_cuerpo/un_cuerpo2.webp",
+        "main": "assets/products/sillones/clasicos/luit/un_cuerpo/un_cuerpo3.webp",
         "gallery": [
-          "assets/products/sillones/clasicos/luit/un_cuerpo/un_cuerpo1.webp"
+          "assets/products/sillones/clasicos/luit/un_cuerpo/un_cuerpo1.webp",
+          "assets/products/sillones/clasicos/luit/un_cuerpo/un_cuerpo2.webp"
         ],
         "lifestyle": ""
       },
@@ -1590,9 +1591,12 @@
       "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para ofrecer confort, amplitud y una estética moderna limpia y equilibrada.",
     
       "images": {
-        "main": "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo3.webp",
+        "main": "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo6.webp",
         "gallery": [
-          "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo1.webp",
+          "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo4.webp",
+          "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo5.webp",
+          "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo6.webp",
+          "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo3.webp",
           "assets/products/sillones/clasicos/tera/un_cuerpo/un_cuerpo2.webp"
         ],
         "lifestyle": ""
@@ -1649,8 +1653,10 @@
       "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para ofrecer confort, amplitud y una estética moderna limpia y equilibrada.",
     
       "images": {
-        "main": "assets/products/sillones/clasicos/tera/dos_cuerpos/dos_cuerpo3.webp",
+        "main": "assets/products/sillones/clasicos/tera/dos_cuerpos/dos_cuerpo4.webp",
         "gallery": [
+          "assets/products/sillones/clasicos/tera/dos_cuerpos/dos_cuerpo5.webp",
+          "assets/products/sillones/clasicos/tera/dos_cuerpos/dos_cuerpo3.webp",
           "assets/products/sillones/clasicos/tera/dos_cuerpos/dos_cuerpo1.webp",
           "assets/products/sillones/clasicos/tera/dos_cuerpos/dos_cuerpo2.webp"
         ],
@@ -1708,8 +1714,11 @@
       "description": "Sillón de exterior en aluminio anodizado de dos cuerpos, diseñado para ofrecer confort, amplitud y una estética moderna limpia y equilibrada.",
     
       "images": {
-        "main": "assets/products/sillones/clasicos/tera/tres_cuerpos/tres_cuerpo1.webp",
+        "main": "assets/products/sillones/clasicos/tera/tres_cuerpos/tres_cuerpo4.webp",
         "gallery": [
+          "assets/products/sillones/clasicos/tera/tres_cuerpos/tres_cuerpo3.webp",
+          "assets/products/sillones/clasicos/tera/tres_cuerpos/tres_cuerpo5.webp",
+          "assets/products/sillones/clasicos/tera/tres_cuerpos/tres_cuerpo1.webp",
           "assets/products/sillones/clasicos/tera/tres_cuerpos/tres_cuerpo2.webp"
         ],
         "lifestyle": ""
