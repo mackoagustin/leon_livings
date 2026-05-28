@@ -2011,21 +2011,73 @@ a.btn-secondary-large:hover {
         line-height: 48px;
     }
 
-    .customization-images {
-        display: none;
-    }
-
     .customization-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-8);
+        min-height: 0;
         height: auto;
     }
 
+    .customization-content {
+        display: contents;
+    }
+
+    .customization-label {
+        order: 1;
+        margin-bottom: var(--space-6);
+    }
+
     .customization-title {
+        order: 2;
         font-size: 40px;
         line-height: 48px;
+        margin-bottom: var(--space-6);
+    }
+
+    .customization-description {
+        order: 3;
+        margin-bottom: 0;
+    }
+
+    .customization-images {
+        order: 4;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-4);
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        aspect-ratio: unset;
+        margin: 0;
+        padding: 0;
+    }
+
+    .floating-image-1,
+    .floating-image-2 {
+        position: static;
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+    }
+
+    .customization-features {
+        order: 5;
+        margin-bottom: var(--space-10);
     }
 
     .customization-buttons {
+        order: 6;
         flex-direction: column;
+        width: 100%;
+        gap: var(--space-3);
+    }
+
+    .customization-buttons .btn-primary,
+    .customization-buttons .btn-secondary-large {
+        width: 100%;
+        justify-content: center;
     }
 
     .cta-title {
