@@ -337,9 +337,13 @@ function bindCollectionGallery(root, imageUrls) {
 
     let index = 0;
     let transitioning = false;
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchTracking = false;
 
     const slideEasing = "cubic-bezier(0.25, 0.1, 0.25, 1)";
     const transitionCss = `transform ${GALLERY_SLIDE_MS}ms ${slideEasing}`;
+    const minSwipeDistance = 40;
 
     function updateBullets() {
         root.querySelectorAll(".gallery-bullet").forEach((b, j) => {
@@ -426,17 +430,20 @@ function bindCollectionGallery(root, imageUrls) {
         });
     }
 
-    root.querySelector(".gallery-nav--prev")?.addEventListener("click", () => {
+    const goPrev = () => {
         let next = index - 1;
         if (next < 0) next = n - 1;
         goTo(next, "prev");
-    });
+    };
 
-    root.querySelector(".gallery-nav--next")?.addEventListener("click", () => {
+    const goNext = () => {
         let next = index + 1;
         if (next >= n) next = 0;
         goTo(next, "next");
-    });
+    };
+
+    root.querySelector(".gallery-nav--prev")?.addEventListener("click", goPrev);
+    root.querySelector(".gallery-nav--next")?.addEventListener("click", goNext);
 
     root.querySelectorAll(".gallery-bullet").forEach((b) => {
         b.addEventListener("click", () => {
@@ -449,16 +456,52 @@ function bindCollectionGallery(root, imageUrls) {
     mainWrap.addEventListener("keydown", (e) => {
         if (e.key === "ArrowLeft") {
             e.preventDefault();
-            let next = index - 1;
-            if (next < 0) next = n - 1;
-            goTo(next, "prev");
+            goPrev();
         } else if (e.key === "ArrowRight") {
             e.preventDefault();
-            let next = index + 1;
-            if (next >= n) next = 0;
-            goTo(next, "next");
+            goNext();
         }
     });
+
+    mainWrap.addEventListener(
+        "touchstart",
+        (e) => {
+            if (!e.touches || e.touches.length !== 1) return;
+            const t = e.touches[0];
+            touchStartX = t.clientX;
+            touchStartY = t.clientY;
+            touchTracking = true;
+        },
+        { passive: true }
+    );
+
+    mainWrap.addEventListener(
+        "touchend",
+        (e) => {
+            if (!touchTracking || !e.changedTouches || !e.changedTouches.length) return;
+            touchTracking = false;
+            if (transitioning) return;
+
+            const t = e.changedTouches[0];
+            const dx = t.clientX - touchStartX;
+            const dy = t.clientY - touchStartY;
+
+            if (Math.abs(dx) < minSwipeDistance) return;
+            if (Math.abs(dx) <= Math.abs(dy)) return;
+
+            if (dx < 0) goNext();
+            else goPrev();
+        },
+        { passive: true }
+    );
+
+    mainWrap.addEventListener(
+        "touchcancel",
+        () => {
+            touchTracking = false;
+        },
+        { passive: true }
+    );
 }
 
 function renderCollection(container, collectionMeta, products) {

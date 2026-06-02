@@ -43,7 +43,7 @@
           "customSize": true
         },
       
-        "heroImage": "assets/collections/luit/collection_luit1.webp",
+        "heroImage": "assets/collections/luit/collection_luit4.webp",
         "collectionImage": [
           "assets/collections/luit/collection_luit2.webp",
           "assets/collections/luit/collection_luit3.webp",
@@ -250,9 +250,10 @@
       
         "heroImage": "assets/collections/lone/collection_lone1.webp",
         "collectionImage": [
-          "assets/collections/lone/collection_lone2.webp",
-          "assets/collections/lone/collection_lone3.webp",
-          "assets/collections/lone/collection_lone1.webp"
+          "assets/products/reposeras/reposera_lone/reposera_lone4.webp",
+          "assets/products/reposeras/reposera_lone/reposera_lone2.webp",
+          "assets/products/reposeras/reposera_lone/reposera_lone3.webp",
+          "assets/products/reposeras/reposera_lone/reposera_lone1.webp"
         ],
         "thumbnail": "/assets/collections/lone/collection_lone3.webp",
       
